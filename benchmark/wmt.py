@@ -1,5 +1,6 @@
 import os
 import json
+import logging
 import argparse
 import sacrebleu, torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -34,27 +35,35 @@ if __name__ == "__main__":
     parser.add_argument("--target_language", type=str, default="German", help="Target language")
     parser.add_argument("--target_column", type=str, default="de", help="Target language column")
     parser.add_argument("--batch_size", type=int, default=32, help="Batch size")
-    parser.add_argument("--num_workers", type=int, default=4, help="Number of data loader workers")
+    parser.add_argument("--num_workers", type=int, default=1, help="Number of data loader workers")
     parser.add_argument("--few_shot", type=int, default=3, help="Number of few-shot examples")
     parser.add_argument("--max_new_tokens", type=int, default=50, help="Number of max new tokens")
     args = parser.parse_args()
 
     # GPU device
+    logging.basicConfig(level=logging.INFO)
+    logging.info('Start')
     device = get_device()
+    logging.info(f'Device: {device}')
 
     # Tokenizer config
+    logging.info(f'Loading tokenizer...')
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
     tokenizer.add_special_tokens({"pad_token": "<pad>"})
     tokenizer.padding_side = 'left'
+    logging.info(f'Tokenizer loaded.')
 
     # Model config
+    logging.info('Loading model...')
     model = AutoModelForCausalLM.from_pretrained(args.model_id)
     model.generation_config.max_new_tokens = 50
     model.config.pad_token_id = tokenizer.pad_token_id
     model.resize_token_embeddings(len(tokenizer))
     model.to(device)
+    logging.info('Model loaded.')
 
     # Dataset loading
+    logging.info('Processing dataset...')
     dataset = load_dataset('json', data_files=args.data_path)
     dataset = dataset['train']['translation']
 
@@ -67,11 +76,13 @@ if __name__ == "__main__":
     dataset = {args.source_column: [item[args.source_column] for item in dataset], args.target_column: [item[args.target_column] for item in dataset]}
     dataset = Dataset.from_dict(dataset)
     dataset = dataset.map(lambda item: create_prompt(item, prompt_examples, prompt_template, args.source_column))
-    dataset = dataset.map(lambda item: tokenization(item, tokenizer=tokenizer), batched=True)
+    dataset = dataset.map(lambda item: tokenization(item, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
     dataloader = DataLoader(dataset, batch_size=args.batch_size, num_workers=args.num_workers)
+    logging.info('Dataset processed...')
 
     # Prediction
+    logging.info('Starting predictions...')
     prompt_examples_size = len(prompt_examples) if prompt_examples else 0
     target_language_size = len(args.target_language)+2
     predictions = []
@@ -86,9 +97,10 @@ if __name__ == "__main__":
             else:
                 for item in generated_prediction:
                     predictions.append(item.split('\n')[1][target_language_size:])
+    logging.info('Predictions finished')
 
     bleu = sacrebleu.corpus_bleu(predictions, dataset[args.target_column])
-    print(bleu.score)
+    logging.info(bleu.score)
     with open(f'results/{args.model_id.split("/")[-1]}_{args.source_column}_{args.target_column}', 'w') as json_file:
         json.dump(
             {
@@ -100,3 +112,4 @@ if __name__ == "__main__":
             }, 
             json_file, indent=4
         )
+    logging.info("Process completed.")
