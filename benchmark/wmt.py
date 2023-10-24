@@ -104,7 +104,7 @@ if __name__ == "__main__":
     bleu = BLEU()
     bleu_score = bleu.corpus_score(predictions, [dataset[args.target_column]])
     logging.info(bleu_score)
-    with open(f'results/{args.model_id.split("/")[-1]}_{args.source_column}_{args.target_column}', 'w') as json_file:
+    with open(f'results/{args.model_id.split("/")[-1]}_{args.source_column}_{args.target_column}.json', 'w') as json_file:
         json.dump(
             {
                 "source": args.source_language,
