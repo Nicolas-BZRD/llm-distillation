@@ -35,7 +35,7 @@ if __name__ == "__main__":
     parser.add_argument("--source_column", type=str, default="en", help="Source language column")
     parser.add_argument("--target_language", type=str, default="German", help="Target language")
     parser.add_argument("--target_column", type=str, default="de", help="Target language column")
-    parser.add_argument("--batch_size", type=int, default=4, help="Batch size")
+    parser.add_argument("--batch_size", type=int, default=64, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=1, help="Number of data loader workers")
     parser.add_argument("--few_shot", type=int, default=3, help="Number of few-shot examples")
     parser.add_argument("--max_new_tokens", type=int, default=50, help="Number of max new tokens")
@@ -99,7 +99,6 @@ if __name__ == "__main__":
             else:
                 for item in generated_prediction:
                     predictions.append(item.split('\n')[1][target_language_size:])
-            break
     logging.info('Predictions finished')
 
     bleu = BLEU()
@@ -112,7 +111,7 @@ if __name__ == "__main__":
                 "target": args.target_language,
                 "model": args.model_id,
                 "samples_number": len(predictions),
-                "sacrebleau": bleu_score
+                "sacrebleau": str(bleu_score)
             }, 
             json_file, indent=4
         )
