@@ -2,10 +2,11 @@ import os
 import json
 import logging
 import argparse
-import sacrebleu, torch
+import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from datasets import Dataset, load_dataset
 from torch.utils.data import DataLoader
+from sacrebleu.metrics import BLEU
 from tqdm import tqdm
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
@@ -34,7 +35,7 @@ if __name__ == "__main__":
     parser.add_argument("--source_column", type=str, default="en", help="Source language column")
     parser.add_argument("--target_language", type=str, default="German", help="Target language")
     parser.add_argument("--target_column", type=str, default="de", help="Target language column")
-    parser.add_argument("--batch_size", type=int, default=32, help="Batch size")
+    parser.add_argument("--batch_size", type=int, default=4, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=1, help="Number of data loader workers")
     parser.add_argument("--few_shot", type=int, default=3, help="Number of few-shot examples")
     parser.add_argument("--max_new_tokens", type=int, default=50, help="Number of max new tokens")
@@ -50,6 +51,7 @@ if __name__ == "__main__":
     logging.info(f'Loading tokenizer...')
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
     tokenizer.add_special_tokens({"pad_token": "<pad>"})
+    tokenizer.pad_token_id = tokenizer.eos_token_id
     tokenizer.padding_side = 'left'
     logging.info(f'Tokenizer loaded.')
 
@@ -88,7 +90,7 @@ if __name__ == "__main__":
     predictions = []
     with torch.no_grad():
         for batch in tqdm(dataloader):
-            generated_prediction = model.generate(batch['input_ids'].to(device), attention_mask=batch['attention_mask'].to(device))
+            generated_prediction = model.generate(batch['input_ids'].to(device), attention_mask=batch['attention_mask'].to(device), pad_token_id=tokenizer.pad_token_id)
             generated_prediction = tokenizer.batch_decode(generated_prediction, skip_special_tokens=True)
             
             if prompt_examples:
@@ -97,10 +99,12 @@ if __name__ == "__main__":
             else:
                 for item in generated_prediction:
                     predictions.append(item.split('\n')[1][target_language_size:])
+            break
     logging.info('Predictions finished')
 
-    bleu = sacrebleu.corpus_bleu(predictions, dataset[args.target_column])
-    logging.info(bleu.score)
+    bleu = BLEU()
+    bleu_score = bleu.corpus_score(predictions, [dataset[args.target_column]])
+    logging.info(bleu_score)
     with open(f'results/{args.model_id.split("/")[-1]}_{args.source_column}_{args.target_column}', 'w') as json_file:
         json.dump(
             {
@@ -108,7 +112,7 @@ if __name__ == "__main__":
                 "target": args.target_language,
                 "model": args.model_id,
                 "samples_number": len(predictions),
-                "sacrebleau": bleu.score
+                "sacrebleau": bleu_score
             }, 
             json_file, indent=4
         )
