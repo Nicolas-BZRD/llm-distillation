@@ -1,8 +1,8 @@
 import os
 import json
+import torch
 import logging
 import argparse
-import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from datasets import Dataset, load_dataset
 from torch.utils.data import DataLoader
@@ -58,7 +58,7 @@ if __name__ == "__main__":
     # Model config
     logging.info('Loading model...')
     model = AutoModelForCausalLM.from_pretrained(args.model_id)
-    model.generation_config.max_new_tokens = 50
+    model.generation_config.max_new_tokens = args.max_new_tokens
     model.config.pad_token_id = tokenizer.pad_token_id
     model.resize_token_embeddings(len(tokenizer))
     model.to(device)
