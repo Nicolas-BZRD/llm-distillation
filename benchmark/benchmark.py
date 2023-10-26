@@ -50,8 +50,8 @@ if __name__ == "__main__":
     parser.add_argument("--dataset_id", type=str, default="squad", help="Dataset hugging face ID")
     parser.add_argument("--split_name", type=str, default="validation", help="Dataset split name")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
-    parser.add_argument("--batch_size", type=int, default=64, help="Batch size")
-    parser.add_argument("--num_workers", type=int, default=1, help="Number of data loader workers")
+    parser.add_argument("--batch_size", type=int, default=32, help="Batch size")
+    parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
     args = parser.parse_args()
     
     
