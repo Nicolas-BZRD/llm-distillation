@@ -63,6 +63,7 @@ if __name__ == "__main__":
     logging.info(f'Loading tokenizer...')
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
     tokenizer.add_special_tokens({"pad_token":"<pad>"})
+    tokenizer.padding_side = 'left'
     logging.info(f'Tokenizer loaded.')
 
     logging.info('Loading model...')
@@ -95,7 +96,7 @@ if __name__ == "__main__":
                 max_new_tokens=15,
                 do_sample=False,
                 num_beams=1
-            )
+            ).to('cpu')
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
             predictions.append([item[prompt_examples_length:].split('\n')[2][8:] for item in sentences])
     logging.info('Predictions finished')
