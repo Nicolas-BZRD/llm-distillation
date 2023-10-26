@@ -80,6 +80,7 @@ if __name__ == "__main__":
     prompt_examples_length = len(prompt_examples)
     dataset = dataset.map(lambda item: create_prompt(item, prompt_examples))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
+    dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
     dataloader = DataLoader(dataset, batch_size=args.batch_size, num_workers=args.num_workers)
     logging.info('Dataset processed...')
 
