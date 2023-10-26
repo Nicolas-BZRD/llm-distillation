@@ -1,7 +1,0 @@
-{
-    "source": "German",
-    "target": "English",
-    "model": "EleutherAI/pythia-410m-deduped",
-    "samples_number": 1981,
-    "sacrebleau": "BLEU = 11.16 46.9/18.3/9.1/5.0 (BP = 0.795 ratio = 0.814 hyp_len = 30582 ref_len = 37589)"
-}
