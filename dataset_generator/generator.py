@@ -1,12 +1,11 @@
 import os
 import json
-import score
 import torch
 import logging
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from torch.utils.data import DataLoader
-from datasets import load_dataset
+from datasets import Dataset, load_dataset
 from itertools import chain
 from tqdm import tqdm
 
@@ -48,7 +47,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Script for compute sacrebleu score")
     parser.add_argument("--model_id", type=str, default="meta-llama/Llama-2-7b-hf", help="Model ID")
     parser.add_argument("--dataset_id", type=str, default="squad", help="Dataset hugging face ID")
-    parser.add_argument("--split_name", type=str, default="validation", help="Dataset split name")
+    parser.add_argument("--split_name", type=str, default="train", help="Dataset split name")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
     parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
@@ -89,9 +88,11 @@ if __name__ == "__main__":
     logging.info('Dataset processed...')
 
     logging.info('Starting predictions...')
+    i = 0
     predictions = []
     with torch.no_grad():
         for batch in tqdm(dataloader):
+            i+=1
             output = model.generate(
                 batch['input_ids'].to(device),
                 attention_mask=batch['attention_mask'].to(device),
@@ -99,27 +100,15 @@ if __name__ == "__main__":
             ).to('cpu')
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
             predictions.append([item[prompt_examples_length:].split('\n')[2][8:] for item in sentences])
+            if i==2: break
     logging.info('Predictions finished')
-    
-    answers = [item['text'] for item in dataset['answers']]
-    predictions = list(chain(*predictions))
-    results = score.f1_score(predictions, answers)
-    results['em'] = score.exact_match(predictions, answers)
-    results['squad'] = (results['f1']+results['em'])/2
-    logging.info(results)
 
-    with open(f'results/{args.model_id.split("/")[-1]}_{args.dataset_id}.json', 'w') as json_file:
-        json.dump(
-            {
-                "model": args.model_id,
-                "dataset": args.dataset_id,
-                "samples_number": len(predictions),
-                "f1": results['f1'],
-                "precision": results['precision'],
-                "recall": results['recall'],
-                "em": results['em'],
-                "squad": results['squad']
-            }, 
-            json_file, indent=4
-        )
-    logging.info("Process completed.")
+    dataset_generated = Dataset.from_dict(
+        {
+            'context': dataset['context'],
+            'question': dataset['question'],
+            'answers': dataset['answers'],
+            'answers_generated': list(chain(*predictions))
+        }
+    )
+    dataset_generated.save_to_disk(f'generated/{args.model_id}_{args.dataset_id}_{args.split_name}')
