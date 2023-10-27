@@ -24,7 +24,7 @@ def create_few_shot(number_few_shot):
     with open('prompt_examples.json') as json_file:
         data = json.load(json_file)
 
-    template = "Context: {context}\nQuestion: {question}\nAnswer:{answers}"
+    template = "Context: {context}\nQuestion: {question}\nAnswer: {answers}"
     prompt = "\n\n".join([template.format(
         context=row['context'],
         question=row['question'],
@@ -33,7 +33,7 @@ def create_few_shot(number_few_shot):
     return prompt+'\n\n'
 
 def create_prompt(item, prompt_examples):
-    template = "Context: {context}\nQuestion: {question}\nAnswer:"
+    template = "Context: {context}\nQuestion: {question}\nAnswer: "
     prompt = template.format(context=item['context'], question=item['question'])
     if prompt_examples:
         item['prompt'] = prompt_examples+prompt
@@ -70,10 +70,7 @@ if __name__ == "__main__":
     model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.float16).to(device)
     model.resize_token_embeddings(len(tokenizer))
     model.config.pad_token_id = tokenizer.pad_token_id
-    model.generation_config.max_new_tokens = 15
-    model.generation_config.do_sample = False
     model.generation_config.temperature = 1
-    model.generation_config.num_beams = 1
     model.generation_config.top_p = 1
     model.eval()
     logging.info('Model loaded.')
@@ -96,6 +93,9 @@ if __name__ == "__main__":
                 batch['input_ids'].to(device),
                 attention_mask=batch['attention_mask'].to(device),
                 pad_token_id=tokenizer.pad_token_id,
+                max_new_tokens=15,
+                do_sample=False,
+                num_beams=1
             ).to('cpu')
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
             predictions.append([item[prompt_examples_length:].split('\n')[2][8:] for item in sentences])
@@ -112,6 +112,7 @@ if __name__ == "__main__":
         json.dump(
             {
                 "model": args.model_id,
+                "number_few_shot": args.number_few_shot,
                 "dataset": args.dataset_id,
                 "samples_number": len(predictions),
                 "f1": results['f1'],
