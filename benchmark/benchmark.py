@@ -33,7 +33,7 @@ def create_few_shot(number_few_shot):
     return prompt+'\n\n'
 
 def create_prompt(item, prompt_examples):
-    template = "Context: {context}\nQuestion: {question}\nAnswer: "
+    template = "Context: {context}\nQuestion: {question}\nAnswer:"
     prompt = template.format(context=item['context'], question=item['question'])
     if prompt_examples:
         item['prompt'] = prompt_examples+prompt
@@ -98,7 +98,7 @@ if __name__ == "__main__":
                 num_beams=1
             ).to('cpu')
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
-            predictions.append([item[prompt_examples_length:].split('\n')[2][8:] for item in sentences])
+            predictions.append([item[prompt_examples_length:].split('\n')[2][7:] for item in sentences])
     logging.info('Predictions finished')
     
     answers = [item['text'] for item in dataset['answers']]
