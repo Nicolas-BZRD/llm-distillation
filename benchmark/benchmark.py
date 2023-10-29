@@ -52,6 +52,7 @@ if __name__ == "__main__":
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
     parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
+    parser.add_argument("--save_predictions", action="store_true", help="Save predictions in txt file")
     args = parser.parse_args()
     
     
@@ -81,7 +82,6 @@ if __name__ == "__main__":
     logging.info('Processing dataset...')
     dataset = load_dataset(args.dataset_id, split=args.split_name)
     prompt_examples = create_few_shot(args.number_few_shot) if args.number_few_shot>0 else ""
-    prompt_examples_length = len(prompt_examples)
     dataset = dataset.map(lambda item: create_prompt(item, prompt_examples))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
@@ -100,8 +100,9 @@ if __name__ == "__main__":
                 temperature=1,
                 top_p=1
             )
-            sentences = tokenizer.batch_decode(output)
-            predictions.append([item[prompt_examples_length:].split('\n')[2][7:] for item in sentences])
+            output = output[:, len(batch['input_ids'][0]):]
+            sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
+            predictions.append([item.split('\n')[0] for item in sentences])
     logging.info('Predictions finished')
 
     answers = [item['text'] for item in dataset['answers']]
@@ -111,10 +112,11 @@ if __name__ == "__main__":
     results['squad'] = (results['f1']+results['em'])/2
     logging.info(results)
 
-    with open(f'results/{args.model_id.split("/")[-1]}_{args.dataset_id}.json', 'w') as json_file:
+    with open(f'results/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.number_few_shot}s.json', 'w') as json_file:
         json.dump(
             {
                 "model": args.model_id,
+                "number_few_shot": args.number_few_shot,
                 "dataset": args.dataset_id,
                 "samples_number": len(predictions),
                 "f1": results['f1'],
@@ -126,3 +128,8 @@ if __name__ == "__main__":
             json_file, indent=4
         )
     logging.info("Process completed.")
+
+    if args.save_predictions:
+        with open("results/predictions.txt", 'w') as file:
+            for item in predictions:
+                file.write(item + "\n")
