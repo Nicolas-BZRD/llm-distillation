@@ -67,12 +67,15 @@ if __name__ == "__main__":
     logging.info(f'Tokenizer loaded.')
 
     logging.info('Loading model...')
-    model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.float16).to(device)
+    if args.model_id.startswith('meta-llama') and device != "cpu":
+        if device.type == "cuda": # Bug with cuda: <unk> tokens in float16 and not in bfloat 16
+            model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.bfloat16).to(device)
+        else: # Work with mps
+            model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.float16).to(device)
+    else:
+        model = AutoModelForCausalLM.from_pretrained(args.model_id).to(device)
     model.resize_token_embeddings(len(tokenizer))
     model.config.pad_token_id = tokenizer.pad_token_id
-    model.generation_config.temperature = 1
-    model.generation_config.top_p = 1
-    model.eval()
     logging.info('Model loaded.')
 
     logging.info('Processing dataset...')
@@ -92,15 +95,15 @@ if __name__ == "__main__":
             output = model.generate(
                 batch['input_ids'].to(device),
                 attention_mask=batch['attention_mask'].to(device),
-                pad_token_id=tokenizer.pad_token_id,
                 max_new_tokens=15,
                 do_sample=False,
-                num_beams=1
-            ).to('cpu')
-            sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
+                temperature=1,
+                top_p=1
+            )
+            sentences = tokenizer.batch_decode(output)
             predictions.append([item[prompt_examples_length:].split('\n')[2][7:] for item in sentences])
     logging.info('Predictions finished')
-    
+
     answers = [item['text'] for item in dataset['answers']]
     predictions = list(chain(*predictions))
     results = score.f1_score(predictions, answers)
@@ -112,7 +115,6 @@ if __name__ == "__main__":
         json.dump(
             {
                 "model": args.model_id,
-                "number_few_shot": args.number_few_shot,
                 "dataset": args.dataset_id,
                 "samples_number": len(predictions),
                 "f1": results['f1'],
