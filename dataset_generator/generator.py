@@ -25,7 +25,7 @@ def create_few_shot(number_few_shot):
 
     template = "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer: {answers}"
     prompt = "\n\n".join([template.format(
-        context=row['title'],
+        title=row['title'],
         context=row['context'],
         question=row['question'],
         answers=row['answers']
