@@ -24,8 +24,9 @@ def create_few_shot(number_few_shot):
     with open('prompt_examples.json') as json_file:
         data = json.load(json_file)
 
-    template = "Context: {context}\nQuestion: {question}\nAnswer: {answers}"
+    template = "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer: {answers}"
     prompt = "\n\n".join([template.format(
+        title=row['title'],
         context=row['context'],
         question=row['question'],
         answers=row['answers']
@@ -33,8 +34,8 @@ def create_few_shot(number_few_shot):
     return prompt+'\n\n'
 
 def create_prompt(item, prompt_examples):
-    template = "Context: {context}\nQuestion: {question}\nAnswer:"
-    prompt = template.format(context=item['context'], question=item['question'])
+    template = "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer:"
+    prompt = template.format(title=item['title'], context=item['context'], question=item['question'])
     if prompt_examples:
         item['prompt'] = prompt_examples+prompt
     else:
@@ -95,7 +96,7 @@ if __name__ == "__main__":
             output = model.generate(
                 batch['input_ids'].to(device),
                 attention_mask=batch['attention_mask'].to(device),
-                max_new_tokens=15,
+                max_new_tokens=20,
                 do_sample=False,
                 temperature=1,
                 top_p=1
@@ -129,7 +130,9 @@ if __name__ == "__main__":
         )
     logging.info("Process completed.")
 
-    if args.save_predictions:
-        with open("results/predictions.txt", 'w') as file:
-            for item in predictions:
-                file.write(item + "\n")
+if args.save_predictions:
+    prediction_data = [{'id': dataset['id'][index], 'prediction_text': item} for index, item in enumerate(predictions)]
+    with open("results/predictions.json", 'w') as file:
+        for prediction_dict in prediction_data:
+            json.dump(prediction_dict, file)
+            file.write('\n')
