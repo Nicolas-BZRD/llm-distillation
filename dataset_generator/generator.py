@@ -25,6 +25,7 @@ def create_few_shot(number_few_shot):
 
     template = "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer: {answers}"
     prompt = "\n\n".join([template.format(
+        context=row['title'],
         context=row['context'],
         question=row['question'],
         answers=row['answers']
@@ -33,7 +34,7 @@ def create_few_shot(number_few_shot):
 
 def create_prompt(item, prompt_examples):
     template = "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer:"
-    prompt = template.format(context=item['context'], question=item['question'])
+    prompt = template.format(title=item['title'], context=item['context'], question=item['question'])
     if prompt_examples:
         item['prompt'] = prompt_examples+prompt
     else:
