@@ -1,0 +1,11 @@
+{
+    "model": "EleutherAI/pythia-1b-deduped",
+    "number_few_shot": 0,
+    "dataset": "squad",
+    "samples_number": 10570,
+    "f1": 0.31862079505942176,
+    "precision": 0.27953101765551164,
+    "recall": 0.5355465523146477,
+    "em": 0.1488174077578051,
+    "squad": 0.23371910140861343
+}
