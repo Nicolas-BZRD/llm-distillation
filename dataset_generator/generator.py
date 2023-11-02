@@ -113,4 +113,4 @@ if __name__ == "__main__":
         'answers': [item['text'] for item in dataset['answers']],
         'answers_generated': list(chain(*predictions))
     })
-    dataset_generated.save_to_disk(f'generated/{args.model_id.split("/")[-1]}_{args.dataset_id}__{args.split_name}_{args.number_few_shot}s')
+    dataset_generated.save_to_disk(f'generated/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.split_name}_{args.number_few_shot}s')
