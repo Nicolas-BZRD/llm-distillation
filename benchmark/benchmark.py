@@ -48,6 +48,7 @@ def tokenization(items, tokenizer):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Script for compute sacrebleu score")
     parser.add_argument("--model_id", type=str, default="meta-llama/Llama-2-7b-hf", help="Model ID")
+    parser.add_argument("--model_tokenizer", type=str, help="Model tokenizer (default: model_id)")
     parser.add_argument("--dataset_id", type=str, default="squad", help="Dataset hugging face ID")
     parser.add_argument("--split_name", type=str, default="validation", help="Dataset split name")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
@@ -63,7 +64,7 @@ if __name__ == "__main__":
     logging.info(f'Device: {device}')
 
     logging.info(f'Loading tokenizer...')
-    tokenizer = AutoTokenizer.from_pretrained(args.model_id)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_tokenizer if args.model_tokenizer else args.model_id)
     tokenizer.add_special_tokens({"pad_token":"<pad>"})
     tokenizer.padding_side = 'left'
     logging.info(f'Tokenizer loaded.')
