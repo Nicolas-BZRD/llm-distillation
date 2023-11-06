@@ -1,11 +1,11 @@
 import subprocess
 from itertools import product
 
-output_path = "/gpfs/users/boizardni/llm_distillation/train/models/pythia_410m"
+output_path = "/gpfs/users/boizardni/llm_distillation/train/models/base/pythia_410m"
 
 param_grid = {
-    'lr': [5e-6, 1e-6, 5e-7],
-    'weight_decay': [0.0, 0.05, 1],
+    'lr': [1e-6],
+    'weight_decay': [0.1],
 }
 
 for params in list(product(*param_grid.values())):
@@ -13,7 +13,7 @@ for params in list(product(*param_grid.values())):
     weight_decay = params[1]
     path = output_path+f"/lr{lr}_wd{weight_decay}"
 
-    subprocess.call(f"mkdir {path}", shell=True)
+    # subprocess.call(f"mkdir {path}", shell=True)
 
     name = f"finetune_lr{lr}_wd{weight_decay}"
     const = "--nodes=1 --time=12:00:00 -p gpua100 --gres=gpu:1 --cpus-per-task=4"
