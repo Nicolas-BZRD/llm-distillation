@@ -21,5 +21,5 @@ for params in list(product(*param_grid.values())):
         elif dataset_id == "squad_v2":
             context_id = 1
 
-    command = f"sbatch --nodes=1 --time=1:00:00 -p gpua100 --gres=gpu:1 --cpus-per-task=4  --wrap=\"module load anaconda3/2020.02/gcc-9.2.0; source activate llm_distillation; cd llm_distillation/benchmark/; python benchmark.py --model_id {model_id} --dataset_id {dataset_id} --context_id {context_id} --number_few_shot {number_few_shot}\""
+    command = f"sbatch --nodes=1 --time=1:00:00 -p gpua100 --gres=gpu:1 --cpus-per-task=4  --wrap=\"module load anaconda3/2020.02/gcc-9.2.0; source activate llm_distillation; cd /gpfs/users/boizardni/llm-distillation/; python benchmark/benchmark.py --model_id {model_id} --dataset_id {dataset_id} --context_id {context_id} --number_few_shot {number_few_shot}\""
     subprocess.call(command ,shell=True)
