@@ -12,23 +12,14 @@ from tqdm import tqdm
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
-list_prompts = [
-    [
-        "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer: {answers}",
-        "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer:"
-    ],
-    [
-        "Title: {title}\nPassage: {context}\nQuestion: {question}\nAnswer: {answers}",
-        "Title: {title}\nPassage: {context}\nQuestion: {question}\nAnswer:"
-    ],
-    [
-        "Reading comprehension with the answer to the question to be extracted from the passage only.\nTitle: {title}\nPassage: {context}\nQuestion: {question}\nAnswer: {answers}",
-        "Reading comprehension with the answer to the question to be extracted from the passage only.\nTitle: {title}\nPassage: {context}\nQuestion: {question}\nAnswer:"
-    ],
-    [
-        "Reading comprehension, the answer to the question is a short text extract in the passage. If the answer is not in the passage, do not answer.\nTitle: {title}\nPassage: {context}\nQuestion: {question}\nAnswer: {answers}",
-        "Reading comprehension, the answer to the question is a short text extract in the passage. If the answer is not in the passage, do not answer.\nTitle: {title}\nPassage: {context}\nQuestion: {question}\nAnswer:"
-    ]
+contexts = [
+    "Reading comprehension with the answer to the question to be extracted from the passage only.\n\n",
+    "Extract the text that answers the question. If the answer is not in the passage, answer 'no response'.\n\n"
+]
+
+templates = [
+    "Title: {title}\nPassage: {context}\nQuestion: {question}\nAnswer: {answers}",
+    "Passage: {context}\nQuestion: {question}\nAnswer: {answers}",
 ]
 
 def get_device():
@@ -39,24 +30,22 @@ def get_device():
         device = torch.device("mps")
     return device
 
-def create_few_shot(number_few_shot, prompt_id):
+def create_few_shot(number_few_shot, has_title):
     with open('prompt_examples.json') as json_file:
         data = json.load(json_file)
 
-    prompt = "\n\n".join([list_prompts[prompt_id][0].format(
-        title=row['title'],
-        context=row['context'],
-        question=row['question'],
-        answers=row['answers']
-    ) for row in data[0:number_few_shot]])
-    return prompt+'\n\n'
+    prompt = "\n\n".join([
+        (templates[0].format(title=row['title'], context=row['context'], question=row['question'], answers=row['answers'])
+        if has_title else templates[1].format(context=row['context'], question=row['question'], answers=row['answers']))
+        for row in data[0:number_few_shot]
+    ]) + '\n\n'
+    return prompt
 
-def create_prompt(item, prompt_examples, prompt_id):
-    prompt = list_prompts[prompt_id][1].format(title=item['title'], context=item['context'], question=item['question'])
-    if prompt_examples:
-        item['prompt'] = prompt_examples+prompt
-    else:
-        item['prompt'] = prompt
+
+def create_prompt(item, pre_prompt, has_title):
+    if has_title: prompt = templates[0].format(title=item['title'], context=item['context'], question=item['question'], answers="")[:-1]
+    else: prompt = templates[1].format(context=item['context'], question=item['question'], answers="")[:1]
+    item['prompt'] = pre_prompt+prompt
     return item
 
 def tokenization(items, tokenizer):
@@ -68,7 +57,7 @@ if __name__ == "__main__":
     parser.add_argument("--model_tokenizer", type=str, help="Model tokenizer (default: model_id)")
     parser.add_argument("--dataset_id", type=str, default="squad", help="Dataset hugging face ID")
     parser.add_argument("--split_name", type=str, default="validation", help="Dataset split name")
-    parser.add_argument("--prompt_id", type=int, default=0, help="Id of the prompt to be used")
+    parser.add_argument("--context_id", type=int, default=-1, help="Id of the context to use (default: -1 no context)")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
     parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
@@ -102,8 +91,10 @@ if __name__ == "__main__":
 
     logging.info('Processing dataset...')
     dataset = load_dataset(args.dataset_id, split=args.split_name) if not args.sample else load_dataset(args.dataset_id, split=args.split_name+"[0:1000]")
-    prompt_examples = create_few_shot(args.number_few_shot, args.prompt_id) if args.number_few_shot>0 else ""
-    dataset = dataset.map(lambda item: create_prompt(item, prompt_examples, args.prompt_id))
+    has_title = True if 'title' in dataset.column_names else False
+    pre_prompt = "" if args.context_id == -1 else contexts[args.context_id]
+    pre_prompt += create_few_shot(args.number_few_shot, has_title) if args.number_few_shot>0 else ""
+    dataset = dataset.map(lambda item: create_prompt(item, pre_prompt, has_title))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
     dataloader = DataLoader(dataset, batch_size=args.batch_size, num_workers=args.num_workers)
@@ -133,11 +124,12 @@ if __name__ == "__main__":
     results['squad'] = (results['f1']+results['em'])/2
     logging.info(results)
 
-    with open(f'results/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.number_few_shot}s_{args.prompt_id}id.json', 'w') as json_file:
+    with open(f'results/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.number_few_shot}s_{args.context_id}context.json', 'w') as json_file:
         json.dump(
             {
                 "model": args.model_id,
                 "number_few_shot": args.number_few_shot,
+                "context": "" if args.context_id == -1 else contexts[args.context_id],
                 "dataset": args.dataset_id,
                 "samples_number": len(predictions),
                 "f1": results['f1'],

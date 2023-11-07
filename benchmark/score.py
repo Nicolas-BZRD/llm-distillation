@@ -37,7 +37,13 @@ def f1_score(predictions, answers):
         prediction = _normalize(prediction)
         max_f1, max_precision, max_recall = 0, 0, 0
 
-        for answer in answer_list:
+        if not answer_list:
+          if prediction == "" or 'no response' in prediction:
+            max_f1 = max_precision = max_recall = 1
+          else:
+            max_f1 = max_precision = max_recall = 0
+        else:
+          for answer in answer_list:
             answer = _normalize(answer)
             f1, precision, recall = _f1_score_sentence(prediction, answer)
             max_f1, max_precision, max_recall = max(f1, max_f1), max(precision, max_precision), max(recall, max_recall)
@@ -57,6 +63,7 @@ def exact_match(predictions, answers):
     for prediction, answer_list in zip(predictions, answers):
         prediction = _normalize(prediction)
         answer_list = [_normalize(item) for item in answer_list]
+        if not answer_list and prediction == "" or "no response" in prediction: exact_match_scores.append(1)
         if prediction in answer_list: exact_match_scores.append(1)
         else: exact_match_scores.append(0)
     return sum(exact_match_scores)/len(exact_match_scores)
