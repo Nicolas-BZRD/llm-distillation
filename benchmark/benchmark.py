@@ -12,6 +12,25 @@ from tqdm import tqdm
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
+list_prompts = [
+    [
+        "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer: {answers}",
+        "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer:"
+    ],
+    [
+        "Title: {title}\nPassage: {context}\nQuestion: {question}\nAnswer: {answers}",
+        "Title: {title}\nPassage: {context}\nQuestion: {question}\nAnswer:"
+    ],
+    [
+        "Reading comprehension with the answer to the question to be extracted from the passage only.\nTitle: {title}\nPassage: {context}\nQuestion: {question}\nAnswer: {answers}",
+        "Reading comprehension with the answer to the question to be extracted from the passage only.\nTitle: {title}\nPassage: {context}\nQuestion: {question}\nAnswer:"
+    ],
+    [
+        "Reading comprehension, the answer to the question is a short text extract in the passage. If the answer is not in the passage, do not answer.\nTitle: {title}\nPassage: {context}\nQuestion: {question}\nAnswer: {answers}",
+        "Reading comprehension, the answer to the question is a short text extract in the passage. If the answer is not in the passage, do not answer.\nTitle: {title}\nPassage: {context}\nQuestion: {question}\nAnswer:"
+    ]
+]
+
 def get_device():
     device = "cpu"
     if torch.cuda.is_available():
@@ -20,12 +39,11 @@ def get_device():
         device = torch.device("mps")
     return device
 
-def create_few_shot(number_few_shot):
+def create_few_shot(number_few_shot, prompt_id):
     with open('prompt_examples.json') as json_file:
         data = json.load(json_file)
 
-    template = "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer: {answers}"
-    prompt = "\n\n".join([template.format(
+    prompt = "\n\n".join([list_prompts[prompt_id][0].format(
         title=row['title'],
         context=row['context'],
         question=row['question'],
@@ -33,9 +51,8 @@ def create_few_shot(number_few_shot):
     ) for row in data[0:number_few_shot]])
     return prompt+'\n\n'
 
-def create_prompt(item, prompt_examples):
-    template = "Title: {title}\nContext: {context}\nQuestion: {question}\nAnswer:"
-    prompt = template.format(title=item['title'], context=item['context'], question=item['question'])
+def create_prompt(item, prompt_examples, prompt_id):
+    prompt = list_prompts[prompt_id][1].format(title=item['title'], context=item['context'], question=item['question'])
     if prompt_examples:
         item['prompt'] = prompt_examples+prompt
     else:
@@ -51,10 +68,12 @@ if __name__ == "__main__":
     parser.add_argument("--model_tokenizer", type=str, help="Model tokenizer (default: model_id)")
     parser.add_argument("--dataset_id", type=str, default="squad", help="Dataset hugging face ID")
     parser.add_argument("--split_name", type=str, default="validation", help="Dataset split name")
+    parser.add_argument("--prompt_id", type=int, default=0, help="Id of the prompt to be used")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
     parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
     parser.add_argument("--save_predictions", action="store_true", help="Save predictions in txt file")
+    parser.add_argument("--sample", action="store_true", help="Process on a sample of 1000 elements")
     args = parser.parse_args()
     
     
@@ -82,9 +101,9 @@ if __name__ == "__main__":
     logging.info('Model loaded.')
 
     logging.info('Processing dataset...')
-    dataset = load_dataset(args.dataset_id, split=args.split_name)
-    prompt_examples = create_few_shot(args.number_few_shot) if args.number_few_shot>0 else ""
-    dataset = dataset.map(lambda item: create_prompt(item, prompt_examples))
+    dataset = load_dataset(args.dataset_id, split=args.split_name) if not args.sample else load_dataset(args.dataset_id, split=args.split_name+"[0:1000]")
+    prompt_examples = create_few_shot(args.number_few_shot, args.prompt_id) if args.number_few_shot>0 else ""
+    dataset = dataset.map(lambda item: create_prompt(item, prompt_examples, args.prompt_id))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
     dataloader = DataLoader(dataset, batch_size=args.batch_size, num_workers=args.num_workers)
@@ -114,7 +133,7 @@ if __name__ == "__main__":
     results['squad'] = (results['f1']+results['em'])/2
     logging.info(results)
 
-    with open(f'results/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.number_few_shot}s.json', 'w') as json_file:
+    with open(f'results/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.number_few_shot}s_{args.prompt_id}id.json', 'w') as json_file:
         json.dump(
             {
                 "model": args.model_id,
@@ -133,7 +152,7 @@ if __name__ == "__main__":
 
 if args.save_predictions:
     prediction_data = [{'id': dataset['id'][index], 'prediction_text': item} for index, item in enumerate(predictions)]
-    with open("results/predictions.json", 'w') as file:
+    with open(f"results/predictions.json", 'w') as file:
         for prediction_dict in prediction_data:
             json.dump(prediction_dict, file)
             file.write('\n')
