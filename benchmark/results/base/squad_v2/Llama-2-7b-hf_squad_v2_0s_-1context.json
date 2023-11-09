@@ -1,0 +1,12 @@
+{
+    "model": "meta-llama/Llama-2-7b-hf",
+    "number_few_shot": 0,
+    "context": "",
+    "dataset": "squad_v2",
+    "samples_number": 11873,
+    "f1": 0.3011786089155724,
+    "precision": 0.28998497336951334,
+    "recall": 0.3659114731022471,
+    "em": 0.21309543847837065,
+    "squad": 0.25713702369697156
+}

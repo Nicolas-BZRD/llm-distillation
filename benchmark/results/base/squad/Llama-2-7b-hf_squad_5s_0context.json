@@ -1,0 +1,12 @@
+{
+    "model": "meta-llama/Llama-2-7b-hf",
+    "number_few_shot": 5,
+    "context": "Reading comprehension with the answer to the question to be extracted from the passage only.\n\n",
+    "dataset": "squad",
+    "samples_number": 10570,
+    "f1": 0.8052081476057521,
+    "precision": 0.788159362334796,
+    "recall": 0.8838681915610486,
+    "em": 0.6567644276253548,
+    "squad": 0.7309862876155535
+}

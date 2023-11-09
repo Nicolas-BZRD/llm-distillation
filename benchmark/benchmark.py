@@ -61,8 +61,6 @@ if __name__ == "__main__":
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
     parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
-    parser.add_argument("--save_predictions", action="store_true", help="Save predictions in txt file")
-    parser.add_argument("--sample", action="store_true", help="Process on a sample of 1000 elements")
     args = parser.parse_args()
     
     
@@ -90,7 +88,7 @@ if __name__ == "__main__":
     logging.info('Model loaded.')
 
     logging.info('Processing dataset...')
-    dataset = load_dataset(args.dataset_id, split=args.split_name) if not args.sample else load_dataset(args.dataset_id, split=args.split_name+"[0:1000]")
+    dataset = load_dataset(args.dataset_id, split=args.split_name)
     has_title = True if 'title' in dataset.column_names else False
     pre_prompt = "" if args.context_id == -1 else contexts[args.context_id]
     pre_prompt += create_few_shot(args.number_few_shot, has_title) if args.number_few_shot>0 else ""

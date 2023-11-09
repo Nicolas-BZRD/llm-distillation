@@ -1,0 +1,12 @@
+{
+    "model": "EleutherAI/pythia-410m-deduped",
+    "number_few_shot": 0,
+    "context": "Reading comprehension with the answer to the question to be extracted from the passage only.\n\n",
+    "dataset": "squad",
+    "samples_number": 10570,
+    "f1": 0.2490036562398318,
+    "precision": 0.20569487941211462,
+    "recall": 0.47704819508432866,
+    "em": 0.08353831598864711,
+    "squad": 0.16627098611423946
+}

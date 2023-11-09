@@ -1,0 +1,12 @@
+{
+    "model": "meta-llama/Llama-2-7b-hf",
+    "number_few_shot": 0,
+    "context": "Extract the text that answers the question. If the answer is not in the passage, answer 'no response'.\n\n",
+    "dataset": "squad_v2",
+    "samples_number": 11873,
+    "f1": 0.42588090535147427,
+    "precision": 0.4300896118885045,
+    "recall": 0.4412351144927879,
+    "em": 0.3388380569813286,
+    "squad": 0.3823594811664014
+}
