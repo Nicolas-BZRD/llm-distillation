@@ -61,6 +61,7 @@ if __name__ == "__main__":
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
     parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
+    parser.add_argument("--save_predictions", action="store_true", help="Save predictions in txt file")
     args = parser.parse_args()
     
     
@@ -140,9 +141,9 @@ if __name__ == "__main__":
         )
     logging.info("Process completed.")
 
-if args.save_predictions:
-    prediction_data = [{'id': dataset['id'][index], 'prediction_text': item} for index, item in enumerate(predictions)]
-    with open(f"results/predictions.json", 'w') as file:
-        for prediction_dict in prediction_data:
-            json.dump(prediction_dict, file)
-            file.write('\n')
+    if args.save_predictions:
+        prediction_data = [{'id': dataset['id'][index], 'prediction_text': item} for index, item in enumerate(predictions)]
+        with open(f"results/predictions.json", 'w') as file:
+            for prediction_dict in prediction_data:
+                json.dump(prediction_dict, file)
+                file.write('\n')
