@@ -60,7 +60,7 @@ if __name__ == "__main__":
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
     parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
-    parser.add_argument("--save_predictions", action="store_true", help="Save predictions in txt file")
+    parser.add_argument("--bfloat", action="store_true", help="Load model in bf16")
     parser.add_argument("--sample", action="store_true", help="Process on a sample of 1000 elements")
     args = parser.parse_args()
     
@@ -77,13 +77,8 @@ if __name__ == "__main__":
     logging.info(f'Tokenizer loaded.')
 
     logging.info('Loading model...')
-    if args.model_id.startswith('meta-llama') and device != "cpu":
-        if device.type == "cuda": # Bug with cuda: <unk> tokens in float16 and not in bfloat 16
-            model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.bfloat16).to(device)
-        else: # Work with mps
-            model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.float16).to(device)
-    else:
-        model = AutoModelForCausalLM.from_pretrained(args.model_id).to(device)
+    if args.bfloat and device != "cpu": model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.bfloat16).to(device)
+    else: model = AutoModelForCausalLM.from_pretrained(args.model_id).to(device)
     model.resize_token_embeddings(len(tokenizer))
     model.config.pad_token_id = tokenizer.pad_token_id
     logging.info('Model loaded.')
