@@ -16,13 +16,13 @@ def tokenize(item, tokenizer, template):
     return dict(combined_tokens, attention_mask=[1]*len(combined_tokens["input_ids"]))
 
 
-def get_custom_dataset(dataset_config, tokenizer, split):
-
-    dataset = datasets.load_dataset("squad", split="train")
+def get_split(_, tokenizer, split):
+    dataset = datasets.load_dataset("squad", split="train[:1%]")
 
     split = "test" if split == "validation" else "train" 
     dataset = dataset.train_test_split(test_size=0.1, seed=42)[split]
 
     template = "Title: {title}\nPassage: {context}\nQuestion: {question}\nAnswer:"
     dataset = dataset.map(lambda item: tokenize(item, tokenizer, template), remove_columns=list(dataset.features))
+
     return dataset
