@@ -1,0 +1,12 @@
+{
+    "model": "/gpfs/users/boizardni/llm-distillation/train/models/distillation/pythia-410m-deduped/Llama-2-7b-hf_squad_train_2s_0context_0",
+    "number_few_shot": 0,
+    "context": "",
+    "dataset": "squad",
+    "samples_number": 10570,
+    "f1": 0.4281608713056787,
+    "precision": 0.35936261906584305,
+    "recall": 0.7958449854474341,
+    "em": 0.16461684011352887,
+    "squad": 0.29638885570960377
+}
