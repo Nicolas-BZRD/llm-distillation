@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import score
 import torch
@@ -8,8 +9,10 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from torch.utils.data import DataLoader
 from datasets import load_dataset
 from itertools import chain
-from tools.qa.qa import create_prompt, create_pre_prompt
 from tqdm import tqdm
+
+sys.path.append("/gpfs/users/boizardni/llm-distillation")
+from tools.qa.qa import create_prompt, create_pre_prompt
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
@@ -25,21 +28,21 @@ def create_prompt_column(item, pre_prompt, has_title):
     if has_title:
         item['prompt'] = create_prompt(pre_prompt=pre_prompt, title=item['title'], context=item['context'], question=item['question'])
     else:
-        item['prompt']= create_prompt(pre_prompt=pre_prompt, context=item['context'], question=item['question'])
+        item['prompt'] = create_prompt(pre_prompt=pre_prompt, context=item['context'], question=item['question'])
     return item
 
 def tokenization(items, tokenizer):
     return tokenizer(items["prompt"], padding='longest')
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Script for compute sacrebleu score")
+    parser = argparse.ArgumentParser(description="Script to compute sacrebleu score")
     parser.add_argument("--model_id", type=str, default="meta-llama/Llama-2-7b-hf", help="Model ID")
     parser.add_argument("--model_tokenizer", type=str, help="Model tokenizer (default: model_id)")
     parser.add_argument("--dataset_id", type=str, default="squad", help="Dataset hugging face ID")
     parser.add_argument("--split_name", type=str, default="validation", help="Dataset split name")
-    parser.add_argument("--context", action="store_true", help="To use a task context")
+    parser.add_argument("--context", action="store_true", help="To pre prompt an explanation of the task")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
-    parser.add_argument("--batch_size", type=int, default=16, help="Batch size")
+    parser.add_argument("--batch_size", type=int, default=8, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
     parser.add_argument("--bfloat", action="store_true", help="Load model in bf16")
     parser.add_argument("--save_predictions", action="store_true", help="Save predictions in txt file")
@@ -98,7 +101,7 @@ if __name__ == "__main__":
     results['squad'] = (results['f1']+results['em'])/2
     logging.info(results)
 
-    with open(f'results/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.number_few_shot}s_{args.context_id}context.json', 'w') as json_file:
+    with open(f'f"/gpfs/users/boizardni/llm-distillation/benchmark/results/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.number_few_shot}shots.json', 'w') as json_file:
         json.dump(
             {
                 "model": args.model_id,
@@ -119,7 +122,7 @@ if __name__ == "__main__":
 
     if args.save_predictions:
         prediction_data = [{'id': dataset['id'][index], 'prediction_text': item} for index, item in enumerate(predictions)]
-        with open(f"results/predictions_{args.model_id.split('/')[-1]}.json", 'w') as file:
+        with open(f"/gpfs/users/boizardni/llm-distillation/benchmark/results/predictions_{args.model_id.split('/')[-1]}.json", 'w') as file:
             for prediction_dict in prediction_data:
                 json.dump(prediction_dict, file)
                 file.write('\n')
