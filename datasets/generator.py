@@ -69,7 +69,7 @@ if __name__ == "__main__":
     logging.info('Processing dataset...')
     dataset = load_dataset(args.dataset_id, split=args.split_name) if not args.sample else load_dataset(args.dataset_id, split=args.split_name+"[0:1000]")
     has_title = True if 'title' in dataset.column_names else False
-    pre_prompt = create_pre_prompt()
+    pre_prompt = create_pre_prompt(args.context, has_title, args.number_few_shot)
     dataset = dataset.map(lambda item: create_prompt_column(item, pre_prompt, has_title))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
