@@ -1,7 +1,8 @@
+import os
 import sys
 import datasets
 
-sys.path.append("/gpfs/users/boizardni/llm-distillation")
+sys.path.append(f"{os.getenv('HOME')}/llm-distillation")
 from tools.qa.qa import create_prompt, create_pre_prompt
 
 def tokenize(item, tokenizer, pre_prompt):

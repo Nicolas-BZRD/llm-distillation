@@ -11,7 +11,7 @@ from datasets import load_dataset
 from itertools import chain
 from tqdm import tqdm
 
-sys.path.append("/gpfs/users/boizardni/llm-distillation")
+sys.path.append(f"{os.getenv('HOME')}/llm-distillation")
 from tools.qa.qa import create_prompt, create_pre_prompt
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"

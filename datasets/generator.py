@@ -9,9 +9,7 @@ from datasets import Dataset, load_dataset
 from itertools import chain
 from tqdm import tqdm
 
-current = os.path.dirname(os.path.realpath(__file__))
-parent = os.path.dirname(current)
-sys.path.append(parent)
+sys.path.append(f"{os.getenv('HOME')}/llm-distillation")
 from tools.qa.qa import create_prompt, create_pre_prompt
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
