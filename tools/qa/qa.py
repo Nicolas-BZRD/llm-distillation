@@ -1,7 +1,8 @@
+import os
 import json
 
 def __create_few_shot(number_few_shot, title=True):
-    with open('/gpfs/users/boizardni/llm-distillation/tools/qa/few_shot_examples.json') as json_file:
+    with open(f"{os.getenv('HOME')}/llm-distillation/tools/qa/few_shot_examples.json") as json_file:
         data = json.load(json_file)
 
     templates = [
@@ -24,7 +25,7 @@ def __create_few_shot(number_few_shot, title=True):
 def create_pre_prompt(context=False, title=False, few_shot=0):
     pre_prompt = ""
     if context:
-        with open('/gpfs/users/boizardni/llm-distillation/tools/context.json') as json_file:
+        with open(f"{os.getenv('HOME')}/llm-distillation/tools/context.json") as json_file:
             pre_prompt = json.load(json_file)['qa']
 
     if few_shot:
