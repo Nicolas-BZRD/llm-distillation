@@ -11,6 +11,7 @@ def main():
     args = parse_args()
 
     ds = load_from_disk(args.dataset_path)
+    ds = ds.filter(lambda example: example['answers_generated'] is not None and example['answers_generated'] != "")
     ds = ds.train_test_split(test_size=args.val_size, seed=42)
 
     ds = DatasetDict({
