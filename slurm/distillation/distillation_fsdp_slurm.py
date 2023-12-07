@@ -9,7 +9,7 @@ param_grid = {
     'val_batch_size': [4],
     'weight_decay': [0.1],
     'final_div_factor': [5],
-    'distil_factor': [1, 0],
+    'distil_factor': [0],
 
     'dataset': [
         '/gpfs/users/boizardni/llm-distillation/datasets/generated/Llama-2-7b-hf_squad_train'
