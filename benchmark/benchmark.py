@@ -40,7 +40,7 @@ if __name__ == "__main__":
     parser.add_argument("--model_tokenizer", type=str, help="Model tokenizer (default: model_id)")
     parser.add_argument("--dataset_id", type=str, default="squad", help="Dataset hugging face ID")
     parser.add_argument("--subset_name", type=str, default="", help="Dataset subset name")
-    parser.add_argument("--split_name", type=str, default="validation", help="Dataset split name")
+    parser.add_argument("--split_name", type=str, default="test", help="Dataset split name")
     parser.add_argument("--context", action="store_true", help="To pre prompt an explanation of the task")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
     parser.add_argument("--batch_size", type=int, default=8, help="Batch size")

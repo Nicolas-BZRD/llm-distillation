@@ -9,10 +9,10 @@ param_grid = {
     'val_batch_size': [4],
     'weight_decay': [0.1],
     'final_div_factor': [5],
-    'distil_factor': [0],
+    'distil_factor': [1],
 
     'dataset': [
-        '/gpfs/users/boizardni/llm-distillation/datasets/generated/Llama-2-7b-hf_squad_train'
+        '/gpfs/users/boizardni/llm-distillation/datasets/generated/Llama-2-7b-hf_squad'
     ]
 }
 param_names = param_grid.keys()
@@ -21,7 +21,7 @@ for param_values in product(*param_grid.values()):
     params = dict(zip(param_names, param_values))
 
     name_dataset = params['dataset'].split('/')[-1] if not params['dataset'].endswith('.py') else params['dataset'].split('/')[-1][:-3]
-    output_path = f"/gpfs/users/boizardni/llm-distillation/train/models/distillation/{params['model_name'].split('/')[-1]}_dist{params['distil_factor']}"
+    output_path = f"/gpfs/users/boizardni/llm-distillation/train/models/distillation/{params['model_name'].split('/')[-1]}_dist{params['distil_factor']}_test"
 
     subprocess.call(f"mkdir {output_path}", shell=True)
 
