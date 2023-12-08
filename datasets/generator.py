@@ -37,6 +37,7 @@ if __name__ == "__main__":
     parser.add_argument("--model_id", type=str, default="meta-llama/Llama-2-7b-hf", help="Model ID")
     parser.add_argument("--model_tokenizer", type=str, help="Model tokenizer (default: model_id)")
     parser.add_argument("--dataset_id", type=str, default="squad", help="Dataset hugging face ID")
+    parser.add_argument("--subset_name", type=str, default="", help="Dataset subset name")
     parser.add_argument("--split_name", type=str, default="train", help="Dataset split name")
     parser.add_argument("--context", action="store_true", help="To pre prompt an explanation of the task")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
@@ -65,7 +66,11 @@ if __name__ == "__main__":
     logging.info('Model loaded.')
 
     logging.info('Processing dataset...')
-    dataset = load_dataset(args.dataset_id, split=args.split_name) if not args.sample else load_dataset(args.dataset_id, split=args.split_name+"[0:1000]")
+    dataset = load_dataset(
+        args.dataset_id,
+        name=args.subset_name if args.subset_name else None,
+        split=args.split_name if not args.sample else args.split_name+"[0:1000]"
+    )
     has_title = True if 'title' in dataset.column_names else False
     pre_prompt = create_pre_prompt(args.context, has_title, args.number_few_shot)
     dataset = dataset.map(lambda item: create_prompt_column(item, pre_prompt, has_title))
