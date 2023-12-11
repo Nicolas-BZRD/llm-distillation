@@ -7,7 +7,7 @@ import logging
 import argparse
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from torch.utils.data import DataLoader
-from datasets import load_dataset
+from datasets import load_dataset, load_from_disk
 from itertools import chain
 from tqdm import tqdm
 
@@ -70,7 +70,7 @@ if __name__ == "__main__":
     logging.info('Model loaded.')
 
     logging.info('Processing dataset...')
-    if args.from_disk: dataset = load_dataset(args.dataset_id)
+    if args.from_disk: dataset = load_from_disk(args.dataset_id)
     else: dataset = load_dataset(args.dataset_id, name=args.subset_name if args.subset_name else None, split=args.split_name)
     has_title = True if 'title' in dataset.column_names else False
     pre_prompt = create_pre_prompt(context=args.context, title=has_title, few_shot=args.number_few_shot)
