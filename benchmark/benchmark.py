@@ -95,9 +95,11 @@ if __name__ == "__main__":
             output = output[:, len(batch['input_ids'][0]):]
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
             predictions.append([item.split('\n')[0] for item in sentences])
+            torch.cuda.empty_cache()
     logging.info('Predictions finished')
 
-    answers = [item['text'] for item in dataset['answers']]
+    if isinstance(dataset['answers'][0], dict): answers = [item['text'] for item in dataset['answers']]
+    else: answers = dataset['answers']
     predictions = list(chain(*predictions))
     results = score.f1_score(predictions, answers)
     results['em'] = score.exact_match(predictions, answers)
