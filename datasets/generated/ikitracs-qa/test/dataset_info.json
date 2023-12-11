@@ -1,0 +1,84 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "ikitracs-qa",
+  "dataset_size": 5085823,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/alessio-vertemati/ikitracs-qa@afc6bcb1734112a3292ae6e58860ff093c4100b6/IKITRACS_QA_data_v0.json": {
+      "num_bytes": 6103319,
+      "checksum": null
+    }
+  },
+  "download_size": 6103319,
+  "features": {
+    "country": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "target_type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "parameter": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "language": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "context": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "document": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "Alpha3": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "url": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "answer": {
+      "answer_start": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "text": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    },
+    "target_year": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 11189142,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 5085823,
+      "num_examples": 3194,
+      "dataset_name": "ikitracs-qa"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
