@@ -108,5 +108,5 @@ if __name__ == "__main__":
         'answers': [item['text'] for item in dataset['answers']],
         'answers_generated': list(chain(*predictions))
     })
-    dataset_generated.save_to_disk(f'/gpfs/users/boizardni/llm-distillation/datasets/generated/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.split_name}')
+    dataset_generated.save_to_disk(f'generated/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.split_name}')
     logging.info('Dataset saved')
