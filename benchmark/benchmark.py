@@ -47,6 +47,7 @@ if __name__ == "__main__":
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
     parser.add_argument("--bfloat", action="store_true", help="Load model in bf16")
     parser.add_argument("--save_predictions", action="store_true", help="Save predictions in txt file")
+    parser.add_argument("--from_disk", action="store_true", help="Load dataset from disk")
     args = parser.parse_args()
     
     
@@ -69,7 +70,8 @@ if __name__ == "__main__":
     logging.info('Model loaded.')
 
     logging.info('Processing dataset...')
-    dataset = load_dataset(args.dataset_id, name=args.subset_name if args.subset_name else None, split=args.split_name)
+    if args.from_disk: dataset = load_dataset(args.dataset_id)
+    else: dataset = load_dataset(args.dataset_id, name=args.subset_name if args.subset_name else None, split=args.split_name)
     has_title = True if 'title' in dataset.column_names else False
     pre_prompt = create_pre_prompt(context=args.context, title=has_title, few_shot=args.number_few_shot)
     dataset = dataset.map(lambda item: create_prompt_column(item, pre_prompt, has_title))
