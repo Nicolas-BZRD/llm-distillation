@@ -5,7 +5,7 @@ param_grid = {
     'model_id': ["EleutherAI/pythia-410m-deduped"],
     'model_tokenizer': ["EleutherAI/pythia-410m-deduped"],
     'dataset_id': ['/gpfs/users/boizardni/llm-distillation/datasets/generated/qed/validation'],
-    'split_name': ['test'],
+    'split_name': ['validation'],
     'batch_size': [4],
     'number_few_shot': [0, 2, 5],
 }

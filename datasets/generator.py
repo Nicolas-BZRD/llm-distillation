@@ -101,11 +101,9 @@ if __name__ == "__main__":
     logging.info('Predictions finished')
 
     dataset_generated = Dataset.from_dict({
-        'id': dataset['id'],
         'title': dataset['title'],
         'context': dataset['context'],
         'question': dataset['question'],
-        'answers': [item['text'] for item in dataset['answers']],
         'answers_generated': list(chain(*predictions))
     })
     dataset_generated.save_to_disk(f'generated/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.split_name}')
