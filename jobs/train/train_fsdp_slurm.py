@@ -5,13 +5,13 @@ param_grid = {
     'model_name': ['EleutherAI/pythia-410m-deduped'],
     'lr': [1e-6],
     'num_epochs': [5],
-    'batch_size_training': [4],
-    'val_batch_size': [4],
+    'batch_size_training': [2],
+    'val_batch_size': [2],
     'weight_decay': [0.1],
     'final_div_factor': [5],
 
     'dataset': [
-        '/gpfs/users/boizardni/llm-distillation/datasets/loader/squad.py'
+        '/gpfs/users/boizardni/llm-distillation/datasets/generated/Llama-2-7b-hf_qed'
     ]
 }
 param_names = param_grid.keys()

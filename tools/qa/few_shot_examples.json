@@ -1,44 +1,44 @@
 [
-    {
-      "id": 72756,
-      "title": "FDA Accepts 'Chilean Seabass' as Name",
-      "context": "In 1994, the U.S. Food and Drug Administration (FDA) accepted `Chilean Seabass' as an alternative market name for Patagonian toothfish, and in 2013 for Antarctic toothfish.",
-      "question": "What is the real name for chilean sea bass?",
-      "answers": "Patagonian toothfish and Antarctic toothfish",
-      "sources": "Lexi/spanextract"
-    },
-    {
-      "id": 0,
-      "title": "June 14, 2018: Death Row Inmates",
-      "context": "As of June 14, 2018, there were 2,718 death row inmates in the United States.",
-      "question": "Total number of death row inmates in the us?",
-      "answers": "2,718",
-      "sources": "Lexi/spanextract"
-
-    },
-    {
-        "id": 419,
-        "title": "Modern Communism",
-        "context": "Most modern forms of communism are grounded at least nominally in Marxism, an ideology conceived by noted sociologist Karl Marx during the mid nineteenth century.",
-        "question": "Who came up with the idea of communism and when?",
-        "answers": "Karl Marx during the mid nineteenth century.",
-        "sources": "Lexi/spanextract"
-    },
-    {
-      "id": 225,
-      "title": "Napoleon's Defeat by Seventh Coalition",
-      "context": "A French army under the command of Napoleon Bonaparte was defeated by two of the armies of the Seventh Coalition : a British-led Allied army under the command of the Duke of Wellington, and a Prussian army under the command of Gebhard Leberecht von Blücher, Prince of Wahlstatt.",
-      "question": "Who commanded british forces at the battle of waterloo?",
-      "answers": "The Duke of Wellington",
-      "sources": "Lexi/spanextract"
-    },
-    {
-    "id": 620,
-    "title": "Canine character",
-    "context": "Astro is a canine character on the Hanna-Barbera cartoon, The Jetsons.",
-    "question": "What was the dog's name on the jetsons?",
-    "answers": "Astro.",
+  {
+    "id": 72756,
+    "title": "FDA Accepts 'Chilean Seabass' as Name",
+    "context": "In 1994, the U.S. Food and Drug Administration (FDA) accepted `Chilean Seabass' as an alternative market name for Patagonian toothfish, and in 2013 for Antarctic toothfish.",
+    "question": "What is the real name for chilean sea bass?",
+    "answers": "Patagonian toothfish and Antarctic toothfish",
     "sources": "Lexi/spanextract"
-    }
-  ]
+  },
+  {
+    "id": 0,
+    "title": "June 14, 2018: Death Row Inmates",
+    "context": "As of June 14, 2018, there were 2,718 death row inmates in the United States.",
+    "question": "Total number of death row inmates in the us?",
+    "answers": "2,718",
+    "sources": "Lexi/spanextract"
+
+  },
+  {
+      "id": 419,
+      "title": "Modern Communism",
+      "context": "Most modern forms of communism are grounded at least nominally in Marxism, an ideology conceived by noted sociologist Karl Marx during the mid nineteenth century.",
+      "question": "Who came up with the idea of communism and when?",
+      "answers": "Karl Marx during the mid nineteenth century.",
+      "sources": "Lexi/spanextract"
+  },
+  {
+    "id": 225,
+    "title": "Napoleon's Defeat by Seventh Coalition",
+    "context": "A French army under the command of Napoleon Bonaparte was defeated by two of the armies of the Seventh Coalition : a British-led Allied army under the command of the Duke of Wellington, and a Prussian army under the command of Gebhard Leberecht von Blücher, Prince of Wahlstatt.",
+    "question": "Who commanded british forces at the battle of waterloo?",
+    "answers": "The Duke of Wellington",
+    "sources": "Lexi/spanextract"
+  },
+  {
+  "id": 620,
+  "title": "Canine character",
+  "context": "Astro is a canine character on the Hanna-Barbera cartoon, The Jetsons.",
+  "question": "What was the dog's name on the jetsons?",
+  "answers": "Astro.",
+  "sources": "Lexi/spanextract"
+  }
+]
   

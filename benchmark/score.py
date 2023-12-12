@@ -1,5 +1,6 @@
 import re
 import string
+import evaluate
 from collections import Counter
 
 def _normalize(s):
@@ -69,3 +70,7 @@ def exact_match(predictions, answers):
         if prediction in answer_list: exact_match_scores.append(1)
         else: exact_match_scores.append(0)
     return sum(exact_match_scores)/len(exact_match_scores)
+
+def rouge(predictions, answers):
+    rouge_metric = evaluate.load('rouge')
+    return rouge_metric.compute(predictions=predictions, references=answers)

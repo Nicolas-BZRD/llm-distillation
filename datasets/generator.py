@@ -10,8 +10,6 @@ from itertools import chain
 from tqdm import tqdm
 
 sys.path.append(f"{os.getenv('HOME')}/llm-distillation")
-from tools.qa.qa import create_prompt, create_pre_prompt
-
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
 def get_device():
@@ -21,13 +19,6 @@ def get_device():
     if torch.backends.mps.is_available() and torch.backends.mps.is_built():
         device = torch.device("mps")
     return device
-
-def create_prompt_column(item, pre_prompt, has_title):
-    if has_title:
-        item['prompt'] = create_prompt(pre_prompt=pre_prompt, title=item['title'], context=item['context'], question=item['question'])
-    else:
-        item['prompt'] = create_prompt(pre_prompt=pre_prompt, context=item['context'], question=item['question'])
-    return item
 
 def tokenization(items, tokenizer):
     return tokenizer(items["prompt"], padding='longest')
@@ -46,7 +37,18 @@ if __name__ == "__main__":
     parser.add_argument("--bfloat", action="store_true", help="Load model in bf16")
     parser.add_argument("--sample", action="store_true", help="Process on a sample of 1000 elements")
     parser.add_argument("--from_disk", action="store_true", help="Load dataset from disk")
+    parser.add_argument("--type", type=str, default="qa", help="Benchmark type (qa, qa_generative, summarization)")
     args = parser.parse_args()
+
+    if args.type == "qa": from tools.qa.qa import *
+    elif args.type == "qa_generative": from tools.qa_generative.qa_generative import *
+
+    def create_prompt_column(item, pre_prompt, has_title):
+        if has_title:
+            item['prompt'] = create_prompt(pre_prompt=pre_prompt, title=item['title'], context=item['context'], question=item['question'])
+        else:
+            item['prompt'] = create_prompt(pre_prompt=pre_prompt, context=item['context'], question=item['question'])
+        return item
     
     logging.basicConfig(level=logging.INFO)
     logging.info('Start')
@@ -90,7 +92,7 @@ if __name__ == "__main__":
             output = model.generate(
                 batch['input_ids'].to(device),
                 attention_mask=batch['attention_mask'].to(device),
-                max_new_tokens=20,
+                max_new_tokens=80,
                 do_sample=False,
                 temperature=1,
                 top_p=1

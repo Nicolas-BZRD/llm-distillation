@@ -12,8 +12,6 @@ from itertools import chain
 from tqdm import tqdm
 
 sys.path.append(f"{os.getenv('HOME')}/llm-distillation")
-from tools.qa.qa import create_prompt, create_pre_prompt
-
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
 def get_device():
@@ -23,13 +21,6 @@ def get_device():
     if torch.backends.mps.is_available() and torch.backends.mps.is_built():
         device = torch.device("mps")
     return device
-
-def create_prompt_column(item, pre_prompt, has_title):
-    if has_title:
-        item['prompt'] = create_prompt(pre_prompt=pre_prompt, title=item['title'], context=item['context'], question=item['question'])
-    else:
-        item['prompt'] = create_prompt(pre_prompt=pre_prompt, context=item['context'], question=item['question'])
-    return item
 
 def tokenization(items, tokenizer):
     return tokenizer(items["prompt"], padding='longest')
@@ -48,8 +39,18 @@ if __name__ == "__main__":
     parser.add_argument("--bfloat", action="store_true", help="Load model in bf16")
     parser.add_argument("--save_predictions", action="store_true", help="Save predictions in txt file")
     parser.add_argument("--from_disk", action="store_true", help="Load dataset from disk")
+    parser.add_argument("--type", type=str, default="qa", help="Benchmark type (qa, qa_generative, summarization)")
     args = parser.parse_args()
-    
+
+    if args.type == "qa": from tools.qa.qa import *
+    elif args.type == "qa_generative": from tools.qa_generative.qa_generative import *
+
+    def create_prompt_column(item, pre_prompt, has_title):
+        if has_title:
+            item['prompt'] = create_prompt(pre_prompt=pre_prompt, title=item['title'], context=item['context'], question=item['question'])
+        else:
+            item['prompt'] = create_prompt(pre_prompt=pre_prompt, context=item['context'], question=item['question'])
+        return item
     
     logging.basicConfig(level=logging.INFO)
     logging.info('Start')
@@ -87,7 +88,7 @@ if __name__ == "__main__":
             output = model.generate(
                 batch['input_ids'].to(device),
                 attention_mask=batch['attention_mask'].to(device),
-                max_new_tokens=20,
+                max_new_tokens=80,
                 do_sample=False,
                 temperature=1,
                 top_p=1
@@ -104,6 +105,7 @@ if __name__ == "__main__":
     results = score.f1_score(predictions, answers)
     results['em'] = score.exact_match(predictions, answers)
     results['squad'] = (results['f1']+results['em'])/2
+    results.update(score.rouge(predictions, answers))
     logging.info(results)
 
     with open(f'f"/gpfs/users/boizardni/llm-distillation/benchmark/results/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.number_few_shot}shots.json', 'w') as json_file:
@@ -119,7 +121,11 @@ if __name__ == "__main__":
                 "precision": results['precision'],
                 "recall": results['recall'],
                 "em": results['em'],
-                "squad": results['squad']
+                "squad": results['squad'],
+                'rouge1': results['rouge1'],
+                'rouge2': results['rouge2'],
+                'rougeL': results['rougeL'],
+                'rougeLsum': results['rougeLsum']
             }, 
             json_file, indent=4
         )
@@ -127,7 +133,7 @@ if __name__ == "__main__":
 
     if args.save_predictions:
         prediction_data = [{'id': dataset['id'][index], 'prediction_text': item} for index, item in enumerate(predictions)]
-        with open(f"/gpfs/users/boizardni/llm-distillation/benchmark/results/predictions_{args.model_id.split('/')[-1]}.json", 'w') as file:
+        with open(f"predictions_{args.model_id.split('/')[-1]}.json", 'w') as file:
             for prediction_dict in prediction_data:
                 json.dump(prediction_dict, file)
                 file.write('\n')
