@@ -5,9 +5,9 @@ param_grid = {
     'model_id': ['meta-llama/Llama-2-7b-hf',],
     'model_tokenizer': ["meta-llama/Llama-2-7b-hf"],
     'dataset_id': [
-        '/gpfs/users/boizardni/llm-distillation/datasets/generated/qed/test',
+        '/gpfs/users/boizardni/llm-distillation/datasets/generated/qed/train',
         ],
-    'split_name': ['validation'],
+    'split_name': ['train'],
     'number_few_shot': [2],
     'batch_size': [2],
 }
