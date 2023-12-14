@@ -7,7 +7,7 @@ param_grid = {
     'dataset_id': ['/gpfs/users/boizardni/llm-distillation/datasets/generated/dialogsum/test'],
     'split_name': ['test'],
     'batch_size': [1],
-    'number_few_shot': [2],
+    'number_few_shot': [0,2,5],
 }
 param_names = param_grid.keys()
 

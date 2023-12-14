@@ -77,7 +77,6 @@ if __name__ == "__main__":
 
     logging.info('Starting predictions...')
     predictions = []
-    i = 0
     with torch.no_grad():
         for batch in tqdm(dataloader):
             output = model.generate(
@@ -90,16 +89,7 @@ if __name__ == "__main__":
             )
             output = output[:, len(batch['input_ids'][0]):]
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
-
-            print(f"Text: {dataset['text'][i]}")
-            print(f"Summary: {dataset['summary'][i]}")
-            tmp = sentences[0].split('\n')[0]
-            print(f"Prediction: {tmp}")
-            print("-------------------\n")
-
             predictions.append([item.split('\n')[0] for item in sentences])
-            i+=1
-            if i == 10: break
             torch.cuda.empty_cache()
     logging.info('Predictions finished')
 
