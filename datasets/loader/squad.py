@@ -8,8 +8,8 @@ from tools.qa.qa import create_prompt
 def tokenize(item, tokenizer):
     prompt = create_prompt(title=item['title'], context=item['context'], question=item['question'])
 
-    context_tokens = tokenizer.encode(f"{tokenizer.bos_token} {prompt}", add_special_tokens=False)
-    answer_tokens = tokenizer.encode(f" {item['answers']['text'][0]} {tokenizer.eos_token}", add_special_tokens=False)
+    context_tokens = tokenizer.encode(f"{tokenizer.bos_token}{prompt}", add_special_tokens=False)
+    answer_tokens = tokenizer.encode(f"{item['answers']['text'][0]}{tokenizer.eos_token}", add_special_tokens=False)
     prompt_tokens = context_tokens+answer_tokens
     labels_tokens = (len(context_tokens)*[-100,])+answer_tokens
 

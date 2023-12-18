@@ -9,7 +9,7 @@ def tokenize(item, tokenizer, pre_prompt):
     prompt = create_prompt(pre_prompt=pre_prompt, text=item['text'])
 
     context_tokens = tokenizer.encode(f"{tokenizer.bos_token}{prompt}", add_special_tokens=False)
-    answer_tokens = tokenizer.encode(f" {item['summary']}{tokenizer.eos_token}", add_special_tokens=False)
+    answer_tokens = tokenizer.encode(f"{item['summary']}{tokenizer.eos_token}", add_special_tokens=False)
     prompt_tokens = context_tokens+answer_tokens
     labels_tokens = (len(context_tokens)*[-100,])+answer_tokens
 

@@ -93,9 +93,6 @@ if __name__ == "__main__":
             torch.cuda.empty_cache()
     logging.info('Predictions finished')
 
-    print(predictions)
-    print(dataset['summary'][:10])
-
     if isinstance(dataset['summary'][0], dict): answers = [item['text'] for item in dataset['summary']]
     else: answers = dataset['summary']
     predictions = list(chain(*predictions))
