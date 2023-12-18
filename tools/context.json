@@ -1,5 +1,0 @@
-{
-    "qa": "Reading comprehension with the answer to the question to be extracted from the passage only.\n\n",
-    "qa_generative": "Reading comprehension: answer the question with the information in the passage.\n\n",
-    "summary": "Summarize the text.\n\n"
-}

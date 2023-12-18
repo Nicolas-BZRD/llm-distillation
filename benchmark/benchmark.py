@@ -26,30 +26,30 @@ def tokenization(items, tokenizer):
     return tokenizer(items["prompt"], padding='longest')
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Script to compute sacrebleu score")
+    parser = argparse.ArgumentParser(description="Script to benchmark a model on a dataset.")
     parser.add_argument("--model_id", type=str, default="meta-llama/Llama-2-7b-hf", help="Model ID")
     parser.add_argument("--model_tokenizer", type=str, help="Model tokenizer (default: model_id)")
-    parser.add_argument("--dataset_id", type=str, default="squad", help="Dataset hugging face ID")
-    parser.add_argument("--subset_name", type=str, default="", help="Dataset subset name")
+    parser.add_argument("--dataset_id", type=str, help="Dataset hugging face ID")
     parser.add_argument("--split_name", type=str, default="test", help="Dataset split name")
     parser.add_argument("--context", action="store_true", help="To pre prompt an explanation of the task")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
-    parser.add_argument("--batch_size", type=int, default=8, help="Batch size")
+    parser.add_argument("--batch_size", type=int, default=4, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
     parser.add_argument("--bfloat", action="store_true", help="Load model in bf16")
     parser.add_argument("--save_predictions", action="store_true", help="Save predictions in txt file")
     parser.add_argument("--from_disk", action="store_true", help="Load dataset from disk")
-    parser.add_argument("--type", type=str, default="qa", help="Benchmark type (qa, qa_generative, summarization)")
+    parser.add_argument("--task", type=str, default="qa", help="Benchmark type (qa, qa_generative, summarization)")
     args = parser.parse_args()
 
-    if args.type == "qa": from tools.qa.qa import *
-    elif args.type == "qa_generative": from tools.qa_generative.qa_generative import *
+    if 'chat' in args.model_id:
+        from prompt.prompt import llama_chat_prompt as create_prompt
 
-    def create_prompt_column(item, pre_prompt, has_title):
-        if has_title:
-            item['prompt'] = create_prompt(pre_prompt=pre_prompt, title=item['title'], context=item['context'], question=item['question'])
-        else:
-            item['prompt'] = create_prompt(pre_prompt=pre_prompt, context=item['context'], question=item['question'])
+    def create_prompt_column(task, few_shot, item, has_title):
+        if task == "qa":
+            item['prompt'] = create_prompt(
+                task, few_shot, 
+                {"title":item['title'] if has_title else "", "context":item['context'], "question":item['question']}
+            )
         return item
     
     logging.basicConfig(level=logging.INFO)
@@ -72,10 +72,9 @@ if __name__ == "__main__":
 
     logging.info('Processing dataset...')
     if args.from_disk: dataset = load_from_disk(args.dataset_id)
-    else: dataset = load_dataset(args.dataset_id, name=args.subset_name if args.subset_name else None, split=args.split_name)
+    else: dataset = load_dataset(args.dataset_id, split=args.split_name)
     has_title = True if 'title' in dataset.column_names else False
-    pre_prompt = create_pre_prompt(context=args.context, title=has_title, few_shot=args.number_few_shot)
-    dataset = dataset.map(lambda item: create_prompt_column(item, pre_prompt, has_title))
+    dataset = dataset.map(lambda item: create_prompt_column(args.task, args.number_few_shot, item, has_title))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
     dataloader = DataLoader(dataset, batch_size=args.batch_size, num_workers=args.num_workers)
@@ -83,6 +82,7 @@ if __name__ == "__main__":
 
     logging.info('Starting predictions...')
     predictions = []
+    i = 0
     with torch.no_grad():
         for batch in tqdm(dataloader):
             output = model.generate(
@@ -95,37 +95,30 @@ if __name__ == "__main__":
             )
             output = output[:, len(batch['input_ids'][0]):]
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
-            predictions.append([item.split('\n')[0] for item in sentences])
-            torch.cuda.empty_cache()
+            if 'chat' in args.model_id: predictions.append([item[:-4] if item.endswith("<\s>") else item for item in sentences])
+            else: predictions.append([item.split('\n')[0] for item in sentences])
     logging.info('Predictions finished')
 
     if isinstance(dataset['answers'][0], dict): answers = [item['text'] for item in dataset['answers']]
     else: answers = dataset['answers']
     predictions = list(chain(*predictions))
+    answers = answers[:len(predictions)]
     results = score.f1_score(predictions, answers)
     results['em'] = score.exact_match(predictions, answers)
     results['squad'] = (results['f1']+results['em'])/2
     results.update(score.rouge(predictions, answers))
     logging.info(results)
 
-    with open(f'f"/gpfs/users/boizardni/llm-distillation/benchmark/results/{args.model_id.split("/")[-1]}_{args.dataset_id}_{args.number_few_shot}shots.json', 'w') as json_file:
+    with open(f"{os.getenv('HOME')}/llm-distillation/benchmark/results/{args.model_id.split('/')[-1]}_{args.dataset_id}_{args.number_few_shot}shots.json", 'w') as json_file:
         json.dump(
             {
                 "model": args.model_id,
                 "dataset": args.dataset_id,
                 "context": args.context,
-                "title": args.title,
+                "title": has_title,
                 "number_few_shot": args.number_few_shot,
                 "samples_number": len(predictions),
-                "f1": results['f1'],
-                "precision": results['precision'],
-                "recall": results['recall'],
-                "em": results['em'],
-                "squad": results['squad'],
-                'rouge1': results['rouge1'],
-                'rouge2': results['rouge2'],
-                'rougeL': results['rougeL'],
-                'rougeLsum': results['rougeLsum']
+                **results,
             }, 
             json_file, indent=4
         )
@@ -133,7 +126,7 @@ if __name__ == "__main__":
 
     if args.save_predictions:
         prediction_data = [{'id': dataset['id'][index], 'prediction_text': item} for index, item in enumerate(predictions)]
-        with open(f"predictions_{args.model_id.split('/')[-1]}.json", 'w') as file:
+        with open(f"{os.getenv('HOME')}/llm-distillation/benchmark/results/predictions_{args.model_id.split('/')[-1]}_{args.dataset_id}_{args.number_few_shot}shots.json", 'w') as file:
             for prediction_dict in prediction_data:
                 json.dump(prediction_dict, file)
                 file.write('\n')
