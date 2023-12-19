@@ -1,3 +1,3 @@
 {
-    "qa": "You're an agent responding to questions in a reading comprehension activity. The answers consist of brief words extracted from the provided text."
+    "qa": "You are an agent answering questions as part of a reading comprehension activity. The answers consist of brief words extracted from the provided context text."
 }

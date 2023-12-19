@@ -32,6 +32,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset_id", type=str, help="Dataset hugging face ID")
     parser.add_argument("--split_name", type=str, default="test", help="Dataset split name")
     parser.add_argument("--context", action="store_true", help="To pre prompt an explanation of the task")
+    parser.add_argument("--title", action="store_true", help="To keep title in the prompt")
     parser.add_argument("--number_few_shot", type=int, default=0, help="Number of few-shot examples")
     parser.add_argument("--batch_size", type=int, default=4, help="Batch size")
     parser.add_argument("--num_workers", type=int, default=2, help="Number of data loader workers")
@@ -73,7 +74,7 @@ if __name__ == "__main__":
     logging.info('Processing dataset...')
     if args.from_disk: dataset = load_from_disk(args.dataset_id)
     else: dataset = load_dataset(args.dataset_id, split=args.split_name)
-    has_title = True if 'title' in dataset.column_names else False
+    has_title = True if 'title' in dataset.column_names and args.title else False
     dataset = dataset.map(lambda item: create_prompt_column(args.task, args.number_few_shot, item, has_title))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
@@ -82,7 +83,6 @@ if __name__ == "__main__":
 
     logging.info('Starting predictions...')
     predictions = []
-    i = 0
     with torch.no_grad():
         for batch in tqdm(dataloader):
             output = model.generate(
@@ -95,6 +95,8 @@ if __name__ == "__main__":
             )
             output = output[:, len(batch['input_ids'][0]):]
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
+            print(sentences)
+            exit()
             if 'chat' in args.model_id: predictions.append([item[:-4] if item.endswith("<\s>") else item for item in sentences])
             else: predictions.append([item.split('\n')[0] for item in sentences])
     logging.info('Predictions finished')
