@@ -74,3 +74,17 @@ def exact_match(predictions, answers):
 def rouge(predictions, answers):
     rouge_metric = evaluate.load('rouge')
     return rouge_metric.compute(predictions=predictions, references=answers)
+
+def bert_score(predictions, answers):
+    bertscore = evaluate.load("bertscore")
+    if isinstance(answers[0], dict):
+      f1, precision, recall = [0]*len(predictions), [0]*len(predictions), [0]*len(predictions)
+      for i, row in enumerate(answers):
+        for answer in row:
+          tmp = bertscore.compute(predictions=predictions[i], references=answer, lang="en", rescale_with_baseline=True)
+          f1[i] = max(f1[i], tmp['f1'])
+          precision[i] = max(precision[i], tmp['precision'])
+          recall[i] = max(recall[i], tmp['recall'])
+      return {'f1': f1, 'precision': precision, 'recall': recall}
+    else:
+      return bertscore.compute(predictions=predictions, references=answers, lang="en", rescale_with_baseline=True)

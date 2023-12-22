@@ -1,0 +1,70 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "dialogsum",
+  "dataset_size": 13253718,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/knkarthick/dialogsum@a968e7aee0602e257935f1321a02e4287f7d5848/train.csv": {
+      "num_bytes": 11321474,
+      "checksum": null
+    },
+    "hf://datasets/knkarthick/dialogsum@a968e7aee0602e257935f1321a02e4287f7d5848/validation.csv": {
+      "num_bytes": 441935,
+      "checksum": null
+    },
+    "hf://datasets/knkarthick/dialogsum@a968e7aee0602e257935f1321a02e4287f7d5848/test.csv": {
+      "num_bytes": 1353147,
+      "checksum": null
+    }
+  },
+  "download_size": 13116556,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "dialogue": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "summary": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "topic": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 26370274,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 11439628,
+      "num_examples": 12460,
+      "dataset_name": "dialogsum"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 446639,
+      "num_examples": 500,
+      "dataset_name": "dialogsum"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 1367451,
+      "num_examples": 1500,
+      "dataset_name": "dialogsum"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

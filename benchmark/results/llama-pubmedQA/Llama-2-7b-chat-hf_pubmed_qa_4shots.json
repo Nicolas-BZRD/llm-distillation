@@ -1,0 +1,20 @@
+{
+    "model": "meta-llama/Llama-2-7b-chat-hf",
+    "dataset": "/gpfs/users/boizardni/llm-distillation/datasets/processed/pubmed_qa",
+    "context": true,
+    "title": false,
+    "number_few_shot": 4,
+    "samples_number": 500,
+    "f1": 0.3220113135458768,
+    "precision": 0.37730612754333515,
+    "recall": 0.312255521708896,
+    "em": 0.006,
+    "squad": 0.1640056567729384,
+    "rouge1": 0.33926597689217286,
+    "rouge2": 0.13249699764273498,
+    "rougeL": 0.24608107137552204,
+    "rougeLsum": 0.24644693350563646,
+    "f1_bert": 0.3249307245090604,
+    "precision_bert": 0.3359534985702485,
+    "recall_bert": 0.3137576553300023
+}
