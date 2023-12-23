@@ -1,6 +1,6 @@
 import os
 import sys
-import datasets
+from datasets import load_dataset
 
 sys.path.append(f"{os.getenv('HOME')}/llm-distillation")
 from prompt.prompt import llama_chat_prompt
@@ -34,9 +34,6 @@ def tokenize(item, tokenizer):
 
 
 def get_split(_, tokenizer, split):
-    dataset = datasets.load_from_disk(f"{os.getenv('HOME')}/llm-distillation/datasets/llama_generated/FairytaleQA")
-    print(dataset)
-    print(split)
-    dataset = dataset[split]
+    dataset = load_dataset("Nicolas-BZRD/FairytaleQA_llama", split=split)
     dataset = dataset.map(lambda item: tokenize(item, tokenizer), remove_columns=list(dataset.features))
     return dataset
