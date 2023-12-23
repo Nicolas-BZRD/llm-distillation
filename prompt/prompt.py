@@ -14,7 +14,7 @@ def __load_module_from_py_file(py_file: str) -> object:
 
 def create_prompt(task: str, few_shot: int, *args):
     prompt = ""
-    if args[0].get('context', False):
+    if args[0].get('sys_prompt', False):
         with open(f"{os.getenv('HOME')}/llm-distillation/prompt/context.json") as json_file:
             prompt += json.load(json_file)[task]+"\n\n"
 

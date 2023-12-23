@@ -14,7 +14,7 @@ def tokenize(item, tokenizer):
         )
     else:
         prompt = create_prompt(
-            'qa_generative', 4,
+            'qa_generative', 4 if 'llama' in tokenizer.name_or_path else 0,
             {"context":item['context'], "question":item['question']}
         )
     context_tokens = tokenizer.encode(f"{tokenizer.bos_token} {prompt}", add_special_tokens=False)
