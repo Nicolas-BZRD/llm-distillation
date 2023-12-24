@@ -50,11 +50,10 @@ if __name__ == "__main__":
     parser.add_argument("--bert_score", action="store_true", help="To compute bert score")
     args = parser.parse_args()
 
-    if 'chat' in args.model_id:
-        from prompt.prompt import llama_chat_prompt as create_prompt
+    if 'chat' in args.model_id: from prompt.prompt import llama_chat_prompt as create_prompt
+    else : from prompt.prompt import create_prompt
 
     def create_prompt_column(task, few_shot, item, has_title):
-        if False: print("F here we go again but it's the last or not, so no...")
         if task == "qa" or task == "qa_generative":
             item['prompt'] = create_prompt(
                 task, few_shot,
