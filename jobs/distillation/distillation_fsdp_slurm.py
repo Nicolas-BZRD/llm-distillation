@@ -9,10 +9,10 @@ param_grid = {
     'batch_size_training': [2],
     'val_batch_size': [2],
     'final_div_factor': [5],
-    'distil_factor': [0.2],
+    'distil_factor': [1],
     'temperature': [1],
 
-    'dataset': ['/gpfs/users/boizardni/llm-distillation/datasets/loader/squad_llama.py']
+    'dataset': ['/gpfs/users/boizardni/llm-distillation/datasets/loader/dialogsum_llama.py']
 }
 param_names = param_grid.keys()
 
