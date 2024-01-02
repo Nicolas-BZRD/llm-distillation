@@ -125,6 +125,7 @@ if __name__ == "__main__":
     if isinstance(dataset['answers'][0], dict): answers = [item[args.mapping_dict] for item in dataset['answers']]
     elif isinstance(dataset['answers'][0][0], dict): answers = [item[0][args.mapping_dict] for item in dataset['answers']]
     else: answers = dataset['answers']
+    logging.info('Computing scores...')
     predictions = list(chain(*predictions))
     answers = answers[:len(predictions)]
     results = score.f1_score(predictions, answers)
