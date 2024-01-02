@@ -127,17 +127,11 @@ if __name__ == "__main__":
     elif isinstance(dataset['answers'][0][0], dict): answers = [item[0][args.mapping_dict] for item in dataset['answers']]
     else: answers = dataset['answers']
     predictions = list(chain(*predictions))
-    logging.info('1')
     answers = answers[:len(predictions)]
-    logging.info('2')
     results = score.f1_score(predictions, answers)
-    logging.info('3')
     results['em'] = score.exact_match(predictions, answers)
-    logging.info('4')
     results['squad'] = (results['f1']+results['em'])/2
-    logging.info('5')
     results.update(score.rouge(predictions, answers))
-    logging.info('6')
     if args.bert_score:
         results_bert = score.bert_score(predictions, answers)
         results["f1_bert"] = sum(results_bert["f1"])/len(results_bert["f1"])
