@@ -1,0 +1,17 @@
+{
+    "model": "meta-llama/Llama-2-7b-chat-hf",
+    "dataset": "qed",
+    "context": true,
+    "title": false,
+    "number_few_shot": 1,
+    "samples_number": 1355,
+    "f1": 0.5973690481995806,
+    "precision": 0.7116012935765487,
+    "recall": 0.5848956496395521,
+    "em": 0.4265682656826568,
+    "squad": 0.5119686569411187,
+    "rouge1": 0.6004728709497564,
+    "rouge2": 0.3652544956236679,
+    "rougeL": 0.5992467850521699,
+    "rougeLsum": 0.5991337550673159
+}

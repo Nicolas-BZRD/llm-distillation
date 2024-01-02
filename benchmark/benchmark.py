@@ -47,6 +47,7 @@ if __name__ == "__main__":
     parser.add_argument("--from_disk", action="store_true", help="Load dataset from disk")
     parser.add_argument("--task", type=str, default="qa", help="Benchmark type (qa, qa_generative, summarization)")
     parser.add_argument("--mapping", type=str, default="", help="JSON file to map dataset column name")
+    parser.add_argument("--mapping_dict", type=str, default="text", help="Field name in the answer dictionary.")
     parser.add_argument("--bert_score", action="store_true", help="To compute bert score")
     args = parser.parse_args()
 
@@ -121,7 +122,8 @@ if __name__ == "__main__":
             predictions.append([item.split('\n')[0] for item in sentences])
     logging.info('Predictions finished')
 
-    if isinstance(dataset['answers'][0], dict): answers = [item['text'] for item in dataset['answers']]
+    if isinstance(dataset['answers'][0], dict): answers = [item[args.mapping_dict] for item in dataset['answers']]
+    elif isinstance(dataset['answers'][0][0], dict): answers = [item[0][args.mapping_dict] for item in dataset['answers']]
     else: answers = dataset['answers']
     predictions = list(chain(*predictions))
     answers = answers[:len(predictions)]
