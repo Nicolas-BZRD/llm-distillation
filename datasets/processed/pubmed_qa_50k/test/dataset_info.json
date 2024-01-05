@@ -1,0 +1,63 @@
+{
+  "builder_name": "pubmed_qa",
+  "citation": "@inproceedings{jin2019pubmedqa,\n  title={PubMedQA: A Dataset for Biomedical Research Question Answering},\n  author={Jin, Qiao and Dhingra, Bhuwan and Liu, Zhengping and Cohen, William and Lu, Xinghua},\n  booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},\n  pages={2567--2577},\n  year={2019}\n}\n",
+  "config_name": "pqa_labeled",
+  "dataset_name": "pubmed_qa",
+  "dataset_size": 2088898,
+  "description": "PubMedQA is a novel biomedical question answering (QA) dataset collected from PubMed abstracts.\nThe task of PubMedQA is to answer research questions with yes/no/maybe (e.g.: Do preoperative\nstatins reduce atrial fibrillation after coronary artery bypass grafting?) using the corresponding abstracts.\nPubMedQA has 1k expert-annotated, 61.2k unlabeled and 211.3k artificially generated QA instances.\nEach PubMedQA instance is composed of (1) a question which is either an existing research article\ntitle or derived from one, (2) a context which is the corresponding abstract without its conclusion,\n(3) a long answer, which is the conclusion of the abstract and, presumably, answers the research question,\nand (4) a yes/no/maybe answer which summarizes the conclusion.\nPubMedQA is the first QA dataset where reasoning over biomedical research texts, especially their\nquantitative contents, is required to answer the questions.\n",
+  "download_checksums": {
+    "https://raw.githubusercontent.com/pubmedqa/pubmedqa/master/data/ori_pqal.json": {
+      "num_bytes": 2584787,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/pubmed_qa/resolve/607a104f8f2bdc1db8e9515d325a83c6aa35d4c1/data/ori_pqau.json": {
+      "num_bytes": 151920084,
+      "checksum": null
+    },
+    "https://huggingface.co/datasets/pubmed_qa/resolve/607a104f8f2bdc1db8e9515d325a83c6aa35d4c1/data/ori_pqaa.json": {
+      "num_bytes": 533377829,
+      "checksum": null
+    }
+  },
+  "download_size": 687882700,
+  "features": {
+    "pubid": {
+      "dtype": "int32",
+      "_type": "Value"
+    },
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "context": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "answers": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "final_decision": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "https://pubmedqa.github.io/",
+  "license": "MIT License\nCopyright (c) 2019 pubmedqa\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+  "size_in_bytes": 689971598,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 2088898,
+      "num_examples": 1000,
+      "dataset_name": "pubmed_qa"
+    }
+  },
+  "version": {
+    "version_str": "1.0.0",
+    "description": "",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}

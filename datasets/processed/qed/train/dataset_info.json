@@ -1,0 +1,179 @@
+{
+  "builder_name": "qed",
+  "citation": "@misc{lamm2020qed,\n    title={QED: A Framework and Dataset for Explanations in Question Answering},\n    author={Matthew Lamm and Jennimaria Palomaki and Chris Alberti and Daniel Andor and Eunsol Choi and Livio Baldini Soares and Michael Collins},\n    year={2020},\n    eprint={2009.06354},\n    archivePrefix={arXiv},\n    primaryClass={cs.CL}\n}\n",
+  "config_name": "qed",
+  "dataset_name": "qed",
+  "dataset_size": 10186099,
+  "description": "QED, is a linguistically informed, extensible framework for explanations in question answering. A QED explanation specifies the relationship between a question and answer according to formal semantic notions such as referential equality, sentencehood, and entailment. It is an expertannotated dataset of QED explanations built upon a subset of the Google Natural Questions dataset.\n",
+  "download_checksums": {
+    "https://raw.githubusercontent.com/google-research-datasets/QED/master/qed-train.jsonlines": {
+      "num_bytes": 11839736,
+      "checksum": null
+    },
+    "https://raw.githubusercontent.com/google-research-datasets/QED/master/qed-dev.jsonlines": {
+      "num_bytes": 2244232,
+      "checksum": null
+    }
+  },
+  "download_size": 14083968,
+  "features": {
+    "example_id": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "title_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "url": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "paragraph_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sentence_starts": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "original_nq_answers": [
+      {
+        "start": {
+          "dtype": "int32",
+          "_type": "Value"
+        },
+        "end": {
+          "dtype": "int32",
+          "_type": "Value"
+        },
+        "string": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    ],
+    "annotation": {
+      "referential_equalities": [
+        {
+          "question_reference": {
+            "start": {
+              "dtype": "int32",
+              "_type": "Value"
+            },
+            "end": {
+              "dtype": "int32",
+              "_type": "Value"
+            },
+            "string": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "sentence_reference": {
+            "start": {
+              "dtype": "int32",
+              "_type": "Value"
+            },
+            "end": {
+              "dtype": "int32",
+              "_type": "Value"
+            },
+            "bridge": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "string": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        }
+      ],
+      "answer": [
+        {
+          "sentence_reference": {
+            "start": {
+              "dtype": "int32",
+              "_type": "Value"
+            },
+            "end": {
+              "dtype": "int32",
+              "_type": "Value"
+            },
+            "bridge": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "string": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "paragraph_reference": {
+            "start": {
+              "dtype": "int32",
+              "_type": "Value"
+            },
+            "end": {
+              "dtype": "int32",
+              "_type": "Value"
+            },
+            "string": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        }
+      ],
+      "explanation_type": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "selected_sentence": {
+        "start": {
+          "dtype": "int32",
+          "_type": "Value"
+        },
+        "end": {
+          "dtype": "int32",
+          "_type": "Value"
+        },
+        "string": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    }
+  },
+  "homepage": "https://github.com/google-research-datasets/QED",
+  "license": "",
+  "size_in_bytes": 24270067,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 8602028,
+      "num_examples": 7638,
+      "dataset_name": "qed"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 1584071,
+      "num_examples": 1355,
+      "dataset_name": "qed"
+    }
+  },
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}

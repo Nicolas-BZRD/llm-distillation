@@ -107,7 +107,7 @@ if __name__ == "__main__":
             output = model.generate(
                 batch['input_ids'].to(device),
                 attention_mask=batch['attention_mask'].to(device),
-                max_new_tokens=80,
+                max_new_tokens=120,
                 do_sample=False,
                 temperature=1,
                 top_p=1
