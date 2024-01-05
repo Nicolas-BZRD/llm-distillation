@@ -35,9 +35,12 @@ def create_few_shot(number_few_shot: int, *args):
   shot = []
   for i in range(number_few_shot):
     shot.append(
-      f"Medical paper: {data[i]['context']}\nQuestion: {data[i]['question']}\nAnswer: {data[i]['answers']}",
+      [
+        f"Medical paper: {data[i]['context']}\nQuestion: {data[i]['question']}",
+        f"Answer: {data[i]['answers']}"
+      ]
     )
   return shot
 
 def create_request(title="", context="", question=""):
-  return f"Medical paper: {context}\nQuestion: {question}\nAnswer:"
+  return [f"Medical paper: {context}\nQuestion: {question}", "Answer:"]

@@ -25,9 +25,12 @@ def create_few_shot(number_few_shot: int, *args):
   shot = []
   for i in range(number_few_shot):
     shot.append(
-        f"Dialogue: {data[i]['context']}\nSummary: {data[i]['answers']}",
+      [
+        f"Dialogue: {data[i]['context']}",
+        f"Summary: {data[i]['answers']}"
+      ]
     )
   return shot
 
 def create_request(title="", context="", question=""):
-  return f"Dialogue: {context}\nSummary:"
+  return [f"Dialogue: {context}", "Summary:"]
