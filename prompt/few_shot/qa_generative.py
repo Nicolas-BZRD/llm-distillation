@@ -36,10 +36,10 @@ data = [
   }
 ]
 
-def create_few_shot(number_few_shot: int, *args):
+def create_few_shot(number_few_shot: int, **args):
   shot = []
   for i in range(number_few_shot):
-    if args[0].get('title', False):
+    if args.get('title', False):
       shot.append(
         [
           f"Title: {data[i]['title']}\nContext: {data[i]['context']}\nQuestion: {data[i]['question']}",
@@ -55,6 +55,6 @@ def create_few_shot(number_few_shot: int, *args):
       )
   return shot
 
-def create_request(title="", context="", question=""):
+def create_request(title="", context="", question="", **args):
   if title: return [f"Title: {title}\nContext: {context}\nQuestion: {question}", "Answer:"]
   else: return [f"Context: {context}\nQuestion: {question}", "Answer:"]

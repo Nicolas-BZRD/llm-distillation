@@ -1,0 +1,19 @@
+{
+    "model": "meta-llama/Llama-2-7b-chat-hf",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 1007,
+    "f1": 0.33131680908589717,
+    "precision": 0.25861217248702395,
+    "recall": 0.6378509963320762,
+    "em": 0.027805362462760674,
+    "squad": 0.17956108577432892,
+    "rouge1": 0.3413890513483232,
+    "rouge2": 0.21653236132856435,
+    "rougeL": 0.32429347359360666,
+    "rougeLsum": 0.3246666251615864,
+    "f1_bert": 0.22278436036661142,
+    "precision_bert": 0.16978088958598023,
+    "recall_bert": 0.27730032460487986
+}

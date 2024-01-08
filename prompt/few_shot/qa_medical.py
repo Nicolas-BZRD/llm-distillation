@@ -31,7 +31,7 @@ data = [
   },
 ]
 
-def create_few_shot(number_few_shot: int, *args):
+def create_few_shot(number_few_shot: int, **args):
   shot = []
   for i in range(number_few_shot):
     shot.append(
@@ -42,5 +42,5 @@ def create_few_shot(number_few_shot: int, *args):
     )
   return shot
 
-def create_request(title="", context="", question=""):
+def create_request(context="", question="", **args):
   return [f"Medical paper: {context}\nQuestion: {question}", "Answer:"]

@@ -1,0 +1,19 @@
+{
+    "model": "tiiuae/falcon-7b-instruct",
+    "dataset": "GEM/FairytaleQA",
+    "title": true,
+    "number_few_shot": 0,
+    "samples_number": 1007,
+    "f1": 0.09378850363611309,
+    "precision": 0.06683769161976062,
+    "recall": 0.4485434067896986,
+    "em": 0.004965243296921549,
+    "squad": 0.04937687346651732,
+    "rouge1": 0.11144455297576852,
+    "rouge2": 0.047453079881776036,
+    "rougeL": 0.10543199939740203,
+    "rougeLsum": 0.10538750395164123,
+    "f1_bert": -0.04766582659650442,
+    "precision_bert": -0.18736044914262714,
+    "recall_bert": 0.1034997308547812
+}

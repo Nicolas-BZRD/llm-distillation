@@ -1,0 +1,19 @@
+{
+    "model": "meta-llama/Llama-2-7b-chat-hf",
+    "dataset": "/gpfs/users/boizardni/llm-distillation/datasets/processed/qed",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 1355,
+    "f1": 0.5709473517439418,
+    "precision": 0.5986550154645082,
+    "recall": 0.6796479571211412,
+    "em": 0.3549815498154982,
+    "squad": 0.46296445077972004,
+    "rouge1": 0.5848605712250744,
+    "rouge2": 0.3806232873991766,
+    "rougeL": 0.5782393060028046,
+    "rougeLsum": 0.5789711010614622,
+    "f1_bert": 0.4786004431693885,
+    "precision_bert": 0.4774191493877275,
+    "recall_bert": 0.4872030154010195
+}

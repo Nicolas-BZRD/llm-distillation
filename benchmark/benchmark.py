@@ -51,24 +51,37 @@ if __name__ == "__main__":
     parser.add_argument("--bert_score", action="store_true", help="To compute bert score")
     args = parser.parse_args()
 
-    if 'chat' in args.model_id: from prompt.prompt import llama_chat_prompt as create_prompt
-    else : from prompt.prompt import create_prompt
+    if 'chat' in args.model_id or "instruct" in args.model_id.lower():
+        from prompt.prompt import create_chat_prompt as create_prompt
+        is_chat = True
+    else :
+        from prompt.prompt import create_prompt
+        is_chat = False
 
     def create_prompt_column(task, few_shot, item, has_title):
         if task == "qa" or task == "qa_generative":
             item['prompt'] = create_prompt(
                 task, few_shot,
-                {"title":item['title'] if has_title else "", "context":item['context'], "question":item['question']}
+                title = item['title'] if has_title else "",
+                context = item['context'],
+                question = item['question'],
+                sys_user = True if "mistralai" in args.model_id or args.context else False,
+                chat_template = tokenizer.apply_chat_template if is_chat else None
             )
         elif task == "qa_medical":
              item['prompt'] = create_prompt(
                 task, few_shot,
-                {"context":item['context'], "question":item['question']}
+                context = item['context'],
+                question = item['question'],
+                sys_user = True if "mistralai" in args.model_id or args.context else False,
+                chat_template = tokenizer.apply_chat_template if is_chat else None
             )
         elif task == "summary_dialogue":
             item['prompt'] = create_prompt(
                 task, few_shot,
-                {"context":item['context']}
+                context = item['context'],
+                sys_user = True if "mistralai" in args.model_id or args.context else False,
+                chat_template = tokenizer.apply_chat_template if is_chat else None
             )
         return item
     
@@ -79,7 +92,7 @@ if __name__ == "__main__":
 
     logging.info(f'Loading tokenizer...')
     tokenizer = AutoTokenizer.from_pretrained(args.model_tokenizer if args.model_tokenizer else args.model_id)
-    tokenizer.add_special_tokens({"pad_token":"<pad>"})
+    tokenizer.add_special_tokens({"pad_token":tokenizer.eos_token})
     tokenizer.padding_side = 'left'
     logging.info(f'Tokenizer loaded.')
 
@@ -88,6 +101,7 @@ if __name__ == "__main__":
     else: model = AutoModelForCausalLM.from_pretrained(args.model_id).to(device)
     model.resize_token_embeddings(len(tokenizer))
     model.config.pad_token_id = tokenizer.pad_token_id
+    model.eval()
     logging.info('Model loaded.')
 
     logging.info('Processing dataset...')
@@ -99,6 +113,7 @@ if __name__ == "__main__":
     has_title = True if 'title' in dataset.column_names and args.title else False
     dataset = dataset.map(lambda item: create_prompt_column(args.task, args.number_few_shot, item, has_title))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
+    print(args.model_id)
     print(dataset['prompt'][0])
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
     dataloader = DataLoader(dataset, batch_size=args.batch_size, num_workers=args.num_workers)
@@ -111,15 +126,17 @@ if __name__ == "__main__":
             output = model.generate(
                 batch['input_ids'].to(device),
                 attention_mask=batch['attention_mask'].to(device),
-                max_new_tokens=80,
+                max_new_tokens=150,
                 do_sample=False,
-                temperature=1,
-                top_p=1
+                eos_token_id= [193, tokenizer.eos_token_id] if "falcon" in args.model_id else tokenizer.eos_token_id
             )
             output = output[:, len(batch['input_ids'][0]):]
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
-            if 'chat' in args.model_id: sentences = [item[:-4] if item.endswith("/s") else item for item in sentences]
-            predictions.append([item.split('\n')[0] for item in sentences])
+            for i in range(len(sentences)):
+                sentences[i] = sentences[i].split('\n')[0].strip()
+                if "falcon" in args.model_id and sentences[i].endswith("<|im_end|>"):
+                    sentences[i] = sentences[i][:-10]
+            predictions.append(sentences)
     logging.info('Predictions finished')
 
     logging.info('Computing scores...')
@@ -139,12 +156,12 @@ if __name__ == "__main__":
         results["recall_bert"] = sum(results_bert["recall"])/len(results_bert["recall"])
     logging.info(results)
 
-    with open(f"{os.getenv('HOME')}/llm-distillation/benchmark/results/{args.model_id.split('/')[-1]}_{args.dataset_id.split('/')[-1]}_{args.number_few_shot}shots.json", 'w') as json_file:
+    titled_folder = "titled" if has_title else "untitled"
+    with open(f"{os.getenv('HOME')}/llm-distillation/benchmark/results/{args.model_id.split('/')[-1]}/{args.dataset_id.split('/')[-1]}/{titled_folder}/{args.number_few_shot}shots.json", 'w') as json_file:
         json.dump(
             {
                 "model": args.model_id,
                 "dataset": args.dataset_id,
-                "context": args.context,
                 "title": has_title,
                 "number_few_shot": args.number_few_shot,
                 "samples_number": len(predictions),
@@ -156,7 +173,7 @@ if __name__ == "__main__":
 
     if args.save_predictions:
         prediction_data = [{'answers': dataset['answers'][index], 'prediction_text': item} for index, item in enumerate(predictions)]
-        with open(f"{os.getenv('HOME')}/llm-distillation/benchmark/results/predictions_{args.model_id.split('/')[-1]}_{args.dataset_id.split('/')[-1]}_{args.number_few_shot}shots.json", 'w') as file:
+        with open(f"{os.getenv('HOME')}/llm-distillation/benchmark/results/{args.model_id.split('/')[-1]}/{args.dataset_id.split('/')[-1]}/{titled_folder}/predictions_{args.number_few_shot}shots.json", 'w') as file:
             for prediction_dict in prediction_data:
                 json.dump(prediction_dict, file)
                 file.write('\n')

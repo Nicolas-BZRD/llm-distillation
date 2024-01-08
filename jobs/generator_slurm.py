@@ -2,8 +2,7 @@ import subprocess
 from itertools import product
 
 param_grid = {
-    'model_id': ['meta-llama/Llama-2-7b-chat-hf',],
-    'model_tokenizer': ["meta-llama/Llama-2-7b-chat-hf"],
+    'model_id': ['meta-llama/Llama-2-7b-chat-hf', ],
     'dataset_id': ['/gpfs/users/boizardni/llm-distillation/datasets/processed/pubmed_qa_50k'],
     'split_name': ['train'],
     'number_few_shot': [3],

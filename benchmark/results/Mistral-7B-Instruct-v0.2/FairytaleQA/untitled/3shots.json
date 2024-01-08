@@ -1,0 +1,19 @@
+{
+    "model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 1007,
+    "f1": 0.4043551269163346,
+    "precision": 0.3607537839869433,
+    "recall": 0.6279007701259136,
+    "em": 0.1002979145978153,
+    "squad": 0.25232652075707496,
+    "rouge1": 0.42247879697665847,
+    "rouge2": 0.303981501500339,
+    "rougeL": 0.4083667409648566,
+    "rougeLsum": 0.4079818237463002,
+    "f1_bert": 0.3060146491401938,
+    "precision_bert": 0.2868249733140371,
+    "recall_bert": 0.32746611349174826
+}

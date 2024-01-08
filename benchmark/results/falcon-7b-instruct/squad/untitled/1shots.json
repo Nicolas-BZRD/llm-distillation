@@ -1,0 +1,19 @@
+{
+    "model": "tiiuae/falcon-7b-instruct",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 1,
+    "samples_number": 10570,
+    "f1": 0.5442552465463897,
+    "precision": 0.5337090247985501,
+    "recall": 0.6778264528714357,
+    "em": 0.41333964049195837,
+    "squad": 0.478797443519174,
+    "rouge1": 0.5510182441892912,
+    "rouge2": 0.32813675894243644,
+    "rougeL": 0.5469696497883008,
+    "rougeLsum": 0.5470752648587864,
+    "f1_bert": 0.5134510071944661,
+    "precision_bert": 0.46298279165611594,
+    "recall_bert": 0.5774753822576253
+}

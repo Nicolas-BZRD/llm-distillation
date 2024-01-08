@@ -1,0 +1,19 @@
+{
+    "model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "dataset": "/gpfs/users/boizardni/llm-distillation/datasets/processed/pubmed_qa",
+    "title": false,
+    "number_few_shot": 5,
+    "samples_number": 500,
+    "f1": 0.31027776825063175,
+    "precision": 0.2806470921347785,
+    "recall": 0.40009548834620295,
+    "em": 0.0,
+    "squad": 0.15513888412531587,
+    "rouge1": 0.3299609770509112,
+    "rouge2": 0.11436311487276224,
+    "rougeL": 0.2248027504509673,
+    "rougeLsum": 0.22505156604883675,
+    "f1_bert": 0.29428556192526595,
+    "precision_bert": 0.24200708688423037,
+    "recall_bert": 0.34733341056108474
+}

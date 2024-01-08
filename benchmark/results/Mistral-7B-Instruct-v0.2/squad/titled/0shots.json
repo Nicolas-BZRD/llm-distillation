@@ -1,0 +1,19 @@
+{
+    "model": "mistralai/Mistral-7B-Instruct-v0.2",
+    "dataset": "squad",
+    "title": true,
+    "number_few_shot": 0,
+    "samples_number": 10570,
+    "f1": 0.46519863773253656,
+    "precision": 0.3744694966851061,
+    "recall": 0.9469540876235881,
+    "em": 0.17029328287606432,
+    "squad": 0.31774596030430047,
+    "rouge1": 0.46068537992445124,
+    "rouge2": 0.3294682540458005,
+    "rougeL": 0.45613371094925004,
+    "rougeLsum": 0.4562548489318593,
+    "f1_bert": 0.33726191855564286,
+    "precision_bert": 0.2192552632934123,
+    "recall_bert": 0.4680761640151357
+}
