@@ -6,3 +6,4 @@ cache*
 datasets/generator/generated/Llama-2-7b-hf_squad_train_2s_0context
 train/models/finetuned
 train/models/distillation
+datasets/hf/*
