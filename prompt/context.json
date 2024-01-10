@@ -1,6 +1,6 @@
 {
-    "qa": "You are an agent answering questions as part of a reading comprehension activity. You must read and understand the context text step by step. Answers are brief and consist exclusively of continuous words taken from the context text provided.",
-    "qa_generative": "You are an expert agent in reading comprehension (question answering). You must read and understand the contextual text step by step, then answer the question. The answer must be brief.",
+    "qa": "You are an agent answering questions as part of a reading comprehension activity. You must read and understand the context text step by step. Answers consist of 0 to 5 words, exclusively continuous words taken from the contextual text provided.",
+    "qa_generative": "You are an expert agent in reading comprehension (question answering). You must read and understand the contextual text step by step, then answer the question. The answer must be brief between 0 to 15 words",
     "qa_medical": "You are a medical expert reading a medical research paper. You must answer the question based exclusively on the information given. The answer is the summary of the research paper's conclusion. This conclusion should be as short as possible, straight to the point and without re-explaining the experimental parts in detail.",
     "summary_dialogue": "You're an expert at summarizing dialogues. You have to read the dialogue between two people and summarize it in no more than one sentence. The summary should be as short as possible, not re-explaining the dialogue in detail and using the person's name when implicitly mentioned."
 }

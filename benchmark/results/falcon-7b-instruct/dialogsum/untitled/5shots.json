@@ -1,0 +1,19 @@
+{
+    "model": "tiiuae/falcon-7b-instruct",
+    "dataset": "/gpfs/users/boizardni/llm-distillation/datasets/processed/dialogsum",
+    "title": false,
+    "number_few_shot": 5,
+    "samples_number": 500,
+    "f1": 0.21629424320726742,
+    "precision": 0.19484561072863418,
+    "recall": 0.41668314822931923,
+    "em": 0.0,
+    "squad": 0.10814712160363371,
+    "rouge1": 0.23065803375450739,
+    "rouge2": 0.08597107196839307,
+    "rougeL": 0.19693649413093045,
+    "rougeLsum": 0.19674357442230211,
+    "f1_bert": 0.24973903679847717,
+    "precision_bert": 0.15844572537048954,
+    "recall_bert": 0.36046633863635363
+}

@@ -16,7 +16,7 @@
 {"answers": "try to catch the bannock .", "prediction_text": "They will get hold of it and divide it between them, and the tailor will fetch them all a drink of milk."}
 {"answers": "eat the bannock .", "prediction_text": "They wanted to divide it between themselves and drink milk."}
 {"answers": "dodged them round and round the fire , and at last it got safely out of the door and ran down the road .", "prediction_text": "Dodged them round and round the fire, and at last it got safely out of the door and ran down the road."}
-{"answers": "great shears , line measure , and the saucer full of pins .", "prediction_text": "The tailor's shears."}
+{"answers": "great shears , line measure , and the saucer full of pins .", "prediction_text": "The shears."}
 {"answers": "a tiny cottage by the roadside .", "prediction_text": "The glass mountain."}
 {"answers": "delighted .", "prediction_text": "He will be very surprised and delighted."}
 {"answers": "grab the bannock .", "prediction_text": "\" grip it, my woman, grip it. \""}
@@ -25,14 +25,14 @@
 {"answers": "cakes .", "prediction_text": "cream and cakes."}
 {"answers": "she had to fix the kirn .", "prediction_text": "The goodwife was in a hurry."}
 {"answers": "the little bannock had no wish to be eaten up by the miller .", "prediction_text": "The miller was so busy that he did not notice the bannock."}
-{"answers": "the miller was so busy .", "prediction_text": "The miller was so busy making horse - shoe nails."}
+{"answers": "the miller was so busy .", "prediction_text": "The little bannock had no wish to be eaten up by the miller."}
 {"answers": "made horse - shoe nails .", "prediction_text": "He looked up at the wee bannock."}
 {"answers": "disappointed .", "prediction_text": "The smith was very angry and disappointed."}
 {"answers": "flung his heavy hammer at it .", "prediction_text": "He picked up his hammer and ran after it."}
 {"answers": "he missed his aim .", "prediction_text": "The bannock came to a farmhouse with a great stack of peats standing at the back of it. In it went, and ran to the fireside. In this house the master had all the lint spread out on the floor, and was cloving it with an iron rod. The mistress was heckling what he had already cloven."}
-{"answers": "a farmhouse .", "prediction_text": "The bannock ran to the farmhouse with the lint spread out on the floor, and the master was cloving it with an iron rod. The mistress was heckling what he had already cloven."}
+{"answers": "a farmhouse .", "prediction_text": "The bannock ran to the farmhouse with the lint spread out on the floor, and the mistress heckling what the smith had already cloven. The little bannock was so frightened that it ran to the fireplace, where it was safe and warm."}
 {"answers": "it looked rare and good .", "prediction_text": "He wanted to eat it because it looked so good."}
-{"answers": "surprised .", "prediction_text": "He was very angry and he said \" oh, janet, \""}
+{"answers": "surprised .", "prediction_text": "He was very angry and he threw his cloving - rod at the bannock."}
 {"answers": "split the bannock in half .", "prediction_text": "They wanted to eat it."}
 {"answers": "her heckle .", "prediction_text": "A heckle."}
 {"answers": "a little cottage standing among the heather .", "prediction_text": "under the chair."}
@@ -40,16 +40,16 @@
 {"answers": "jock ran into the dark corner behind the chair ; but , in his hurry , he tripped and fell .", "prediction_text": "He tripped and fell."}
 {"answers": "a shepherd 's cottage on the other side .", "prediction_text": "The shepherd's cottage."}
 {"answers": "it wanted to warm itself .", "prediction_text": "to warm itself."}
-{"answers": "they wanted to eat the bannock with their porridge .", "prediction_text": "to eat it for dinner."}
+{"answers": "they wanted to eat the bannock with their porridge .", "prediction_text": "to eat."}
 {"answers": "his bonnet .", "prediction_text": "His bonnet."}
 {"answers": "he did not have enough to eat at supper .", "prediction_text": "He wanted to eat it for his supper."}
 {"answers": "he was feeling cold without his coat .", "prediction_text": "He was cold without his coat."}
 {"answers": "he threw it on the bannock .", "prediction_text": "He was too old to run."}
 {"answers": "a fox 's hole .", "prediction_text": "The fox's hole."}
 {"answers": "it was so dark that it never saw that there was a fox 's hole there .", "prediction_text": "The fox was very glad to see it."}
-{"answers": "the fox ate the bannock .", "prediction_text": "The fox was very glad to see it."}
+{"answers": "the fox ate the bannock .", "prediction_text": "The fox was very glad to see it, and snapped it through the middle with his teeth. The poor wee bannock was cast down into the fox's hole, and the fox got it after all."}
 {"answers": "golden hair .", "prediction_text": "golden hair."}
-{"answers": "she was so beautiful .", "prediction_text": "because she was so beautiful that no one could find a queen as beautiful as she was."}
+{"answers": "she was so beautiful .", "prediction_text": "because she was so beautiful that no one could find a queen as beautiful as her."}
 {"answers": "she felt that she must soon die .", "prediction_text": "She died."}
 {"answers": "the king .", "prediction_text": "The king's wife."}
 {"answers": "so that they may have a queen .", "prediction_text": "because the king was not to be comforted."}
@@ -58,8 +58,8 @@
 {"answers": "she was exactly like her dead mother .", "prediction_text": "because she was just like her dead mother."}
 {"answers": "his daughter 's husband shall be king .", "prediction_text": "She will be queen."}
 {"answers": "not at all pleased .", "prediction_text": "She was not at all pleased."}
-{"answers": "three dresses .", "prediction_text": "a cloak made of a thousand different kinds of skin."}
-{"answers": "every animal .", "prediction_text": "The skin of a thousand different kinds of animals."}
+{"answers": "three dresses .", "prediction_text": "A cloak made of a thousand different kinds of skin ; every animal in your kingdom must give a bit of his skin to it."}
+{"answers": "every animal .", "prediction_text": "The skin of every animal in the kingdom."}
 {"answers": "catch one of every kind of beast in the kingdom .", "prediction_text": "To catch one of every kind of beast in the kingdom and get a bit of its skin to make the cloak of a thousand pieces of fur."}
 {"answers": "the most skilled maidens .", "prediction_text": "The maidens in the kingdom."}
 {"answers": "the king commanded the cloak to be brought to him , and he spread it out before the princess .", "prediction_text": "The princess was married to the king, and they lived happily ever after."}
@@ -71,13 +71,13 @@
 {"answers": "inside a hollow tree .", "prediction_text": "In a hollow tree."}
 {"answers": "went out and travelled the whole night .", "prediction_text": "She fell asleep in a hollow tree."}
 {"answers": "the king .", "prediction_text": "The king."}
-{"answers": "hunt .", "prediction_text": "He hunted in the wood. He was looking for a wild animal that he had never seen before. The king and his huntsmen found a tree hollowed out by a wild animal. They were amazed at the animal's fur, which was made of a thousand pieces of fur. The king said, 'See if you can catch it alive and fasten it to the cart.' The princess was taken by the huntsmen and put in the cart. She was frightened and cried out to them, 'I am a poor child, forsaken by my father and mother. Take pity on me and let me go with you.' The king and his huntsmen said, 'Many-furred creature, you can work in the kitchen"}
-{"answers": "sniffed .", "prediction_text": "They sniffed and ran around it."}
+{"answers": "hunt .", "prediction_text": "He hunted in the wood. He was looking for a wild animal that he had never seen before. The king and his huntsmen found a tree hollowed out by a wild animal. They were amazed to see a creature with a thousand pieces of fur. The king said, 'See if you can catch it alive.' The huntsmen tried to catch it, but the creature was too fast. The king said, 'Take it with you and fasten it to the cart.' The creature was a poor child, forsaken by her parents. The king and his huntsmen took her with them. They put her in a tiny room under the stairs, where no daylight came. She did all the dirty work in the kitchen."}
+{"answers": "sniffed .", "prediction_text": "They sniffed and barked."}
 {"answers": "a wonderful animal that they did n't know .", "prediction_text": "A wild beast."}
 {"answers": "catch it alive .", "prediction_text": "'see if you can catch it alive, and then fasten it to the cart, and we will take it with us.'"}
 {"answers": "she awoke .", "prediction_text": "She was taken to the kitchen and put to work. She was a poor child, forsaken by her father and mother. The king's daughter was going to be a kitchen maid."}
 {"answers": "frightened .", "prediction_text": "She was frightened."}
-{"answers": "work in the kitchen .", "prediction_text": "'it can be used for a fur coat. '"}
+{"answers": "work in the kitchen .", "prediction_text": "'take care of the kitchen and sweep up the ashes.'"}
 {"answers": "back to the palace .", "prediction_text": "The creature was taken to the palace, and the huntsmen were sent to the woods to hunt for the wild beast. The creature was taken to the palace, and the huntsmen were sent to the woods to hunt for the wild beast."}
 {"answers": "a tiny room under the stairs .", "prediction_text": "In the hollow tree."}
 {"answers": "carried wood and water , poked the fire , washed vegetables , plucked fowls , swept up the ashes , and did all the dirty work .", "prediction_text": "She did all the dirty work."}
@@ -95,7 +95,7 @@
 {"answers": "dance .", "prediction_text": "He will ask her to be his queen."}
 {"answers": "delighted .", "prediction_text": "The king was delighted to see her again."}
 {"answers": "the maiden disappeared again so quickly that the king could not see which way she went .", "prediction_text": "the king could not see which way she went."}
-{"answers": "have boots thrown at her head .", "prediction_text": "to have boots thrown at her head."}
+{"answers": "have boots thrown at her head .", "prediction_text": "to cook the king's soup."}
 {"answers": "a witch .", "prediction_text": "a witch."}
 {"answers": "she always put something in the soup , so that it is much better and tastes nicer to the king than any that he cooked .", "prediction_text": "because she always put something in the soup, so that it was better and tasted nicer to the king than any that he cooked."}
 {"answers": "she begged hard .", "prediction_text": "because she begged hard."}
@@ -108,30 +108,30 @@
 {"answers": "he was mourning his first wife .", "prediction_text": "because he was so in love with his late queen that he could not even think of marrying again."}
 {"answers": "she had no say in his decision .", "prediction_text": "because she was not as beautiful as her mother."}
 {"answers": "he made her the dresses and coat .", "prediction_text": "because the king was a very wise man, and he knew that the princess would not be able to escape from him."}
-{"answers": "surprised .", "prediction_text": "She will be very happy and excited."}
-{"answers": "they could smell something in the tree .", "prediction_text": "the king's dogs were barking because they had seen a wild beast in the tree."}
+{"answers": "surprised .", "prediction_text": "The princess will be very happy and excited to marry the king. She will be very happy to be able to fulfill her dream of marrying him and will be very excited to be able to be with him and be his wife. She will be very happy to be able to be with him and be his wife and will be very excited to be able to be with him and be his wife. She will be very happy to be able to be with him and be his wife. She will be very happy to be able to be with him and be his wife. She will be very happy to be able to be with him and be his wife. She will be very happy to be able to be with him and be his wife. She will be very"}
+{"answers": "they could smell something in the tree .", "prediction_text": "the king's dogs were barking because they had seen a wild beast in the hollow tree."}
 {"answers": "she was discovered by the huntsmen .", "prediction_text": "She was frightened because she thought the king was going to kill her."}
-{"answers": "she did not want the king to find her .", "prediction_text": "She was afraid that they would kill her and her family."}
+{"answers": "she did not want the king to find her .", "prediction_text": "She was afraid that they would kill her and the king's son."}
 {"answers": "he heard about a fair maiden there .", "prediction_text": "to see if they were all there."}
 {"answers": "to give a hint to her father about her whereabouts .", "prediction_text": "to make the soup taste better."}
 {"answers": "she did not want the king to know she was his daughter .", "prediction_text": "The ring was in the soup."}
 {"answers": "he found a golden spinning - wheel in the soup .", "prediction_text": "because the soup was not as good as the last time."}
-{"answers": "jealous .", "prediction_text": "He will be very angry and will try to get the king to change his mind about the soup."}
+{"answers": "jealous .", "prediction_text": "He will be very angry and will try to get the king to change his mind about the soup. He will try to get the king to change his mind about the soup. He will try to get the king to change his mind about the soup. He will try to get the king to change his mind about the soup. He will try to get the king to change his mind about the soup. He will try to get the king to change his mind about the soup. He will try to get the king to change his mind about the soup. He will try to get the king to change his mind about the soup. He will try to get the king to change his mind about the soup. He will try to get the king to change his"}
 {"answers": "he loved her .", "prediction_text": "He wanted to keep her hands in his because he wanted to keep her in his sight."}
 {"answers": "to figure out who she was .", "prediction_text": "to keep her hands in his."}
 {"answers": "she wore the ring .", "prediction_text": "The king saw her dancing with the other maidens, and he knew she was the one he wanted to marry."}
 {"answers": "a wen .", "prediction_text": "a tennis ball."}
-{"answers": "it so annoyed him .", "prediction_text": "He was so disfigured by the lump that he was ashamed to show himself in public. He spent all his time and money trying to get rid of it."}
+{"answers": "it so annoyed him .", "prediction_text": "He was so disfigured by the lump that he was ashamed to show himself in public."}
 {"answers": "the doctors did not know how to get rid of it .", "prediction_text": "He consulted many doctors far and near, and took all kinds of medicines both internally and externally."}
 {"answers": "annoyed .", "prediction_text": "He was very unhappy about it."}
-{"answers": "took his ax and set out for the woods .", "prediction_text": "He took his ax and set out for the woods up among the hills not very far from his home."}
+{"answers": "took his ax and set out for the woods .", "prediction_text": "He took his ax and set out for the woods."}
 {"answers": "up among the hills not very far from his home .", "prediction_text": "Up among the hills."}
 {"answers": "happy .", "prediction_text": "The old man enjoyed the fresh air."}
 {"answers": "turned his face homewards .", "prediction_text": "He turned his face homewards."}
 {"answers": "rain began to fall heavily .", "prediction_text": "to escape the rain."}
 {"answers": "the hole was near the ground .", "prediction_text": "The hollow trunk of a tree."}
 {"answers": "disappointment .", "prediction_text": "The old man was delighted at the idea of having some jolly companions with whom to walk home."}
-{"answers": "step out from his strange hiding - place in the hollow in the tree .", "prediction_text": "He was about to step out from his strange hiding place in the hollow tree."}
+{"answers": "step out from his strange hiding - place in the hollow in the tree .", "prediction_text": "step out from his strange hiding place."}
 {"answers": "the sound of what seemed like the approaching steps of several people .", "prediction_text": "The sound of approaching steps."}
 {"answers": "his friends .", "prediction_text": "The old man's friends."}
 {"answers": "the idea of having some jolly companions with whom to walk home .", "prediction_text": "because he thought his friends had come to look for him."}
@@ -140,55 +140,55 @@
 {"answers": "the tree was in the background .", "prediction_text": "The tree was in the background."}
 {"answers": "he did not want to be seen by the demons .", "prediction_text": "He was surprised by the demons coming towards him."}
 {"answers": "they were sitting round , some drinking and some dancing .", "prediction_text": "Sitting round, drinking and dancing."}
-{"answers": "amused .", "prediction_text": "He was very amused."}
-{"answers": "he was so interested and excited in watching all that the demons were doing .", "prediction_text": "He was so excited and interested in watching all that the demons were doing that he forgot himself and stepped out of the tree."}
+{"answers": "amused .", "prediction_text": "He was so excited that he forgot himself and stepped out of the tree and stood looking on."}
+{"answers": "he was so interested and excited in watching all that the demons were doing .", "prediction_text": "He was so excited and interested in watching all that the demons were doing."}
 {"answers": "dance .", "prediction_text": "He will be very angry and will try to kill the demon chief."}
-{"answers": "if he did n't please them they may kill him .", "prediction_text": "The old man was fond of dancing all his life, and was quite an expert in the art. He knew that he could do much better than the demon. \" Shall I go and dance before these demons and let them see what a human being can do? It may be dangerous. If I don't please them they may kill me! \" said the old fellow to himself."}
+{"answers": "if he did n't please them they may kill him .", "prediction_text": "The old man was fond of dancing all his life, and was quite an expert in the art. He knew that he could do much better than the demon. \" Shall I go and dance before these demons and let them see what a human being can do? It may be dangerous, for if I don't please them they may kill me! \" said the old fellow to himself."}
 {"answers": "surprised .", "prediction_text": "The demons will be amazed and impressed by the old man's dancing."}
-{"answers": "whether he pleased these strange creatures or not .", "prediction_text": "His life depended on whether he pleased the demons."}
+{"answers": "whether he pleased these strange creatures or not .", "prediction_text": "On whether he pleased the demons."}
 {"answers": "his largest wine - cup .", "prediction_text": "A cup of wine."}
 {"answers": "the man 's skill has given them much pleasure .", "prediction_text": "to dance for them."}
 {"answers": "come often and dance for them .", "prediction_text": "The old man promised to dance for the demon every day."}
 {"answers": "he wanted to make sure the man will come back to dance .", "prediction_text": "to ensure the old man's attendance at the party."}
 {"answers": "a wen .", "prediction_text": "The old man's wens."}
-{"answers": "the demon chief wanted the old man to come again .", "prediction_text": "The old man's wen was considered very fortunate."}
+{"answers": "the demon chief wanted the old man to come again .", "prediction_text": "to get the token he leaves with them."}
 {"answers": "the merry troop of demons suddenly vanished .", "prediction_text": "The old man's face was transformed into a beautiful woman, and he was no longer old. he was young and handsome, and he was no longer old. he was young and handsome, and he was no longer old."}
 {"answers": "bewilderment .", "prediction_text": "delighted."}
-{"answers": "he was lost in bewilderment by all that had happened .", "prediction_text": "He was lost in bewilderment by all that had happened."}
+{"answers": "he was lost in bewilderment by all that had happened .", "prediction_text": "He was lost in bewilderment."}
 {"answers": "excited .", "prediction_text": "The man will be very happy and relieved."}
 {"answers": "as smooth as his left .", "prediction_text": "smooth."}
 {"answers": "hurry home .", "prediction_text": "patted his right cheek all the time."}
 {"answers": "he was so happy .", "prediction_text": "He found it impossible to walk quietly because he was so happy."}
-{"answers": "very anxious .", "prediction_text": "She was quite as happy as her husband when he showed her that the ugly lump had disappeared from his face."}
+{"answers": "very anxious .", "prediction_text": "She was as happy as her husband when he showed her that the ugly lump had disappeared from his face."}
 {"answers": "her husband 's good looks .", "prediction_text": "His good looks."}
 {"answers": "a wicked and disagreeable old man .", "prediction_text": "A wicked and disagreeable old man."}
 {"answers": "the growth of a wen on his left cheek .", "prediction_text": "A wen on his left cheek."}
 {"answers": "he also wants to remove his wen .", "prediction_text": "He wanted to know if he could find the lump on his face."}
 {"answers": "the old man .", "prediction_text": "The demon chief."}
-{"answers": "dance .", "prediction_text": "dance for them."}
+{"answers": "dance .", "prediction_text": "dance."}
 {"answers": "dissatisfied .", "prediction_text": "The demons will be displeased with the old man's dancing."}
 {"answers": "he knew nothing about the necessary gestures and different positions .", "prediction_text": "He had never learned to dance."}
-{"answers": "they did n't wish to see any more of such dancing .", "prediction_text": "because the old man's performance was different from the dance of yesterday."}
+{"answers": "they did n't wish to see any more of such dancing .", "prediction_text": "because the old man's dancing was not as good as the demon chief's."}
 {"answers": "he was a poor dancer .", "prediction_text": "He was a pitiful sight."}
-{"answers": "snorro the dwarf lived there .", "prediction_text": "because it was hollow inside."}
+{"answers": "snorro the dwarf lived there .", "prediction_text": "because long centuries ago, so the legend has it, snorro the dwarf lived there."}
 {"answers": "snorro .", "prediction_text": "snorro the dwarf."}
-{"answers": "the dwarf had inhabited the dwarfie stone long before the oldest man or woman in hoy had been born .", "prediction_text": "because he was a little man with a twisted body and a face of marvellous beauty, who never seemed to look any older, but was always smiling and young. He was a denizen of the dwarfie stone, and had lived there for centuries. Nobody knew where he came from or how long he had dwelt there. All that they knew about him was that he was a little man with a twisted body and a face of marvellous beauty, who never seemed to look any older, but was always smiling and young."}
+{"answers": "the dwarf had inhabited the dwarfie stone long before the oldest man or woman in hoy had been born .", "prediction_text": "because he was a little man with a twisted body and a face of marvellous beauty, who never seemed to look any older, but was always smiling and young. He was a denizen of the dwarfie stone, and had lived there for centuries. Nobody knew where he came from or how long he had dwelt there. All that they knew about him was that he was a little man with a twisted body and a face of marvellous beauty, who never seemed to look any older, but was always smiling and young. He was a denizen of the dwarfie stone, and had lived there for centuries."}
 {"answers": "the dangerous qualities of vanity and ambition .", "prediction_text": "vanity and ambition."}
 {"answers": "he constantly looked in order to see the reflection of his handsome face .", "prediction_text": "to see his handsome face."}
-{"answers": "the country people .", "prediction_text": "the country people."}
+{"answers": "the country people .", "prediction_text": "The country people."}
 {"answers": "bowed themselves humbly before him and spoke to him as if he were a king .", "prediction_text": "Bowed themselves humbly before him and spoke to him as if he were a king."}
 {"answers": "herbs and simple .", "prediction_text": "Herbs and simples."}
-{"answers": "he made medicines and potions .", "prediction_text": "To get medicines and potions from him."}
-{"answers": "a wonderful leathern - covered book .", "prediction_text": "A book."}
+{"answers": "he made medicines and potions .", "prediction_text": "To seek his help in collecting herbs and simples."}
+{"answers": "a wonderful leathern - covered book .", "prediction_text": "The book of runes."}
 {"answers": "fear .", "prediction_text": "The islanders feared snorro."}
-{"answers": "it was whispered that it had once belonged to odin , and they crossed themselves for protection as they named the mighty enchanter .", "prediction_text": "because it was said to be the book of the gods, and that it could tell the fortunes of the islanders."}
+{"answers": "it was whispered that it had once belonged to odin , and they crossed themselves for protection as they named the mighty enchanter .", "prediction_text": "because it was said to have belonged to Odin."}
 {"answers": "he wanted to find a stone .", "prediction_text": "to find the treasure of the carbuncle."}
 {"answers": "it would bestow on its finder marvellous magic gifts -- health , wealth , and happiness .", "prediction_text": "to gain the wonderful gifts of health, wealth, and happiness."}
 {"answers": "the wart hill of hoy .", "prediction_text": "The hill of the wart."}
-{"answers": "creep out , with pickaxe and spade , to turn over the rocks or dig over the turf .", "prediction_text": "He was looking for the treasure under the wart hill of hoy."}
+{"answers": "creep out , with pickaxe and spade , to turn over the rocks or dig over the turf .", "prediction_text": "He was looking for the carbuncle."}
 {"answers": "an enormous grey - headed raven .", "prediction_text": "The raven."}
-{"answers": "it was a bad omen .", "prediction_text": "Because it was a raven."}
-{"answers": "paul .", "prediction_text": "Paul the taciturn."}
+{"answers": "it was a bad omen .", "prediction_text": "Because it was a raven, and ravens are always associated with death and ill omen."}
+{"answers": "paul .", "prediction_text": "Paul, the elder."}
 {"answers": "he was so skilled in knightly exercises , and had such a sweet and loving nature .", "prediction_text": "He was skilled in knightly exercises and had a sweet and loving nature."}
 {"answers": "paul the silent .", "prediction_text": "Paul the taciturn."}
 {"answers": "harold .", "prediction_text": "harold."}
@@ -211,26 +211,26 @@
 {"answers": "the great palace of orphir .", "prediction_text": "to the great palace of orphir."}
 {"answers": "sad .", "prediction_text": "She was very sad."}
 {"answers": "folded her in his arms , he whispered to her how much he loved her , and begged her to promise to be his wife .", "prediction_text": "He took her in his arms and whispered to her how much he loved her and begged her to promise to be his wife."}
-{"answers": "happy .", "prediction_text": "She was very happy."}
-{"answers": "sat together , rejoicing in their new - found happiness .", "prediction_text": "They went to the castle and told the good news to the earl's mother and brother."}
-{"answers": "tell the good news to his mother and his brother .", "prediction_text": "He wanted to tell his mother and brother that he was going to marry lady morna."}
-{"answers": "harold will try to win lady morna 's love .", "prediction_text": "He will be very angry and will try to break up the engagement. He will try to get his brother to call it off, but will fail and will be forced to marry lady morna."}
-{"answers": "she knew what earl harold 's feeling would be ; and she would fain put off the evil hour .", "prediction_text": "Because she was afraid that harold would be disappointed in her."}
+{"answers": "happy .", "prediction_text": "She was overwhelmed with joy and happiness."}
+{"answers": "sat together , rejoicing in their new - found happiness .", "prediction_text": "They went to the castle and told the good news to the king and queen."}
+{"answers": "tell the good news to his mother and his brother .", "prediction_text": "He wanted to tell his mother and brother about their engagement."}
+{"answers": "harold will try to win lady morna 's love .", "prediction_text": "He will be very angry and will try to break up the engagement."}
+{"answers": "she knew what earl harold 's feeling would be ; and she would fain put off the evil hour .", "prediction_text": "Because she was afraid that he would be disappointed in her."}
 {"answers": "countess fraukirk .", "prediction_text": "Countess fraukirk."}
-{"answers": "angry .", "prediction_text": "She was filled with rage and hatred for the young earl, and she had no doubt that he would be dead soon."}
+{"answers": "angry .", "prediction_text": "She was filled with black rage."}
 {"answers": "if paul were only dead , harold would be the sole earl of orkney .", "prediction_text": "Because she was a hard, ambitious woman."}
 {"answers": "her sister 's chamber .", "prediction_text": "Countess fraukirk went to her own chamber."}
 {"answers": "remained talking together .", "prediction_text": "They talked till the chilly dawn broke in the sky."}
-{"answers": "meet with snorro the dwarf .", "prediction_text": "She will go to the palace at orkney and tell the queen that the young earl is dead. She will also tell her that the queen's son is dead, and that she has been poisoned by the queen's son. She will tell the queen that she has been poisoned by the queen's son, and that she has been poisoned by the queen's son, and that she has been poisoned by the queen's son, and that she has been poisoned by the queen's son, and that she has been poisoned by the queen's son, and that she has been poisoned by the queen's son, and that she has been poisoned by the queen's son, and that she has been poisoned by"}
+{"answers": "meet with snorro the dwarf .", "prediction_text": "She will go to the palace at orkney and tell the king that the young earl is dead."}
 {"answers": "seek his aid to help her in her evil deeds .", "prediction_text": "to seek his aid in her evil deeds."}
-{"answers": "she had always paid him well for his services in yellow gold .", "prediction_text": "because she was a wealthy and powerful lady, and he was a dwarf, and he was in her debt."}
+{"answers": "she had always paid him well for his services in yellow gold .", "prediction_text": "because she was a wealthy lady and he was a dwarf, and he was in need of her money."}
 {"answers": "an earl 's death was a weighty matter .", "prediction_text": "because he was afraid of the consequences of helping her."}
 {"answers": "he would have to leave his home .", "prediction_text": "because he was afraid of being caught and hanged for the murder of the earl."}
 {"answers": "offer him much gold , and bribe him higher and higher .", "prediction_text": "she will find another way to get her way."}
 {"answers": "promised to obtain for him a high post at the court of the king of scotland .", "prediction_text": "She offered him a high post at the court of the king of scotland."}
 {"answers": "poison his garment .", "prediction_text": "by poisoning the thread with a magic potion."}
 {"answers": "content .", "prediction_text": "She was delighted, and thanked him for his kindness, and promised to reward him with a fine gift."}
-{"answers": "a couple of yards of this wonderful web .", "prediction_text": "A yuletide gift."}
+{"answers": "a couple of yards of this wonderful web .", "prediction_text": "A fine young earl."}
 {"answers": "arranged that the piece of cloth should be delivered at the palace of orphir on the day before christmas eve .", "prediction_text": "They arranged that the piece of cloth should be delivered at the palace of orphir on the day before christmas eve."}
 {"answers": "she did not want him to bother her anymore .", "prediction_text": "to make harold think that she was not interested in him."}
 {"answers": "offered his heart and hand once more to the lady morna .", "prediction_text": "He went to the castle of kirkwall and found his brother there. He told him that he had been offered the hand of morna, but that she had refused him. He then asked his brother to help him get a love potion from snorro, so that he could make morna love him instead of his brother."}
@@ -238,12 +238,12 @@
 {"answers": "he will meet snorro .", "prediction_text": "He will ride to the castle at kirkwall and tell his brother that he has been to see snorro the dwarf."}
 {"answers": "it would make lady morna hate his precious brother and turn her thoughts kindly towards him .", "prediction_text": "to make his lady morna love him."}
 {"answers": "he could receive help from snorro .", "prediction_text": "because he was in love with her himself."}
-{"answers": "he needed to meet snorro .", "prediction_text": "to go to the island of hoy."}
+{"answers": "he needed to meet snorro .", "prediction_text": "to get to the island of hoy."}
 {"answers": "the island of hoy .", "prediction_text": "He went to the island of hoy."}
 {"answers": "snorro was standing at the hole that served as a door , his raven on his shoulder , gazing placidly at the setting sun .", "prediction_text": "because snorro was standing at the door of his cave, and his raven was on his shoulder."}
-{"answers": "happy .", "prediction_text": "He was delighted to see harold. \" i have been waiting for you for a long time, \" he said. \" i have been waiting for you for a long time, \" he said."}
-{"answers": "he smelled gold .", "prediction_text": "because he knew that harold was in love with the princess, and that he was going to try to make her fall in love with him."}
-{"answers": "snorro did not understand why he needed a love - potion .", "prediction_text": "Because snorro was not a knight, but a dwarf."}
+{"answers": "happy .", "prediction_text": "He was delighted to see harold, and he was very eager to help him."}
+{"answers": "he smelled gold .", "prediction_text": "because he knew that harold was in love with the princess, and he was amused by the knight's foolishness."}
+{"answers": "snorro did not understand why he needed a love - potion .", "prediction_text": "Because snorro was not a knight, but a dwarfie stone."}
 {"answers": "a small phial .", "prediction_text": "The love potion."}
 {"answers": "pour the contents of this into the lady morna 's wine - cup .", "prediction_text": "Pour the contents of the phial into the lady morna's wine - cup."}
 {"answers": "he will return home .", "prediction_text": "He will drink the wine, and then he will be able to see the lady morna's face."}
@@ -253,32 +253,32 @@
 {"answers": "she felt so afraid of him .", "prediction_text": "because she was afraid of him."}
 {"answers": "he felt certain that the charm was beginning to work , and that his hopes would soon be fulfilled .", "prediction_text": "because she was the only one who could protect him from the earl's treachery."}
 {"answers": "overjoyed .", "prediction_text": "They will be overjoyed to see each other again."}
-{"answers": "she felt that she was now safe from the unwelcome attentions of earl harold .", "prediction_text": "Because he was overjoyed to meet her again."}
-{"answers": "upset .", "prediction_text": "He was overjoyed to meet lady morna again, and she was overjoyed to meet him."}
+{"answers": "she felt that she was now safe from the unwelcome attentions of earl harold .", "prediction_text": "Because he was the only one who could help her get out of the castle."}
+{"answers": "upset .", "prediction_text": "He was overjoyed to meet lady morna again, and felt that he was now safe from the unwelcome attentions of earl harold."}
 {"answers": "the two countesses will make a waistcoat from the thread .", "prediction_text": "The prince will be dead before he can wear the garment."}
 {"answers": "a sealed packet .", "prediction_text": "The magic web."}
-{"answers": "excited .", "prediction_text": "The countess was delighted, and the countess was not."}
+{"answers": "excited .", "prediction_text": "The countess was delighted, and the countess was not so delighted."}
 {"answers": "set to work to cut out and sew the garment .", "prediction_text": "They cut out and sewed the garment."}
 {"answers": "angry and disappointed .", "prediction_text": "He will be very angry and disappointed."}
 {"answers": "lady morna 's manner had grown cold and distant again .", "prediction_text": "Because snorro was not as charming as he had been."}
 {"answers": "the wonderful waistcoat .", "prediction_text": "A waistcoat made of gold and silver and shining colours."}
-{"answers": "angry .", "prediction_text": "He will be very angry and disappointed."}
-{"answers": "it seemed to him that this hated brother of his was claiming everything .", "prediction_text": "Because he was not allowed to wear it."}
+{"answers": "angry .", "prediction_text": "He will be angry and disappointed."}
+{"answers": "it seemed to him that this hated brother of his was claiming everything .", "prediction_text": "because she was not as beautiful as the waistcoat."}
 {"answers": "snatch the vest from the table .", "prediction_text": "He will take the vest and go to the woods to kill himself."}
 {"answers": "threw themselves at his feet , begging him to lay it down , and warning him that there was not a thread in it which was not poisoned .", "prediction_text": "They begged him to lay it down and not wear it."}
 {"answers": "he wanted to show lady morna .", "prediction_text": "To show the lady morna how fine he was."}
-{"answers": "afraid .", "prediction_text": "They will be very angry and will try to take revenge on harold."}
+{"answers": "afraid .", "prediction_text": "They will be very angry and will try to take the vest from him."}
 {"answers": "the vest would kill him .", "prediction_text": "to take his life."}
 {"answers": "paul had been true and kind .", "prediction_text": "for having wronged him."}
 {"answers": "revealed who killed him .", "prediction_text": "He took the waistcoat from his dead brother and put it on his own body."}
 {"answers": "mad .", "prediction_text": "He was filled with rage and sorrow."}
 {"answers": "slip out of the palace and fled to the coast , and take boat in haste to scotland .", "prediction_text": "Fled to scotland."}
 {"answers": "norsemen invaded the land , and their castle was set on fire , and they perished miserably in the flames .", "prediction_text": "The norsemen invaded the land, and their castle was set on fire, and they perished miserably in the flames. When earl paul found that they had escaped, he set out in hot haste for the island of hoy, but found it deserted. All trace of its uncanny occupants had disappeared."}
-{"answers": "it was silent and deserted .", "prediction_text": "The dwarf was found dead in his bed, with a wound in his head."}
+{"answers": "it was silent and deserted .", "prediction_text": "The dwarf was found dead in the cave."}
 {"answers": "they were married .", "prediction_text": "They were married."}
-{"answers": "he did not live on the island anymore .", "prediction_text": "Because the magic carbuncle was a curse, and the curse was on snorro."}
+{"answers": "he did not live on the island anymore .", "prediction_text": "Because he was never seen again by any living person."}
 {"answers": "in a wretched hut far away from the village .", "prediction_text": "In a hut far away from the village."}
-{"answers": "she was a poor woman .", "prediction_text": "The poor woman had but little to bite and less to burn because she had to feed her son on a very limited budget."}
+{"answers": "she was a poor woman .", "prediction_text": "She had but little to bite and less to burn because she was poor."}
 {"answers": "her little boy .", "prediction_text": "The little boy."}
 {"answers": "took off his jacket and laid it over the stone .", "prediction_text": "He took off his jacket and laid it over the stone."}
 {"answers": "it was foolish to give his jacket to the stone .", "prediction_text": "to keep warm."}
@@ -289,37 +289,37 @@
 {"answers": "people found him too small or weak and said they could make no use of him .", "prediction_text": "because he was too small and weak."}
 {"answers": "the merchant .", "prediction_text": "the merchant."}
 {"answers": "what he should buy and bring back home for them .", "prediction_text": "What he should buy and bring back home for them."}
-{"answers": "the woman wanted to get rid of the cat .", "prediction_text": "because the merchant was a gentleman."}
-{"answers": "he bought him a cat .", "prediction_text": "The boy was not given anything."}
-{"answers": "a land where he had never yet been , and went up into a city .", "prediction_text": "The city."}
+{"answers": "the woman wanted to get rid of the cat .", "prediction_text": "because the merchant was kind and generous."}
+{"answers": "he bought him a cat .", "prediction_text": "the boy was not given anything."}
+{"answers": "a land where he had never yet been , and went up into a city .", "prediction_text": "The city of the mice."}
 {"answers": "confused .", "prediction_text": "He was amazed."}
 {"answers": "the cat would scare the mice away .", "prediction_text": "Because they had no cats."}
 {"answers": "hurried into their holes .", "prediction_text": "They had to hurry into their holes."}
-{"answers": "the people were able to eat in such comfort .", "prediction_text": "The mice had to hurry into their holes because the cat was eating the mice."}
+{"answers": "the people were able to eat in such comfort .", "prediction_text": "The mice had to hurry into their holes because the cat was eating the mice. The cat was eating the mice because the mice were in the merchant's house."}
 {"answers": "they were twice the size .", "prediction_text": "They were much larger and longer than the ones he had first seen."}
-{"answers": "sell the cat .", "prediction_text": "He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to"}
-{"answers": "the cat .", "prediction_text": "The cat was sitting up in the mast."}
+{"answers": "sell the cat .", "prediction_text": "He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice. He will ask the tavern keeper to get rid of the mice."}
+{"answers": "the cat .", "prediction_text": "The storm at sea."}
 {"answers": "only with toil and trouble could one manage to shove a bite of something into one 's mouth once in a while .", "prediction_text": "The cat was again sold for three hundred dollars."}
 {"answers": "three hundred dollars .", "prediction_text": "three hundred dollars."}
-{"answers": "such a storm and tempest arose that all the thought the ship would sink .", "prediction_text": "The merchant realized that there was nothing left for him to do but to promise that the boy should have all the money. No sooner had the merchant made his vow than the weather turned fair, and he had a favoring wind for his journey home. And when he landed, he gave the youth the six hundred dollars and his daughter to boot. For now the scullion was as rich as the merchant himself and richer, and thereafter he lived in splendor and happiness. And he took in his mother and treated her kindly."}
+{"answers": "such a storm and tempest arose that all the thought the ship would sink .", "prediction_text": "The merchant realized that there was nothing left for him to do but to promise that the boy should have all the money."}
 {"answers": "in splendor and happiness .", "prediction_text": "He lived in splendor and happiness."}
 {"answers": "it was summer , and everyone rose early and rested from twelve to three .", "prediction_text": "It was summer."}
 {"answers": "a number of young nobles .", "prediction_text": "The prince."}
 {"answers": "the prince and this gentleman .", "prediction_text": "The prince."}
-{"answers": "horrified .", "prediction_text": "They were horrified."}
+{"answers": "horrified .", "prediction_text": "horrified."}
 {"answers": "his grandfather the duke stepped between and commanded the young nobles to lay the affair before the king .", "prediction_text": "The duke stepped in and commanded them to lay the affair before the king."}
 {"answers": "angry .", "prediction_text": "The prince was very angry."}
 {"answers": "he went to a corner of the court and began to cry .", "prediction_text": "He cried."}
 {"answers": "a dagger .", "prediction_text": "A dagger."}
 {"answers": "he did not use his dagger during the fight .", "prediction_text": "He cried."}
 {"answers": "walked to the window and stood for a few minutes with his back to the room .", "prediction_text": "He walked to the window and stood there for a few minutes with his back to the room, his face white and stern."}
-{"answers": "he suffered such an injury without attempting to avenge it .", "prediction_text": "because the prince did not avenge himself."}
+{"answers": "he suffered such an injury without attempting to avenge it .", "prediction_text": "because he was not a man of arms."}
 {"answers": "be brought before the king 's judges , and plead his own cause .", "prediction_text": "He ordered his death."}
 {"answers": "the king would not listen , and commanded his guards to put him under arrest .", "prediction_text": "The king would not listen."}
 {"answers": "be brought to trial before the highest judges in the land .", "prediction_text": "To find a way to escape death."}
 {"answers": "seek counsel from wise men of all sorts .", "prediction_text": "He went about seeking counsel from wise men of all sorts."}
 {"answers": "he wanted to escape from death .", "prediction_text": "To find an excuse for the blow he had given to the prince."}
-{"answers": "despair .", "prediction_text": "The gentleman was very sad and desperate."}
+{"answers": "despair .", "prediction_text": "The gentleman was filled with despair."}
 {"answers": "he needed to go to trial the next day .", "prediction_text": "He had killed the prince."}
 {"answers": "he wandered on hardly knowing where he went , and his face was so white and desperate .", "prediction_text": "Because he was a great favourite."}
 {"answers": "an old woman .", "prediction_text": "The old woman."}
@@ -329,31 +329,31 @@
 {"answers": "marry her .", "prediction_text": "marry her."}
 {"answers": "she decided not to help him .", "prediction_text": "She was angry with him and cursed him to be eaten by crows."}
 {"answers": "he mentioned their age difference .", "prediction_text": "He spoke without thinking."}
-{"answers": "horrified .", "prediction_text": "He felt very bad."}
+{"answers": "horrified .", "prediction_text": "He felt very bad, and was very sorry for his hasty words."}
 {"answers": "begin to run as fast as he can after the old crone .", "prediction_text": "He will be hanged."}
 {"answers": "surprised .", "prediction_text": "He felt very foolish and embarrassed."}
 {"answers": "apologized to her .", "prediction_text": "He was brought before the king and the judges."}
 {"answers": "a small house .", "prediction_text": "The old woman took him to her house."}
 {"answers": "she wanted him to promise to be her husband in front of witnesses .", "prediction_text": "to be his wife."}
-{"answers": "she told the young man what he was to do .", "prediction_text": "to make the young man swear to marry her."}
+{"answers": "she told the young man what he was to do .", "prediction_text": "to marry the old woman."}
 {"answers": "inquired if he had any excuse to plead .", "prediction_text": "He ordered the gentleman to be hanged."}
 {"answers": "the prince was adopted .", "prediction_text": "He revealed that he was the one who had killed the king's son."}
 {"answers": "the king had been married to the queen and yet had no children .", "prediction_text": "To keep the secret of the baby's true parentage from the king."}
 {"answers": "the priest .", "prediction_text": "The priest."}
-{"answers": "she fell ill and died .", "prediction_text": "The king was so moved by the story that he ordered the prince to be brought up in the royal palace and to be treated as a prince."}
+{"answers": "she fell ill and died .", "prediction_text": "The king was so moved by the story that he ordered the prince to be brought up in the royal palace and to be treated as a son of the king."}
 {"answers": "he was so struck with her beauty .", "prediction_text": "'he was in a part of the country which you did not know, so seeing an orchard all pink and white with apple-blossoms, and a girl tossing a ball in one corner, you went up to her to ask your way. but when she turned to answer you, you were so struck with her beauty that all else fled from your mind. again and again you rode back to see her, and at length persuaded her to marry you. she only thought you a poor knight, and agreed that as you wished it, the marriage should be kept secret.'' after the ceremony you gave her three rings and a charm with a cross on it, and"}
-{"answers": "she only thought he was a poor knight .", "prediction_text": "'she only thought you a poor knight, and agreed that as you wished it, the marriage should be kept secret. '"}
-{"answers": "three rings and a charm .", "prediction_text": "The girl was given a necklace with a cross on it, and a charm with a cross on it."}
+{"answers": "she only thought he was a poor knight .", "prediction_text": "'she was so beautiful that he could not resist her. '"}
+{"answers": "three rings and a charm .", "prediction_text": "The girl was given a necklace with a cross on it."}
 {"answers": "in a cottage in the forest .", "prediction_text": "The old duke's castle."}
 {"answers": "a rebellion broke out in a distant part of the kingdom , and called for his presence .", "prediction_text": "The rebellion broke out in a distant part of the kingdom, and called for his presence."}
 {"answers": "it was empty , and none could inform his where his bride had gone .", "prediction_text": "The old duke was angry with the king for hiding his daughter from him, and he vowed to keep her safe until the day when the king would claim her as his queen."}
-{"answers": "he waited for the day that the king would announce she was queen .", "prediction_text": "Because he was afraid of the king's anger and jealousy."}
+{"answers": "he waited for the day that the king would announce she was queen .", "prediction_text": "The old duke was a traitor to the king, and he was hiding his daughter to keep her safe from the king's wrath."}
 {"answers": "the gentleman .", "prediction_text": "The king's son was the false prince."}
 {"answers": "the rings and the cross .", "prediction_text": "The rings and the cross."}
 {"answers": "he had forgotten the hall of justice and all about him , and saw only the apple - orchard .", "prediction_text": "The king was so old that he had forgotten the hall of justice and all about him."}
 {"answers": "surprised .", "prediction_text": "The king was very pleased and happy."}
-{"answers": "the prince was adopted .", "prediction_text": "The king was old and forgetful, and the girl was beautiful and charming."}
-{"answers": "a message was sent to the false prince , forbidding him ever again to appear at court , though a handsome pension was granted him .", "prediction_text": "The false prince was sent away to a remote castle, where he was to be kept in a tower until the king's death."}
+{"answers": "the prince was adopted .", "prediction_text": "The king was old and forgetful, and the girl playing at ball was his daughter. He had forgotten about the apple orchard, and the girl playing at ball was his daughter. He had forgotten about the apple orchard, and the girl playing at ball was his daughter. He had forgotten about the apple orchard, and the girl playing at ball was his daughter. He had forgotten about the apple orchard, and the girl playing at ball was his daughter. He had forgotten about the apple orchard, and the girl playing at ball was his daughter. He had forgotten about the apple orchard, and the girl playing at ball was his daughter. He had forgotten about the apple orchard, and the girl playing at ball was his daughter. He had forgotten about the apple"}
+{"answers": "a message was sent to the false prince , forbidding him ever again to appear at court , though a handsome pension was granted him .", "prediction_text": "The false prince was sent away to a remote castle in the mountains, where he was to be kept in prison until the king's death."}
 {"answers": "unhappy .", "prediction_text": "The king was displeased."}
 {"answers": "she saved his life .", "prediction_text": "because the old woman had saved his life."}
 {"answers": "they got married .", "prediction_text": "The old woman was taken to the chapel, where a bishop was waiting to perform the marriage ceremony. The prince spent his days hunting and trying to forget the old woman at home. The princess refused the services of the ladies - in - waiting."}
@@ -361,8 +361,8 @@
 {"answers": "startled .", "prediction_text": "He was very much surprised."}
 {"answers": "the gentleman 's wife .", "prediction_text": "The princess."}
 {"answers": "a wicked fairy .", "prediction_text": "The wicked fairy."}
-{"answers": "casted a spell over her .", "prediction_text": "The wicked fairy cast a spell over the princess, making her look old and ugly."}
-{"answers": "a wizard .", "prediction_text": "The wizard."}
+{"answers": "casted a spell over her .", "prediction_text": "The wicked fairy cast a spell on the princess, which made her look old and ugly."}
+{"answers": "a wizard .", "prediction_text": "The old man was the wizard who cast the spell on the princess's father."}
 {"answers": "the princess 's wrinkles to disappear .", "prediction_text": "To have her wrinkles disappear and her beauty restored."}
 {"answers": "her misfortune resulted from a spell .", "prediction_text": "The wizard could not help the princess immediately because he was not a wizard, but a witch. He was a witch who had been cursed by the princess's father, and he could not break the curse until he had found a man to marry the princess."}
 {"answers": "before her fifteenth birthday she should be freed from the enchantment if she could get a man who would swear to marry me as she was .", "prediction_text": "He promised to remove the spell from the princess and make her beautiful again. He also promised to make the prince marry her."}
@@ -372,7 +372,7 @@
 {"answers": "had been persuaded to enlist , and had been killed in the wars .", "prediction_text": "He had been taken away to serve as a sailor by the press - gang."}
 {"answers": "had been taken away to serve as a sailor by the press - gang , and had been drowned at sea .", "prediction_text": "He had been taken away to serve as a sailor by the press - gang."}
 {"answers": "a little baby - boy .", "prediction_text": "her son."}
-{"answers": "times were bad .", "prediction_text": "Because of the poor state of the market."}
+{"answers": "times were bad .", "prediction_text": "Because times were bad."}
 {"answers": "worked all day amongst her cows , and pigs , and hens .", "prediction_text": "She took one of her pigs to the market."}
 {"answers": "rent - day was coming on , and she intended to take one of them , a great , big , fat creature , to the market that very day .", "prediction_text": "to take one of her pigs to the market that very day, as she thought that the price that it would fetch would go a long way towards paying her rent."}
 {"answers": "she thought that the price that it would fetch would go a long way towards paying her rent .", "prediction_text": "to pay her rent."}
@@ -383,26 +383,26 @@
 {"answers": "an old woman .", "prediction_text": "The old woman."}
 {"answers": "rise and curtsey to the gentlewoman .", "prediction_text": "She rose and curtseyed."}
 {"answers": "she lost her husband and her pig .", "prediction_text": "She had lost her husband in a hunting accident."}
-{"answers": "offer something in return .", "prediction_text": "She needed to get a pig - sty."}
+{"answers": "offer something in return .", "prediction_text": "She had to give the old woman a present of a pig."}
 {"answers": "delighted .", "prediction_text": "The old woman will be very happy to cure the pig, and the widow will be very grateful."}
-{"answers": "she was too happy that her pig was going to be saved .", "prediction_text": "The old lady was so happy to have saved the pig's life that she was willing to give the widow anything she asked for."}
-{"answers": "walked straight into the pig - sty .", "prediction_text": "She took the pig out of the sty and cured him."}
+{"answers": "she was too happy that her pig was going to be saved .", "prediction_text": "The old lady was so delighted at having the animal's life saved that she made a rash promise."}
+{"answers": "walked straight into the pig - sty .", "prediction_text": "She took the pig out of the sty and cured it."}
 {"answers": "rocked to and fro and muttering to herself .", "prediction_text": "She rocked to and fro and muttered to herself in words which the widow could not understand."}
-{"answers": "a tiny bottle .", "prediction_text": "A bottle of oil."}
+{"answers": "a tiny bottle .", "prediction_text": "A bottle with a liquid that looked like oil in it."}
 {"answers": "the pig was cured .", "prediction_text": "The pig ran off to its trough to look for its breakfast."}
-{"answers": "joyful .", "prediction_text": "She will be overjoyed and grateful, and will be glad to have her rent safe."}
+{"answers": "joyful .", "prediction_text": "The widow will be overjoyed and grateful to the fairy for curing her pig, and will be happy to give her son to the fairy as a reward for her kindness."}
 {"answers": "she felt that her rent was safe .", "prediction_text": "because the old woman was a fairy."}
 {"answers": "kiss the hem of the strange lady 's green gown .", "prediction_text": "She would have kissed the hem of the strange lady's green gown."}
 {"answers": "they needed to focus on their bargain .", "prediction_text": "because the fairy was a wicked one."}
 {"answers": "her son .", "prediction_text": "her son."}
 {"answers": "sad .", "prediction_text": "She felt very bad."}
 {"answers": "the old woman was a wicked fairy .", "prediction_text": "Because she knew that the green - clad lady was a fairy."}
-{"answers": "prayed , and beseeched , and begged for mercy .", "prediction_text": "She gave him to the fairy, who took him away with her."}
+{"answers": "prayed , and beseeched , and begged for mercy .", "prediction_text": "She gave the old woman her son, who was a very fine young man, and the old woman took him away with her."}
 {"answers": "find out the old woman 's name .", "prediction_text": "She needed to find a way to keep her son alive."}
-{"answers": "she had to follow the laws of fairy - land .", "prediction_text": "Because the fairy laws of fairy - land do not allow a fairy to take a human child until the third day after the birth."}
+{"answers": "she had to follow the laws of fairy - land .", "prediction_text": "Because the fairy laws of the fairy - land required that the bairn should be taken away from his mother for three days before he could be taken away from the fairy - land."}
 {"answers": "fell down in a dead faint beside the stone .", "prediction_text": "She went for a walk in the fir wood behind the house."}
 {"answers": "sit in her kitchen and cry , and hug her baby tighter in her arms .", "prediction_text": "She will go to the woods and find the fairy - woman and ask her to take her son away."}
-{"answers": "the whirr of a spinning - wheel and the sound of a voice lilting a song .", "prediction_text": "The sound of a spinning wheel and a song."}
+{"answers": "the whirr of a spinning - wheel and the sound of a voice lilting a song .", "prediction_text": "The sound of a spinning wheel and a song called \"Little kens our guid dame at hame, whippety-stourie is my name.\""}
 {"answers": "in the fir wood behind the house .", "prediction_text": "The fir wood behind the house."}
 {"answers": "surprised .", "prediction_text": "She was astonished."}
 {"answers": "she wanted to find where the sound came from .", "prediction_text": "to listen to the fairy's song."}
@@ -420,31 +420,31 @@
 {"answers": "she did not eat bacon .", "prediction_text": "\" oh, sweet madam mistress, \" cried the old woman, \" spare me my bairn, and take the pig instead. \" \" we have no need of bacon where i come from, \" answered the fairy coldly ; \" so give me the laddie and let me begone -- i have no time to waste in this wise. \" \" oh, dear lady mine, \" pleaded the goodwife, \" if thou wilt not have the pig, wilt thou not spare my poor bairn and take me instead? \" the fairy stepped back a little, as if in astonishment"}
 {"answers": "herself .", "prediction_text": "The fairy."}
 {"answers": "astonished .", "prediction_text": "\" i'm sorry for you, \" she said, \" but i'm not the one for you. \" \" i'm sorry for you, \" he said, \" but i'm not the one for you. \" \" i'm sorry for you, \" she said, \" but i'm not the one for you. \" \" i'm sorry for you, \" he said, \" but i'm not the one for you. \" \" i'm sorry for you, \" she said, \" but i'm not the one for"}
-{"answers": "the widowed mistress was not pretty .", "prediction_text": "\" oh, sweet madam mistress, \" cried the old woman, \" spare me my bairn, and take the pig instead. \" \" we have no need of bacon where i come from, \" answered the fairy coldly ; \" so give me the laddie and let me begone -- i have no time to waste in this wise. \" \" oh, dear lady mine, \" pleaded the goodwife, \" if thou wilt not have the pig, wilt thou not spare my poor bairn and take me myself? \" the fairy stepped back a little, as if in astonishment"}
+{"answers": "the widowed mistress was not pretty .", "prediction_text": "Because she was a witch and wanted to use the mistress's body for her own purposes."}
 {"answers": "the widowed mistress became angry at her .", "prediction_text": "The old woman was a witch, and the mistress was afraid of her."}
 {"answers": "she jumped into the air .", "prediction_text": "The old woman was so frightened that she ran away, leaving the princess alone in the woods."}
 {"answers": "the daughter of the queen of the flowers .", "prediction_text": "The daughter of the queen of the flowers."}
 {"answers": "dismounted from his horse , and stepped along in the direction the sound came from .", "prediction_text": "He stepped along in the direction the sound came from."}
-{"answers": "astonished .", "prediction_text": "The prince felt very sorry for the old woman, and was glad to help her out of the ditch."}
-{"answers": "in the little hut .", "prediction_text": "In the hut by the edge of the forest."}
+{"answers": "astonished .", "prediction_text": "The prince felt very sorry for the old woman, and was glad to have been able to help her out of the ditch. He was also very grateful to the old woman for her kindness."}
+{"answers": "in the little hut .", "prediction_text": "In the hut."}
 {"answers": "second mountain .", "prediction_text": "The second mountain."}
 {"answers": "he wanted king of the eagles to appear .", "prediction_text": "to call his eagle."}
 {"answers": "put the little bell carefully in his pocket , he rode home and told his father that he meant to set the daughter of the flower queen free , and intended setting out on the following day into the wide world in search of the maid .", "prediction_text": "He set out on the wide world in search of the maid."}
 {"answers": "he wished to marry her .", "prediction_text": "To marry her."}
 {"answers": "he had roamed round the world for a whole year , and his horse had died of exhaustion .", "prediction_text": "He had been searching for the maid for a year, and had been unable to find her."}
-{"answers": "lead the mother dragon 's mare out to the meadow and look after her for three days .", "prediction_text": "Lead the mare out to the meadow and look after her for three days."}
+{"answers": "lead the mother dragon 's mare out to the meadow and look after her for three days .", "prediction_text": "Look after her for three days."}
 {"answers": "took out his little bell and rang it .", "prediction_text": "He rang his bell and the eagle came to him."}
-{"answers": "he noticed an eagle flying over his head .", "prediction_text": "to call the eagle down."}
+{"answers": "he noticed an eagle flying over his head .", "prediction_text": "to call the eagle."}
 {"answers": "asked the prince what reward he wanted .", "prediction_text": "She made him her body - servant."}
-{"answers": "continue his journey on the same road .", "prediction_text": "He will ask the old man to tell him where the dragon lives. He will then go up the mountain and find the castle of the dragon's old mother. He will ask her to tell him where the flower queen's daughter lives, and will be told to go up the mountain and find her. He will then ask her to tell him where the dragon lives, and she will tell him that the dragon sleeps for one year and then wakes up. He will then ask her to tell him where the flower queen's daughter lives, and she will tell him to go up the mountain and find her. He will then ask her to tell him where the dragon lives, and she will tell him that the dragon sleeps for one"}
+{"answers": "continue his journey on the same road .", "prediction_text": "He will ask the old man to tell him where the dragon lives, and then he will go up the mountain to see the flower queen's daughter."}
 {"answers": "the ditch .", "prediction_text": "In the meadow."}
-{"answers": "the prince had a kind heart .", "prediction_text": "for his kind heart."}
-{"answers": "tonly allowed her daughter to stay with the prince in summer .", "prediction_text": "She said that her daughter could only stay with her in summer, and in winter she must live in her palace underground."}
+{"answers": "the prince had a kind heart .", "prediction_text": "because he was kind hearted."}
+{"answers": "tonly allowed her daughter to stay with the prince in summer .", "prediction_text": "She consented to this."}
 {"answers": "happy .", "prediction_text": "The prince was very happy."}
 {"answers": "the flower queen 's daughter departed and went home to her mother .", "prediction_text": "because they were happy together."}
 {"answers": "he will receive a reward .", "prediction_text": "The prince will be rewarded with a foal of the mare, and a cloak made of gold."}
 {"answers": "a fisherman .", "prediction_text": "The fisherman's name was matte, and his christian name was salmon."}
-{"answers": "by the shore of the big sea .", "prediction_text": "In a cottage by the sea."}
+{"answers": "by the shore of the big sea .", "prediction_text": "In a cottage by the shore."}
 {"answers": "in a little cottage by the shore .", "prediction_text": "In a cottage by the shore."}
 {"answers": "a red rock out in the sea .", "prediction_text": "In a cottage by the shore."}
 {"answers": "salmon .", "prediction_text": "herring."}
@@ -452,18 +452,18 @@
 {"answers": "cod .", "prediction_text": "fish."}
 {"answers": "sailed to the nearest town , sold their fish , and went to church on sunday .", "prediction_text": "They went to church on sundays."}
 {"answers": "prince .", "prediction_text": "Prince."}
-{"answers": "the rock laid far away from the land , and there were no green islets or human habitations for miles round .", "prediction_text": "Because they were poor and had no money to buy a cow."}
+{"answers": "the rock laid far away from the land , and there were no green islets or human habitations for miles round .", "prediction_text": "because they were poor."}
 {"answers": "matte and maie .", "prediction_text": "Matte and Maie."}
 {"answers": "tobacco for the old man , and a pound or two of coffee for his wife .", "prediction_text": "They bought a cow."}
 {"answers": "a cow .", "prediction_text": "A cow."}
 {"answers": "she could not swim so far , and their boat was not large enough to bring her over here ; and even if they had her , that gad nothing to feed her on .", "prediction_text": "because he was afraid of the cow's size."}
-{"answers": "it was n't enough food for the cow .", "prediction_text": "Because he was not sure if they had enough food for the cow. He wanted to make sure that they had enough food before he agreed to take the cow."}
+{"answers": "it was n't enough food for the cow .", "prediction_text": "Because he was not sure if they had enough food for the cow."}
 {"answers": "sad .", "prediction_text": "maie was very angry with her husband."}
 {"answers": "three young men .", "prediction_text": "The students."}
 {"answers": "she did not own a cow .", "prediction_text": "maie did not have a junket or a can of fresh milk because she was a poor woman and could not afford to buy them."}
 {"answers": "a junket .", "prediction_text": "A can of fresh milk."}
 {"answers": "good smoked herring .", "prediction_text": "smoked herring."}
-{"answers": "he had never read kalevala and knew nothing of the sea gods of old .", "prediction_text": "Because he had never read kalevala and knew nothing of the sea gods of old, but the students proceeded to explain to him."}
+{"answers": "he had never read kalevala and knew nothing of the sea gods of old .", "prediction_text": "Matte was a man of the old school, and had been brought up to believe that the sea was a place of the gods, and that the gods were not to be meddled with.'i'm not so sure of that,'said matte, as he shook his head.'i'm not so sure of that,'said matte, as he shook his head.'i'm not so sure of that,'said matte, as he shook his head.'i'm not so sure of that,'said matte, as he shook his head.'i'm"}
 {"answers": "ahti .", "prediction_text": "Ahti."}
 {"answers": "all fish and animals of the deep .", "prediction_text": "Ahti ruled over the sea gods of old."}
 {"answers": "he was very changeful and touchy .", "prediction_text": "because he is very changeable and touchy."}
@@ -474,11 +474,11 @@
 {"answers": "grateful .", "prediction_text": "The students were very happy and thanked matte and maie for their hospitality."}
 {"answers": "sad .", "prediction_text": "He was very sad and lonely."}
 {"answers": "a fairy cow .", "prediction_text": "A fairy cow."}
-{"answers": "she heard about the fairy cow from the young men .", "prediction_text": "because she had heard the story of ahti and his cows."}
+{"answers": "she heard about the fairy cow from the young men .", "prediction_text": "because she had heard the story of ahti and his cows and wanted to have one of her own."}
 {"answers": "excited .", "prediction_text": "She was delighted."}
-{"answers": "her husband already told her that they could n't have a cow .", "prediction_text": "maie did not want to disappoint her husband, who was so fond of salt herring."}
+{"answers": "her husband already told her that they could n't have a cow .", "prediction_text": "maie did not want to disappoint her husband, who had been so kind to her. she was afraid that he would not be able to get a fairy cow, and that he would be very angry with her. she was afraid that he would not be able to get a fairy cow, and that he would be very angry with her.'' what! haven't you got a cow?'' she thought to herself.'i'll have to tell him,'she thought.'i'll have to tell him,'she thought.'i'll have to tell him,'she thought"}
 {"answers": "magic rhymes .", "prediction_text": "The magic rhymes she had heard as a child."}
-{"answers": "try magic rhymes .", "prediction_text": "'set the herring - net '."}
+{"answers": "try magic rhymes .", "prediction_text": "Set the herring - net."}
 {"answers": "he did not fish on sunday .", "prediction_text": "He did not fish on sunday."}
 {"answers": "she wanted to try the magic rhymes .", "prediction_text": "because it was saturday, and on saturday evenings matte never set the herring - net, for he did not fish on sunday."}
 {"answers": "set only one net close to the shore , and then they shall be able to finish up their half - filled cask .", "prediction_text": "'listen to me,'said his wife,'we will set only one net close to the shore, and then we shall be able to finish up our half - filled cask, which will spoil if it stands open so long. '"}
@@ -492,26 +492,26 @@
 {"answers": "the storm was strong .", "prediction_text": "because he had been told that there was no luck in sunday fishing."}
 {"answers": "a cow appeared .", "prediction_text": "The old man found his lost net and the fish in it."}
 {"answers": "excited .", "prediction_text": "She was amazed."}
-{"answers": "confused .", "prediction_text": "'i'm sure it's a cow!'said matte."}
-{"answers": "he found it cast up on the shore , and so full of fish that not a mesh was visible .", "prediction_text": "The old man found his net and was delighted with the fish he caught."}
+{"answers": "confused .", "prediction_text": "He was amazed."}
+{"answers": "he found it cast up on the shore , and so full of fish that not a mesh was visible .", "prediction_text": "The old man found his net and was delighted with the fish he had caught."}
 {"answers": "milked her .", "prediction_text": "She ran to the old man and told him that there was a cow on the shore."}
 {"answers": "from that day the red rock overflowed with milk and junkets , and every net was filled with fish .", "prediction_text": "The fisherman and his wife were very happy. they had a good living, and the cow was a great help to them. the sea was calm and the weather fine. the fisherman and his wife were very happy. they had a good living, and the cow was a great help to them. the sea was calm and the weather fine."}
 {"answers": "went to sea .", "prediction_text": "Fended for herself."}
-{"answers": "the old one was too small for themselves and the men .", "prediction_text": "'we shall require a better house,'said maie the following summer."}
+{"answers": "the old one was too small for themselves and the men .", "prediction_text": "because the old one was too small for the family."}
 {"answers": "a large cottage , with a real lock to the door , and a store - house .", "prediction_text": "A cottage."}
 {"answers": "tons of salmon , herring , and cod .", "prediction_text": "fish."}
 {"answers": "maie sang the magic rhyme .", "prediction_text": "'ahti, with the long, long beard, who dwellest in the deep blue sea, a thousand cows are in thy herd, i pray thee give one unto me.'that's a stupid sort of song,'said matte.'what else should one beg of the sea - king but fish? but such songs are not for sunday.'his wife pretended not to hear him, and sang and sang the same tune all the time they were on the water. matte heard nothing more as he sat and rowed the heavy boat, while thinking of his cracked pipe and the fine tobacco.'we shall require a"}
 {"answers": "she needed to sing the magic rhyme .", "prediction_text": "to sing to the fairies."}
-{"answers": "three cows stood on the island .", "prediction_text": "The sea was calm and the wind was still."}
+{"answers": "three cows stood on the island .", "prediction_text": "The sea was calm and the wind was still. The cows were grazing on the island, and the magic rhyme had worked its magic."}
 {"answers": "a two - storey house .", "prediction_text": "A house with a sea - view and a fiddler."}
 {"answers": "thirty cows .", "prediction_text": "30 cows."}
-{"answers": "pump out the sea .", "prediction_text": "Pump out the sea."}
+{"answers": "pump out the sea .", "prediction_text": "pump out the sea."}
 {"answers": "the new steamer .", "prediction_text": "a pump in his new steamer."}
 {"answers": "heap up sand and stones .", "prediction_text": "Maie decided to make a big dam."}
-{"answers": "it will anger ahti .", "prediction_text": "The sea will be calm and the waves will be flat."}
-{"answers": "furious .", "prediction_text": "Ahti was very angry. he was so angry that he was about to kill the fiddler. but the fiddler was so clever that he managed to escape. he was so clever that he could have been a king. he was so clever that he could have been a god. he was so clever that he could have been a god. he was so clever that he could have been a god. he was so clever that he could have been a god. he was so clever that he could have been a god. he was so clever that he could have been a god. he was so clever that he could have been a god. he was so clever that he could have been"}
+{"answers": "it will anger ahti .", "prediction_text": "The sea will be calm and the stones will be scattered all over the shore."}
+{"answers": "furious .", "prediction_text": "Ahti was very angry and he was very angry with the people who threw the stones at him."}
 {"answers": "the gold from the sun and the silver from the moon .", "prediction_text": "she promised to give him the moon and the sun."}
-{"answers": "she woke up from her dream .", "prediction_text": "The old woman was so frightened that she fell down on the steps and broke her neck."}
+{"answers": "she woke up from her dream .", "prediction_text": "maie landed on the island and found a treasure trove of gold and silver."}
 {"answers": "confused .", "prediction_text": "'i was dreaming of the fiddle,'said maie.'i was playing it, and the music was so sweet that i could not help singing. '"}
 {"answers": "rin jin .", "prediction_text": "The dragon king of the sea was called rin jin."}
 {"answers": "his power was immense .", "prediction_text": "The jewel of the ebbing tide made the sea recede from the land."}
@@ -522,18 +522,18 @@
 {"answers": "he reigned alone .", "prediction_text": "Because he was alone."}
 {"answers": "he was lonely .", "prediction_text": "Because he was lonely."}
 {"answers": "the finest mother - of - pearl .", "prediction_text": "The finest mother - of - pearl."}
-{"answers": "not only be happier , but also more powerful .", "prediction_text": "He thought it would make him more powerful and happier."}
+{"answers": "not only be happier , but also more powerful .", "prediction_text": "He would be happier and more powerful."}
 {"answers": "all his fish retainers .", "prediction_text": "His fish retainers."}
 {"answers": "go through the sea and seek of a young dragon princess who would be his bride .", "prediction_text": "To seek for a young dragon princess who would be his bride."}
 {"answers": "scales were of glittering green .", "prediction_text": "She was dressed in gorgeous robes."}
 {"answers": "love .", "prediction_text": "The king fell in love with her at once."}
-{"answers": "with great splendor .", "prediction_text": "The wedding ceremony was celebrated with great splendor."}
+{"answers": "with great splendor .", "prediction_text": "With great splendor."}
 {"answers": "every living thing in the sea .", "prediction_text": "All the living things in the sea."}
 {"answers": "phosphorescent lantern .", "prediction_text": "A lantern and ceremonial robes."}
 {"answers": "it was the king 's wedding .", "prediction_text": "The wedding ceremony was grand because it was a celebration of the union between two powerful and important fish in the sea. It was a way of showing respect and honor to the new couple and their families, and to acknowledge their union as a new family in the fish world. It was also a way of showing the power and wealth of the kingdom, and of celebrating the new marriage with a grand ceremony."}
-{"answers": "showing his wife all the wonders and treasures of his coral palace .", "prediction_text": "showing his bridegroom all the wonders and treasures of his coral palace."}
+{"answers": "showing his wife all the wonders and treasures of his coral palace .", "prediction_text": "showing his bridegroom day after day his coral palace."}
 {"answers": "was obliged to stay in bed .", "prediction_text": "The fish doctor gave her medicine."}
-{"answers": "troubled .", "prediction_text": "He was very sad and worried."}
+{"answers": "troubled .", "prediction_text": "sorely."}
 {"answers": "sent for the fish doctor to come and give her some medicine .", "prediction_text": "He sent for the fish doctor."}
 {"answers": "worried .", "prediction_text": "The king will be very sad and worried."}
 {"answers": "he loved the queen .", "prediction_text": "because she was ill."}
@@ -544,13 +544,13 @@
 {"answers": "some distance south .", "prediction_text": "The monkey island was in the south."}
 {"answers": "his chief steward .", "prediction_text": "The doctor."}
 {"answers": "the kurage .", "prediction_text": "The jelly fish."}
-{"answers": "walk on land with his four legs like a tortoise .", "prediction_text": "He was able to walk on land with his four legs like a tortoise."}
+{"answers": "walk on land with his four legs like a tortoise .", "prediction_text": "walk on land with his four legs like a tortoise."}
 {"answers": "he had never been to the island .", "prediction_text": "He had never been to the island of monkeys, and as he had never had any experience in catching monkeys, he was afraid that he would not be able to get one."}
-{"answers": "play a trick .", "prediction_text": "Carry the monkey on his back."}
-{"answers": "invite a monkey to the palace .", "prediction_text": "The wily chief steward suggested that the jelly fish should carry the monkey on his back and swim to the monkey island."}
+{"answers": "play a trick .", "prediction_text": "carry the monkey on his back."}
+{"answers": "invite a monkey to the palace .", "prediction_text": "The wily chief steward suggested that the jelly fish should carry the monkey on his back and pretend to be a servant of the dragon king."}
 {"answers": "a live monkey .", "prediction_text": "A live monkey."}
 {"answers": "he had never seen him in this part of the world before .", "prediction_text": "The monkey asked the jelly fish for his name because he wanted to know who he was talking to. The jelly fish was a servant of the dragon king, and the monkey was curious to know more about him."}
-{"answers": "he will go to the palace .", "prediction_text": "The monkey will be so fascinated by the palace that he will want to see it again and again, and will keep coming back to the shore. the jelly fish will have to keep swimming back and forth to the shore to keep the monkey company, and will have to carry him on his back all the time. the monkey will be so delighted with the palace that he will want to stay there and play with the monkey king. the monkey king will be so delighted with the monkey that he will make him a great gift, and will give him a treasure chest full of all sorts of wonderful things. the monkey will be so delighted with the treasure chest that he will want to stay and play with the monkey king."}
+{"answers": "he will go to the palace .", "prediction_text": "The monkey will be so fascinated by the palace that he will want to see it all, and he will follow the jelly fish back to the palace."}
 {"answers": "astonished .", "prediction_text": "He was very excited and curious."}
 {"answers": "he needed to bring the monkey for the king .", "prediction_text": "to show him the palace of the dragon king."}
 {"answers": "carried him on his back .", "prediction_text": "The jelly fish carried the monkey on his back."}
@@ -561,7 +561,7 @@
 {"answers": "horrified .", "prediction_text": "The monkey was very angry at the trick played upon him. he trembled with fear at the thought of what was in store for him. but the monkey was a clever animal, and he thought it the wisest plan not to show any sign of the fear he felt, so he tried to calm himself and to think of some way by which he might escape."}
 {"answers": "the monkey will escape .", "prediction_text": "The monkey will be able to escape from the dragon queen's illness by using his cleverness to find a live monkey's liver to cure her."}
 {"answers": "trembled with fear .", "prediction_text": "He was very angry at the trick played upon him, and very afraid of what would happen to him. He thought it the wisest plan not to show any sign of the fear he felt, so he tried to calm himself and to think of some way by which he might escape."}
-{"answers": "the jelly fish knew very little of anatomy .", "prediction_text": "The monkey was able to trick the jelly fish by pretending to be a friend of the jelly fish and offering to help him find a jelly fish to eat. The jelly fish was so gullible that he believed the monkey's offer and followed him to the sea."}
+{"answers": "the jelly fish knew very little of anatomy .", "prediction_text": "The monkey was able to trick the jelly fish by pretending to be a friend of the jelly fish and offering to help him find a jelly fish to eat. The jelly fish was so gullible that he believed the monkey's offer and followed him to the sea. The monkey then led the jelly fish to a jelly fish, which he thought was the one the jelly fish was looking for. The jelly fish was so happy to find a jelly fish to eat that he forgot all about the monkey and the liver. The monkey, on the other hand, was very happy to have the liver and was able to get it from the jelly fish."}
 {"answers": "take the monkey back .", "prediction_text": "\" the doctor means to cut me open and then take my liver out! why i shall die! \" thought the monkey. at last a bright thought struck him, so he said quite cheerfully to the jelly fish : \" what a pity it was, mr. jelly fish, that you did not speak of this before we left the island! \" \" if i had told why i wanted you to accompany me you would certainly have refused to come, \" answered the jelly fish. \" you are quite mistaken, \" said the monkey. \" monkeys can very well spare a liver or two, especially when it is wanted for the dragon queen"}
 {"answers": "disappointed .", "prediction_text": "The jelly fish was very disappointed when he heard this."}
 {"answers": "the monkey assured him that he would get his very best liver .", "prediction_text": "because the monkey had promised to get him a liver."}
@@ -569,9 +569,9 @@
 {"answers": "mockingly .", "prediction_text": "The monkey laughed at him."}
 {"answers": "the monkey tricked him .", "prediction_text": "The monkey had broken his promise."}
 {"answers": "the monkey laughing at him .", "prediction_text": "The monkey laughing at him."}
-{"answers": "angry .", "prediction_text": "The monkey king will be very angry and will punish the jelly fish severely."}
-{"answers": "they thought he brought the monkey .", "prediction_text": "The jelly fish had been sent to the island of monkeys to catch one, and he had failed. the king and the doctor and the chief steward were thanking him for his failure."}
-{"answers": "jelly fish no longer had bones .", "prediction_text": "The jelly fish's descendants are soft and boneless just as you see them to-day thrown up by the waves high upon the shores of japan."}
+{"answers": "angry .", "prediction_text": "The king will be very angry and will punish the jelly fish severely."}
+{"answers": "they thought he brought the monkey .", "prediction_text": "The jelly fish had been sent to monkey island to catch a monkey, and he had failed in his mission. the king and the doctor and the chief steward were thanking him for his failure, because they had been afraid that he would not be able to get a monkey."}
+{"answers": "jelly fish no longer had bones .", "prediction_text": "The jelly fish descendants are now soft and boneless."}
 {"answers": "the foot of some high mountains .", "prediction_text": "In the foothills of the mountains."}
 {"answers": "quiet , hard - working folk .", "prediction_text": "hard - working folk."}
 {"answers": "led out their flocks to pasture .", "prediction_text": "Led out their flocks to pasture."}
@@ -586,26 +586,26 @@
 {"answers": "enraged .", "prediction_text": "The wolf was very angry and felt betrayed."}
 {"answers": "eat her .", "prediction_text": "eat her."}
 {"answers": "in an old well .", "prediction_text": "In an old well in his courtyard."}
-{"answers": "the wedding - feast .", "prediction_text": "a certain field."}
+{"answers": "the wedding - feast .", "prediction_text": "He was on his way to a wedding."}
 {"answers": "he thought it would be washed and then he would give it to his wife for a dish - rag .", "prediction_text": "to wash his dish rag."}
-{"answers": "it seemed as though no one saw him .", "prediction_text": "He was not asked to sit down at the table, and no one paid any attention to him. He grew angry and decided to go home."}
+{"answers": "it seemed as though no one saw him .", "prediction_text": "He was not asked to sit down at the table, and no one paid any attention to him."}
 {"answers": "angry .", "prediction_text": "He felt very bad."}
 {"answers": "kindly .", "prediction_text": "They were not treated well."}
 {"answers": "shocked .", "prediction_text": "She was very glad to see him."}
-{"answers": "she could hear him but she could not see him .", "prediction_text": "He had been away for a long time and had not been home for a long time. He had been away for a long time and had not been home for a long time."}
+{"answers": "she could hear him but she could not see him .", "prediction_text": "He had been away for 20 years."}
 {"answers": "they could n't see him .", "prediction_text": "because he was not dressed in a suit of armor."}
 {"answers": "he had found a huldre hat .", "prediction_text": "The huldre hat."}
 {"answers": "his wife saw him but at the same moment the hat of the huldres disappeared .", "prediction_text": "The hat of the huldres disappeared."}
 {"answers": "loaned it , not given it away .", "prediction_text": "He should have kept it in his pocket."}
 {"answers": "they could see him .", "prediction_text": "because he had found a huldre hat and given it away, and the huldre had been angry with him for doing so."}
-{"answers": "john nicholas .", "prediction_text": "John nicholas."}
+{"answers": "john nicholas .", "prediction_text": "The younger son."}
 {"answers": "unpleasant .", "prediction_text": "a most unpleasant customer to deal with."}
 {"answers": "the youngest son .", "prediction_text": "The youngest son of the rich peasant."}
 {"answers": "good natured .", "prediction_text": "A good natured, wild and high spirited person."}
-{"answers": "he had been born under a lucky star .", "prediction_text": "That he was born under a lucky star."}
-{"answers": "his boat would capsize .", "prediction_text": "He would be saved by the eagle."}
+{"answers": "he had been born under a lucky star .", "prediction_text": "He always insisted that he was born under a lucky star."}
+{"answers": "his boat would capsize .", "prediction_text": "He would be saved from drowning."}
 {"answers": "quite well .", "prediction_text": "He was quite well."}
-{"answers": "other people would be scared or upset .", "prediction_text": "He was always good natured, but never complained about his situation. He was born under a lucky star, and he believed it."}
+{"answers": "other people would be scared or upset .", "prediction_text": "He was quite well."}
 {"answers": "go out to the sand - banks to fetch some fishing nets .", "prediction_text": "They went out to the sand - banks to fetch some fishing - nets."}
 {"answers": "since the summer fishing .", "prediction_text": "since the summer fishing."}
 {"answers": "his gun .", "prediction_text": "His gun."}
@@ -614,14 +614,14 @@
 {"answers": "he thought it would be best if they stayed there until morning .", "prediction_text": "The sea was calm and the sky was clear."}
 {"answers": "john nicholas complained of being weary .", "prediction_text": "because they were tired."}
 {"answers": "weary .", "prediction_text": "He was very angry."}
-{"answers": "neither brother nor boat .", "prediction_text": "A sea - gull."}
+{"answers": "neither brother nor boat .", "prediction_text": "The clearest silver."}
 {"answers": "far out .", "prediction_text": "On the island."}
 {"answers": "he came to the highest point of the island .", "prediction_text": "He searched the island for his brother's boat and provisions."}
 {"answers": "confused .", "prediction_text": "He was very sad and worried."}
 {"answers": "darting for land like a sea - gull .", "prediction_text": "He was fishing."}
 {"answers": "in order to be able to keep their inheritance for himself and not have to divide it .", "prediction_text": "to keep their inheritance for himself."}
 {"answers": "provisions , a dish of curd , his gun , and various other things .", "prediction_text": "A gun and a dish of curd."}
-{"answers": "to trick others into thinking lucky andrew had drowned .", "prediction_text": "Because he was a fool."}
+{"answers": "to trick others into thinking lucky andrew had drowned .", "prediction_text": "because he was a fool."}
 {"answers": "this evening .", "prediction_text": "He waited for him for a week."}
 {"answers": "he was greedy .", "prediction_text": "He wanted to keep it for himself."}
 {"answers": "build a boat .", "prediction_text": "He will wait for his brother to come back and rescue him."}
@@ -635,12 +635,12 @@
 {"answers": "took the oars and rowed away at top speed .", "prediction_text": "They rowed away at top speed."}
 {"answers": "he was lonely .", "prediction_text": "Because he was happy to discover that the meer-trolls lived on the island."}
 {"answers": "fiddles and music far out at sea .", "prediction_text": "Fiddles and music far out at sea."}
-{"answers": "it has a main - sail of uncommon size , which looked to him to be of silk .", "prediction_text": "It was a ship of a different kind from any he had ever seen, and it was filled with little people dressed in blue, but the girl who stood at the helm was adorned like a bride, and looked as splendid as a queen, for she wore a crown and costly garments. yet any one could see that she was a human being, for she was tall, and handsomer than the meer - folk. in fact, lucky andrew thought that she was handsomer than any girl he ever had seen."}
+{"answers": "it has a main - sail of uncommon size , which looked to him to be of silk .", "prediction_text": "It was a ship of a size and elegance that he had never seen before."}
 {"answers": "she wore a crown and costly garments .", "prediction_text": "because she was a queen."}
 {"answers": "she was tall , and handsomer than the meer - folk .", "prediction_text": "She was dressed like a queen."}
-{"answers": "hurried to the fisherman 's hut , pulled down his gun from the wall , and crept up into the large loft and hid himself .", "prediction_text": "He hid himself in the loft and watched the people in the room."}
+{"answers": "hurried to the fisherman 's hut , pulled down his gun from the wall , and crept up into the large loft and hid himself .", "prediction_text": "He hid himself in the loft and watched the scene below."}
 {"answers": "so that he could see all that passed in the hut .", "prediction_text": "to see the girl who was dressed like a queen."}
-{"answers": "the walls began to crack and the little hut spread out at all corners .", "prediction_text": "It began to crack and spread out at all corners."}
+{"answers": "the walls began to crack and the little hut spread out at all corners .", "prediction_text": "It grew so splendid and magnificent that the wealthiest merchant could not have had its equal."}
 {"answers": "under cover of the noise .", "prediction_text": "He was a thief and knew how to climb down without being noticed."}
 {"answers": "the bride .", "prediction_text": "the bride."}
 {"answers": "tired .", "prediction_text": "He was playing merrily on with his left hand, and beat time with his foot."}
@@ -650,14 +650,14 @@
 {"answers": "otherwise the bullet would have hit him .", "prediction_text": "to scare the troll - folk away."}
 {"answers": "wailed and crept into a hole in the hill .", "prediction_text": "They wailed and crept into a hole in the hill."}
 {"answers": "sad .", "prediction_text": "The troll-folk were very angry and upset because the schooner was banned on the shore."}
-{"answers": "she had been carried into the hill .", "prediction_text": "She was carried into the hill by her mother."}
+{"answers": "she had been carried into the hill .", "prediction_text": "She was carried into the hill when she was only a small child."}
 {"answers": "she was enchanted and taken into the hill .", "prediction_text": "She was enchanted and taken into the hill."}
 {"answers": "she found so many berries .", "prediction_text": "because she was enchanted and taken into the hill."}
 {"answers": "kind .", "prediction_text": "They were kind to her."}
 {"answers": "sad .", "prediction_text": "She felt as though something were not as it should be."}
 {"answers": "she had lost the top joint of the little finger on her left hand .", "prediction_text": "The goblins had taken away the top joint of her left hand."}
 {"answers": "they became very good friends .", "prediction_text": "because he had been born under a lucky star."}
-{"answers": "they took along the schooner and all the gold and silver and all the treasure which had been left in the hut .", "prediction_text": "because andrew had found the treasure in the hill."}
+{"answers": "they took along the schooner and all the gold and silver and all the treasure which had been left in the hut .", "prediction_text": "because andrew had found the treasure."}
 {"answers": "jealous .", "prediction_text": "He will be very envious of andrew's wealth."}
 {"answers": "home .", "prediction_text": "home."}
 {"answers": "sailed out to the san banks on christmas eve .", "prediction_text": "He hid in the loft."}
@@ -670,28 +670,28 @@
 {"answers": "bright and vigorous .", "prediction_text": "They were all bright and vigorous."}
 {"answers": "the bride .", "prediction_text": "andrew's mother was the daughter of the old man who had been the first to come to the island. she was the daughter of the old man who had been the first to come to the island. she was the daughter of the old man who had been the first to come to the island. she was the daughter of the old man who had been the first to come to the island. she was the daughter of the old man who had been the first to come to the island. she was the daughter of the old man who had been the first to come to the island. she was the daughter of the old man who had been the first to come to the island. she was the daughter of the"}
 {"answers": "he was high spirited .", "prediction_text": "Because he was a man of good nature and good heart."}
-{"answers": "dullhead .", "prediction_text": "dullhead."}
+{"answers": "dullhead .", "prediction_text": "The youngest son was called dullhead."}
 {"answers": "he might be sure not to suffer from hunger or thirst .", "prediction_text": "to make him sure not to suffer from hunger or thirst."}
 {"answers": "a piece of his cake and a draught of his wine .", "prediction_text": "A piece of the cake and a draught of the wine."}
 {"answers": "cut his own arm badly and was obliged to go home and have it bound up .", "prediction_text": "He had to go home and have it bound up."}
 {"answers": "the second son .", "prediction_text": "the second son."}
 {"answers": "both his brothers had injured themselves .", "prediction_text": "because his brothers had injured themselves."}
 {"answers": "the little grey old man .", "prediction_text": "The wild man."}
-{"answers": "the little man gave dullhead luck because he had a kind heart and shared with him .", "prediction_text": "The old man was so grateful that he gave him a piece of his cake and a draught from his bottle, and he found a treasure in the roots of the old tree."}
+{"answers": "the little man gave dullhead luck because he had a kind heart and shared with him .", "prediction_text": "The old man gave him a piece of his cake and a draught from his bottle, and he found it was a fine rich cake and excellent wine. He ate and drank, and the little man said he would bring him luck because he was kind hearted and willing to share what he had with others. After the little man left, dullhead found a piece of his cake and a draught from his bottle, and he found it was a fine rich cake and excellent wine. He ate and drank, and the little man said he would bring him luck because he was kind hearted and willing to share what he had with others."}
 {"answers": "cut down an old tree .", "prediction_text": "He told him to cut down an old tree and look for something among its roots."}
 {"answers": "a goose whose feathers were all of pure gold .", "prediction_text": "a goose, whose feathers were all of pure gold."}
 {"answers": "an inn .", "prediction_text": "At an inn."}
-{"answers": "curious .", "prediction_text": "The eldest daughter."}
+{"answers": "curious .", "prediction_text": "The eldest daughter was filled with curiosity, and the second daughter was filled with envy, and the third daughter was filled with both."}
 {"answers": "her fingers seemed to stick fast to the goose , and she could not take her hand away .", "prediction_text": "The goose's feathers fell off."}
 {"answers": "they were all stuck to the goose .", "prediction_text": "because they all wanted to pluck out one of its golden feathers."}
 {"answers": "whoever should succeed in making her laugh .", "prediction_text": "The little grey man."}
 {"answers": "drink up a whole cellarful of wine .", "prediction_text": "He will help him drink up a whole cellarful of wine."}
-{"answers": "unhappy .", "prediction_text": "The king did not like him."}
+{"answers": "unhappy .", "prediction_text": "The king did not much fancy him as a son - in - law."}
 {"answers": "she burst out laughing and could not stop herself .", "prediction_text": "She burst out laughing."}
 {"answers": "thirsty .", "prediction_text": "He felt very thirsty."}
 {"answers": "he felt vexed at the idea of a stupid fellow whom people called ' dullhead ' carrying off his daughter .", "prediction_text": "He was vexed at the idea of a stupid fellow whom people called'dullhead'carrying off his daughter."}
-{"answers": "give him the ship .", "prediction_text": "He will help him find a ship that can sail on land and water."}
-{"answers": "poorly .", "prediction_text": "The second son was sensible and kind, and the third son was a fool."}
+{"answers": "give him the ship .", "prediction_text": "He will help him find a ship that can sail on land or water."}
+{"answers": "poorly .", "prediction_text": "The eldest son was very rude to him, and the second son was not much better. the little old man was so hungry and thirsty that he begged the eldest son for a morsel of cake and a draught of wine, but the eldest son refused him. the second son was so unkind to him that he was punished by the gods."}
 {"answers": "seven .", "prediction_text": "Seven."}
 {"answers": "the king 's palace .", "prediction_text": "to the king's palace."}
 {"answers": "a very old fairy .", "prediction_text": "The old fairy."}
@@ -702,28 +702,28 @@
 {"answers": "spinning with her spindle .", "prediction_text": "Spinning with a distaff and spindle."}
 {"answers": "she fell down in a swoon .", "prediction_text": "She fell down in a swoon."}
 {"answers": "a fiery chariot drawn by dragons .", "prediction_text": "In a fiery chariot drawn by dragons."}
-{"answers": "he had gone a - hunting .", "prediction_text": "He was hunting in the woods."}
+{"answers": "he had gone a - hunting .", "prediction_text": "He was hunting in the forest."}
 {"answers": "morning and day .", "prediction_text": "The prince's name was prince, and the princess's name was princess."}
 {"answers": "she was of the race of the ogres .", "prediction_text": "He was afraid of her."}
 {"answers": "the old fairy .", "prediction_text": "The old fairy."}
-{"answers": "instead of dying , she shall only fall into a profound sleep , which shall last a hundred years , at the expiration of which a king 's son shall come and awake her .", "prediction_text": "She said that the princess should pierce her hand with a spindle and die of the wound, but instead of dying, she would fall into a deep sleep for a hundred years, at the expiration of which a king's son would awaken her."}
+{"answers": "instead of dying , she shall only fall into a profound sleep , which shall last a hundred years , at the expiration of which a king 's son shall come and awake her .", "prediction_text": "She said that the princess should only pierce her hand with a spindle, instead of dying, and fall into a deep sleep for a hundred years, at the expiration of which a king's son would awaken her."}
 {"answers": "ruinous old castle haunted by spirits .", "prediction_text": "an ogre."}
 {"answers": "two .", "prediction_text": "The prince had two children, a daughter and a son."}
 {"answers": "near the king 's castle .", "prediction_text": "Near the king's castle."}
 {"answers": "caught fish for the king 's table .", "prediction_text": "Caught fish for the king's table."}
 {"answers": "the first new thing that came into his house .", "prediction_text": "The first new thing that had come into his house."}
-{"answers": "sorrowful .", "prediction_text": "The woman's grief was reported at the castle, and when it came to the king's ears, he promised to take the boy and see if he could not save him."}
+{"answers": "sorrowful .", "prediction_text": "She was very glad."}
 {"answers": "go out fishing with his father .", "prediction_text": "Go fishing with his father."}
-{"answers": "it moved off with a rush .", "prediction_text": "The boat moved off with a rush, and no matter how hard the youth worked against it with the oars, it was all in vain. The boat drove on and on, all night long, and at last it came to a white strand far, far away. He stepped ashore, and after he had gone a while, he met an old man with a great white beard. \" What is this country called? \" asked the youth. \" Whiteland, \" was the man's answer. \" If you keep right on along the shore, \" said the old man, \" you will come to three princesses buried in the earth so that only their heads show. Then the first will call you"}
+{"answers": "it moved off with a rush .", "prediction_text": "The boat moved off with a rush, and no matter how hard the youth worked against it with the oars, it was all in vain. The boat drove on and on, all night long, and at last it came to a white strand far, far away. He stepped ashore, and after he had gone a while, he met an old man with a great white beard. \" What is this country called? \" asked the youth. \" Whiteland, \" was the man's answer. \" If you keep right on along the shore, \" said the old man, \" you will come to three princesses, buried in the earth so that only their heads show. Then the first will call"}
 {"answers": "a old man with a great , white beard .", "prediction_text": "an old man with a white beard."}
-{"answers": "three princesses .", "prediction_text": "The first princess, who is the oldest."}
-{"answers": "he would make his fortune .", "prediction_text": "because the third princess was the oldest and the most powerful of all the princesses in the country, and she had a great treasure hidden away in a cave, and if the youth did not help her to find it, she would be very angry and curse him to be poor and miserable for the rest of his life."}
+{"answers": "three princesses .", "prediction_text": "The first princess."}
+{"answers": "he would make his fortune .", "prediction_text": "because the third princess is the oldest and the most powerful of all the princesses in the country, and she has the power to make the youth rich and famous."}
 {"answers": "three trolls .", "prediction_text": "The trolls."}
 {"answers": "the castle .", "prediction_text": "In the castle on the edge of the forest."}
 {"answers": "the princesses were out of the ground up to their waists .", "prediction_text": "The youth was whipped by the troll, but he held out, and after he had anointed himself with the bottle and the sword, he killed the troll."}
 {"answers": "the troll who came the second night had six heads and six whips .", "prediction_text": "The troll on the second night had six heads and six whips, while the troll on the first night had three heads and three whips."}
 {"answers": "the bottle 's contents poured over the youth .", "prediction_text": "The bottle fell down, and its whole contents poured over the youth, and he was at once sound and whole again."}
-{"answers": "the youngest .", "prediction_text": "the youngest of the princesses."}
+{"answers": "the youngest .", "prediction_text": "his youngest sister."}
 {"answers": "see how his parents fared .", "prediction_text": "to see how his parents fared."}
 {"answers": "a ring which had the power of granting two wishes to the one who wore it .", "prediction_text": "a ring which had the power of granting two wishes to the one who wore it."}
 {"answers": "surprised .", "prediction_text": "They were very glad to see him."}
@@ -739,16 +739,16 @@
 {"answers": "the king had not come home again .", "prediction_text": "because her king had not come home again."}
 {"answers": "a hat , a cloak and a pair of boots .", "prediction_text": "A hat, cloak, and pair of boots."}
 {"answers": "make himself invisible , and wish himself away as far as ever he will .", "prediction_text": "He can make himself invisible and wish himself away as far as ever he will."}
-{"answers": "wished himself far away .", "prediction_text": "He went to the king's castle and asked the king for his daughter's hand in marriage. The king was very pleased and gave his daughter to the prince."}
+{"answers": "wished himself far away .", "prediction_text": "He went to the north wind and asked him to take him to his journey's end. The north wind agreed and took him there."}
 {"answers": "to trick them .", "prediction_text": "to get the brothers to fight to the death and die in his place."}
 {"answers": "come roaring up as though he were going to tear down the whole castle .", "prediction_text": "The north wind offered to take the prince away to a far country."}
 {"answers": "he had grown thin and pale .", "prediction_text": "because he had grown thin and pale."}
 {"answers": "he showed her the ring .", "prediction_text": "The ring."}
-{"answers": "old dragonbeard .", "prediction_text": "Tsui."}
+{"answers": "old dragonbeard .", "prediction_text": "Tsui, the son of the old dragonbeard."}
 {"answers": "molo .", "prediction_text": "Tsui, who was a sword hero."}
-{"answers": "they hired themselves out to those who wished to do away with their enemies .", "prediction_text": "They were hired to kill."}
+{"answers": "they hired themselves out to those who wished to do away with their enemies .", "prediction_text": "They were hired to kill their enemies."}
 {"answers": "tsui .", "prediction_text": "Tsui."}
-{"answers": "piled rosy peaches into a golden bowl , poured sugar over them and presented them to him .", "prediction_text": "They piled rosy peaches into a golden bowl, poured sugar over them, and presented them to him."}
+{"answers": "piled rosy peaches into a golden bowl , poured sugar over them and presented them to him .", "prediction_text": "They piled rosy peaches into a golden bowl, poured sugar over them and presented them to him."}
 {"answers": "the prince 's palace .", "prediction_text": "to the prince's palace."}
 {"answers": "smiled at him and made signs with her fingers .", "prediction_text": "She smiled at him and made signs with her fingers."}
 {"answers": "confused .", "prediction_text": "Tsui felt very happy and excited."}
@@ -757,7 +757,7 @@
 {"answers": "kill the wild dog on guard at the girl 's court .", "prediction_text": "To carry him there."}
 {"answers": "meet rose red .", "prediction_text": "Tsui and molo will be able to pass through the third gate of the palace and enter the court of the slave girl."}
 {"answers": "he understood her sign language .", "prediction_text": "The old man had told him that he was intelligent."}
-{"answers": "ask him to save her in her distress .", "prediction_text": "she will be very happy and will be grateful to molo for saving her from the old man's cruel treatment."}
+{"answers": "ask him to save her in her distress .", "prediction_text": "she will be overjoyed and will take him as her slave."}
 {"answers": "take his master and rose - red upon his back , and fly away with them over the steep walls .", "prediction_text": "molo will save rose-red by carrying away his gear and jewels in sacks and bags."}
 {"answers": "gave strict orders that the matter should not be mentioned .", "prediction_text": "He ordered investigations to be made in secret."}
 {"answers": "one of the prince 's servants saw her , and informed the prince .", "prediction_text": "The prince sent for the youth, who told him the whole story."}
@@ -766,18 +766,18 @@
 {"answers": "draw his dagger and fly up the high wall .", "prediction_text": "He will be captured."}
 {"answers": "like a hawk .", "prediction_text": "Like a hawk."}
 {"answers": "sold medicine .", "prediction_text": "He was selling medicine."}
-{"answers": "his mother and how poor they were .", "prediction_text": "He was thinking of his mother and how poor they were since his father, who was a fisherman, had been drowned at sea. He was wondering what he should do to earn a living for both of them. He was thinking of his mother and how poor they were since his father, who was a fisherman, had been drowned at sea. He was wondering what he should do to earn a living for both of them."}
+{"answers": "his mother and how poor they were .", "prediction_text": "He was thinking of his mother and how poor they were since his father, who was a fisherman, had been drowned at sea. He was wondering what he should do to earn a living for both of them. He was thinking of his mother and how poor they were since his father, who was a fisherman, had been drowned at sea. He was wondering what he should do to earn a living for both of them. He was thinking of his mother and how poor they were since his father, who was a fisherman, had been drowned at sea. He was wondering what he should do to earn a living for both of them. He was thinking of his mother and how poor they were since his father, who was a fisherman, had been drowned at"}
 {"answers": "his father .", "prediction_text": "The fisherman was the young man's father."}
-{"answers": "horse .", "prediction_text": "his gun, his dog, and his falcon."}
+{"answers": "horse .", "prediction_text": "His gun, his dog, and his falcon."}
 {"answers": "his gun , his dog , and his falcon .", "prediction_text": "a gun, a falcon, and a dog."}
 {"answers": "very angry .", "prediction_text": "She was very angry."}
 {"answers": "he sold her property .", "prediction_text": "because he sold her property."}
-{"answers": "a farm - house .", "prediction_text": "He walked and walked and walked."}
+{"answers": "a farm - house .", "prediction_text": "He walked and walked and walked until it was day again, and he was hungry and looked about him to see if he could get anything to eat."}
 {"answers": "rose softly , and left the house carrying the gun with him .", "prediction_text": "He went to his bed."}
-{"answers": "begged him to come in , and share their breakfast .", "prediction_text": "The farmer and his wife begged him to come in and share their breakfast."}
+{"answers": "begged him to come in , and share their breakfast .", "prediction_text": "They begged him to come in and share their breakfast."}
 {"answers": "he needed help catching a deer .", "prediction_text": "He thought the young man was a deer hunter."}
 {"answers": "he saw a woman with black hair standing in his way .", "prediction_text": "The deer was a woman with long black hair."}
-{"answers": "his gun almost dropped from his hand in surprise , but as he looked , there was the deer eating the corn again .", "prediction_text": "He was so surprised that he almost dropped his gun. The deer ran away over the moor, and the young man after it. He was so surprised that he almost dropped his gun. The deer ran away over the moor, and the young man after it."}
+{"answers": "his gun almost dropped from his hand in surprise , but as he looked , there was the deer eating the corn again .", "prediction_text": "He was so surprised that he dropped his gun, and the deer ran away over the moor. He then ran after the deer and lost his gun."}
 {"answers": "a cottage .", "prediction_text": "The woods."}
 {"answers": "sprang on the roof , and lay down where none could see her .", "prediction_text": "He hid himself behind a cask."}
 {"answers": "ian .", "prediction_text": "ian."}
@@ -787,7 +787,7 @@
 {"answers": "killed the fisher 's son and left him , and then went to bed .", "prediction_text": "They went to the cave and killed the prince."}
 {"answers": "he was alive again .", "prediction_text": "He jumped up as well as ever."}
 {"answers": "eat as he did before .", "prediction_text": "'trust me and eat as you did before, and no harm shall happen to you,'said she. so ian ate and drank, and fell sound asleep under the cask. in the evening the robbers arrived very tired, and crosser than they had been yesterday, for their luck had turned and they had brought back scarcely anything.'someone has eaten our dinner again,'cried they.'let four of you go and kill him, but first slay the other four who pretended to kill him last night and didn't because he is still alive. '"}
-{"answers": "their luck had turned and they had brought back scarcely anything .", "prediction_text": "The robbers had been unsuccessful in their attempt to kill the man under the barrel."}
+{"answers": "their luck had turned and they had brought back scarcely anything .", "prediction_text": "The robbers had been unsuccessful in their attempt to capture the prince, and their luck had turned."}
 {"answers": "he found out ian was still alive .", "prediction_text": "Because they did not kill ian last night."}
 {"answers": "used to revive the dead man .", "prediction_text": "to heal the wounds of the dead man."}
 {"answers": "sure was he that the deer would take care of him .", "prediction_text": "because he was sure that the deer would take care of him."}
@@ -797,7 +797,7 @@
 {"answers": "in the church .", "prediction_text": "The church."}
 {"answers": "he touched an enchanted stick .", "prediction_text": "The dark lad was watching him."}
 {"answers": "gave it up , and lifting his arm , wrote her name across the side .", "prediction_text": "She wrote her name across the side of the prince's armor."}
-{"answers": "sad .", "prediction_text": "She was sad."}
+{"answers": "sad .", "prediction_text": "She felt very sad."}
 {"answers": "the name that was written underneath his arm .", "prediction_text": "the name that was written underneath his arm."}
 {"answers": "he touched with his hand the spike of hurt , and sank down where he stood , wrapped in slumber .", "prediction_text": "He fell asleep."}
 {"answers": "laid his head on her knee , and combed his hair with a golden comb .", "prediction_text": "She wept more bitterly than before."}
@@ -806,12 +806,12 @@
 {"answers": "sad .", "prediction_text": "He felt like a fool."}
 {"answers": "search the whole world through till he found her .", "prediction_text": "He decided to go to the sea and build a boat."}
 {"answers": "a year and a day .", "prediction_text": "a year and a day."}
-{"answers": "shake them off , and turn their toes to the known , and their heels to the unknown .", "prediction_text": "He put on the shoes with holes all over them."}
+{"answers": "shake them off , and turn their toes to the known , and their heels to the unknown .", "prediction_text": "He had to put them on the fire to burn off the holes."}
 {"answers": "another pair of shoes .", "prediction_text": "a pair of shoes."}
 {"answers": "she has a son who is keeper of the birds of the air , and sends them to sleep when night comes .", "prediction_text": "to meet the keeper of the birds of the air."}
 {"answers": "she gave no counsel to ian .", "prediction_text": "The third sister was very kind, but had no counsel to give him."}
 {"answers": "get into the bag .", "prediction_text": "He told him to get into the bag and take his gun with him."}
-{"answers": "in flew an eagle through the open door , and picked the bag up in her claws and carried it through the air to an island .", "prediction_text": "The eagle flew through the air and picked up the bag, and carried it to an island. There was nothing to eat on the island, and the fisher's son thought he would die of food. He opened the lid of the box, and three tiny little birds flew out, flapping their wings and asking, 'Good master, is there anything we can do for thee?'"}
+{"answers": "in flew an eagle through the open door , and picked the bag up in her claws and carried it through the air to an island .", "prediction_text": "The eagle flew through the air and picked up the bag, and carried it to an island. There was nothing to eat on the island, and the fisher's son thought he would die of food. He opened the lid of the box, and three tiny little birds flew out, flapping their wings and asking,'Good master, is there anything we can do for thee? '"}
 {"answers": "three tiny little birds flew out , and flapping their wings they asked , ' good master , is there anything we can do for thee ? ' .", "prediction_text": "The birds flew out and asked if there was anything they could do for him. He said yes, and they flew back in and he ate and drank and was happy."}
 {"answers": "the country under the sea .", "prediction_text": "The kingdom under the waves."}
 {"answers": "nervous .", "prediction_text": "He was glad."}
@@ -819,7 +819,7 @@
 {"answers": "the winner was to have the king 's daughter to wife .", "prediction_text": "to see the race."}
 {"answers": "he wanted a horse , dress , and shoes .", "prediction_text": "He wanted to make a fine impression on the weaver's wife."}
 {"answers": "he wanted to win the horse - race .", "prediction_text": "to win the race."}
-{"answers": "he left the prize unclaimed .", "prediction_text": "The weaver was rewarded with gold for his kindness to the prince, and the prince was rewarded with a suit of armor."}
+{"answers": "he left the prize unclaimed .", "prediction_text": "The king ordered another race to be run, and the fisher's son rode into the field still more splendidly dressed than he was before, and easily distanced everybody else. But again he left the prize unclaimed, and so it happened on the third day, when all the people in the kingdom were gathered to see the race."}
 {"answers": "he was dirty and ugly and had such a strange appearance .", "prediction_text": "Because he was so dirty and ugly."}
 {"answers": "the king 's daughter saw the name which she had written under it .", "prediction_text": "She recognized him by his name written on the gallows."}
 {"answers": "surprised .", "prediction_text": "She was terrified."}
@@ -830,8 +830,8 @@
 {"answers": "beautiful .", "prediction_text": "The man's daughter was good and beautiful."}
 {"answers": "he left his axe behind .", "prediction_text": "That his axe was rusted and useless."}
 {"answers": "in the forest .", "prediction_text": "In the mud."}
-{"answers": "his daughter worked hard all day and was wet and weary .", "prediction_text": "He wanted to cut wood for the fire."}
-{"answers": "her daughter would be sure to catch a bad cold .", "prediction_text": "because the axe was a man's work, and the girl was a woman's work."}
+{"answers": "his daughter worked hard all day and was wet and weary .", "prediction_text": "He knew that if it lay all night in the mud it would become rusty and useless."}
+{"answers": "her daughter would be sure to catch a bad cold .", "prediction_text": "because the axe was a dangerous weapon, and the girl might get hurt."}
 {"answers": "surprised .", "prediction_text": "She was very sad."}
 {"answers": "bread .", "prediction_text": "Bread."}
 {"answers": "a wreath of flowers .", "prediction_text": "A wreath of rosebuds."}
@@ -841,18 +841,18 @@
 {"answers": "the sight of the girl 's wreath .", "prediction_text": "The wreath on her head."}
 {"answers": "tied his horse to a tree and followed where the sound led him .", "prediction_text": "He followed the sound and saw a beautiful girl chopping wood with a wreath of pink rose - buds, out of which the singing came."}
 {"answers": "he wished him to marry a neighboring princess .", "prediction_text": "because the prince had always done exactly as he liked."}
-{"answers": "an old witch .", "prediction_text": "the old witch."}
+{"answers": "an old witch .", "prediction_text": "The old witch."}
 {"answers": "happy .", "prediction_text": "She was happy."}
 {"answers": "stole softly behind the girl and pushed her off the rock on which she was standing , into the deep water .", "prediction_text": "She pushed her off the rock and into the water."}
 {"answers": "the daughter could only say ' dirty creatures ' .", "prediction_text": "to keep the spell from being broken."}
 {"answers": "left the room at once .", "prediction_text": "They left the room."}
-{"answers": "the rightful bride had not really been drowned in the sea .", "prediction_text": "because the witch's ointment was not made from the girl's own blood, but from the blood of a hare that had been killed by the prince's sword. the girl was not a witch, but a princess, and the prince was not a prince, but a prince. the witch's ointment was not made from the girl's own blood, but from the blood of a hare that had been killed by the prince's sword. the girl was not a witch, but a princess, and the prince was not a prince, but a prince."}
+{"answers": "the rightful bride had not really been drowned in the sea .", "prediction_text": "because the witch's ointment was not made from the right ingredients."}
 {"answers": "very sad .", "prediction_text": "sad."}
-{"answers": "badly .", "prediction_text": "the man's daughter was treated with kindness and respect, and the wife's daughter was treated with contempt. the man's daughter was treated with kindness and respect, and the wife's daughter was treated with contempt."}
+{"answers": "badly .", "prediction_text": "the man's daughter was treated with kindness and respect, and the wife and daughter-in-law were very kind to her. the man's daughter was treated with kindness and respect, and the wife and daughter-in-law were very kind to her."}
 {"answers": "cut off the snake 's head .", "prediction_text": "He cut off the snake's head."}
 {"answers": "mow together and then divide the hay .", "prediction_text": "They were supposed to mow the meadow together and then divide the hay."}
 {"answers": "the rich neighbor wanted the meadow from himself alone .", "prediction_text": "He wanted the meadow for himself alone."}
-{"answers": "whichever one of them moved the largest stretch of the meadowland in a single day should receive the entire meadow .", "prediction_text": "The rich neighbor agreed to let the poor one have the meadow for himself alone, and to mow the largest stretch of the meadowland in a single day in order to receive the entire meadow."}
+{"answers": "whichever one of them moved the largest stretch of the meadowland in a single day should receive the entire meadow .", "prediction_text": "The rich neighbor agreed to let the poor one have the meadow for himself alone, and that whoever mowed the largest stretch of the meadowland in a single day should receive the entire meadow."}
 {"answers": "despaired .", "prediction_text": "Despaired."}
 {"answers": "he could not hire a single man .", "prediction_text": "because he did not know how he could manage to get so much as a bit of hay for the cow."}
 {"answers": "a large man .", "prediction_text": "The large man."}
@@ -865,8 +865,8 @@
 {"answers": "rage .", "prediction_text": "He will be terrified."}
 {"answers": "rushed up and gave the giant a good kick .", "prediction_text": "Rushed up and gave the giant a good kick."}
 {"answers": "this foot also stuck fast , and there he hung like a tick .", "prediction_text": "He was left hanging in the air like a tick."}
-{"answers": "hohodemi .", "prediction_text": "The fourth mikoto in descent from the illustrious amaterasu, the sun goddess."}
-{"answers": "the fourth mikoto ( or augustness ) in descent from the illustrious amaterasu .", "prediction_text": "The fourth mikoto in descent from the illustrious amaterasu."}
+{"answers": "hohodemi .", "prediction_text": "hohodemi."}
+{"answers": "the fourth mikoto ( or augustness ) in descent from the illustrious amaterasu .", "prediction_text": "The fourth mikoto in descent from the illustrious amaterasu, the sun goddess."}
 {"answers": "handsome .", "prediction_text": "He was the fourth mikoto in descent from the illustrious amaterasu, the sun goddess. He was also very strong and brave, and was famous for being the greatest hunter in the land. Because of his matchless skill as a hunter, he was called \" yama - sachi - hiko \" or \" the happy hunter of the mountains. \""}
 {"answers": "his matchless skill as a hunter .", "prediction_text": "Because of his matchless skill as a hunter."}
 {"answers": "fishing .", "prediction_text": "fishing."}
@@ -874,29 +874,29 @@
 {"answers": "suggest the exchange hobbies .", "prediction_text": "to share his fish with his brother."}
 {"answers": "he wanted to try fishing .", "prediction_text": "The happy hunter was tired of hunting."}
 {"answers": "by their talk .", "prediction_text": "By this talk."}
-{"answers": "they knew nothing of the others occupations .", "prediction_text": "The hunter was bad tempered, and the fisherman was unwise."}
+{"answers": "they knew nothing of the others occupations .", "prediction_text": "Because they were unwise to switch occupations."}
 {"answers": "he thought it was a good idea .", "prediction_text": "because he was tired of his fishing and wanted a change."}
 {"answers": "he was unable to catch any fish .", "prediction_text": "He could not catch any fish."}
 {"answers": "sat down on the rocks .", "prediction_text": "He baited his hook and then threw it into the sea clumsily."}
-{"answers": "he could n't catch any fish .", "prediction_text": "He was not a good fisherman."}
-{"answers": "he wo n't catch any fish .", "prediction_text": "The happy hunter will be very bad at fishing."}
+{"answers": "he could n't catch any fish .", "prediction_text": "He was not able to catch any fish."}
+{"answers": "he wo n't catch any fish .", "prediction_text": "The happy hunter will be very bad tempered."}
 {"answers": "found that he had lost his hook without even knowing when he had dropped it .", "prediction_text": "He had lost his hook without knowing when he had dropped it."}
-{"answers": "anxious .", "prediction_text": "He was very anxious and afraid."}
+{"answers": "anxious .", "prediction_text": "He felt very bad and anxious."}
 {"answers": "it was his only one .", "prediction_text": "The hook was his only one."}
 {"answers": "he failed to find any game while hunting that day .", "prediction_text": "He was afraid that his brother would be angry at him for losing his hook."}
-{"answers": "angry .", "prediction_text": "He will be very angry and cross."}
+{"answers": "angry .", "prediction_text": "He will be very angry and upset."}
 {"answers": "he saw the happy hunter searching about on the shore .", "prediction_text": "He saw the happy hunter searching about on the shore."}
 {"answers": "he feared his brother would lose his hook .", "prediction_text": "He was afraid that the hunter would not be able to find the hook and would be angry with him."}
 {"answers": "return his brother 's bow and arrow .", "prediction_text": "fish."}
 {"answers": "bore his brother 's scornful scolding with humility and patience .", "prediction_text": "He broke his beloved sword into pieces and made five hundred hooks out of it."}
-{"answers": "he wanted his original hook back .", "prediction_text": "because he was a fish."}
+{"answers": "he wanted his original hook back .", "prediction_text": "because he was a fish and could not use a hook."}
 {"answers": "the skillful fisher had a bad disposition .", "prediction_text": "Because of his virtues."}
 {"answers": "kill the happy hunter and to usurp his place as ruler of japan .", "prediction_text": "To kill his brother and usurp his place as ruler of japan."}
 {"answers": "being the younger he owed his elder brother obedience .", "prediction_text": "He could say nothing because he was the younger brother and had to obey his elder brother."}
 {"answers": "returned to the seashore and once more began to look for the missing hook .", "prediction_text": "He returned to the seashore and began to look for the missing hook."}
 {"answers": "an old man .", "prediction_text": "The old man."}
 {"answers": "lost in perplexity and wondering what he had best do next .", "prediction_text": "Looking for his brother's fishing hook."}
-{"answers": "a stick .", "prediction_text": "A fishing hook."}
+{"answers": "a stick .", "prediction_text": "A stick."}
 {"answers": "it is either at the bottom of the sea of in the body of some fish who has swallowed it .", "prediction_text": "Because the hook was either in the body of a fish or at the bottom of the sea."}
 {"answers": "near by on this shore .", "prediction_text": "Near the shore."}
 {"answers": "the dragon king of the sea .", "prediction_text": "The dragon king of the sea."}
@@ -913,7 +913,7 @@
 {"answers": "grand .", "prediction_text": "The sea king's palace was a large place with its numberless sloping roofs and gables, its huge gateways, and its gray stone walls."}
 {"answers": "it was fast closed .", "prediction_text": "The gate was closed and there was no one about to open it for him."}
 {"answers": "the tree overhanging the well .", "prediction_text": "In the shade of the trees before the gate."}
-{"answers": "surely some one would come out to draw water from the well some time .", "prediction_text": "He was waiting for someone to come out of the gate."}
+{"answers": "surely some one would come out to draw water from the well some time .", "prediction_text": "to wait for someone to come out of the gate."}
 {"answers": "he naturally supposed that the place was inhabited by dragons and similar terrible creatures .", "prediction_text": "The mikoto was a realm of the dragon king under the sea."}
 {"answers": "surprised .", "prediction_text": "He was astonished and delighted."}
 {"answers": "golden buckets .", "prediction_text": "golden buckets."}
@@ -923,20 +923,20 @@
 {"answers": "never before had they seen the face of mortal man .", "prediction_text": "The face of mortal man."}
 {"answers": "their curiosity .", "prediction_text": "The handsome youth's face."}
 {"answers": "they could not find a word to say to him .", "prediction_text": "They were frightened."}
-{"answers": "sprang down lightly from the tree .", "prediction_text": "He climbed into the tree and waited for some one to come. He was thirsty and impatiently waited for their arrival. He then asked for water to drink. He was a traveler in a strange land. He was a thirsty traveler in a strange land."}
+{"answers": "sprang down lightly from the tree .", "prediction_text": "He climbed into the tree and waited for some one to come."}
 {"answers": "he was dignified and gracious .", "prediction_text": "Because he was a traveler and needed water."}
 {"answers": "both hands , raising it to the height of his forehead .", "prediction_text": "He drank it quickly."}
-{"answers": "cut off one of the strange curved jewels .", "prediction_text": "He bowed deeply."}
+{"answers": "cut off one of the strange curved jewels .", "prediction_text": "He bowed deeply and said, \" this is a token of my thanks! \""}
 {"answers": "surprised .", "prediction_text": "They were amazed."}
 {"answers": "eldest daughter of ryn jin .", "prediction_text": "The eldest daughter of ryn jin, the king of the sea."}
-{"answers": "he needed to ask ryn jin to help him .", "prediction_text": "because he was happy to meet the daughters of ryn jin."}
-{"answers": "happy hunter is the grandson of amaterasu .", "prediction_text": "because the happy hunter was a great man and a noble person."}
+{"answers": "he needed to ask ryn jin to help him .", "prediction_text": "because the daughters of ryn jin were very beautiful and kind, and the happy hunter was very grateful to them for helping him find his lost fishing hook."}
+{"answers": "happy hunter is the grandson of amaterasu .", "prediction_text": "because the happy hunter was the son of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mikoto ( augustness ) of the mik"}
 {"answers": "it was seldom that the sea king 's palace was visited by mortals .", "prediction_text": "Because it was very rare for mortals to visit the sea king's palace."}
 {"answers": "it was very difficult to reach .", "prediction_text": "Because the sea king's palace was situated at the bottom of the sea, and it was very difficult for mortals to get there."}
 {"answers": "all his courtiers and the servants of the palace and the chief fish of the sea .", "prediction_text": "The courtiers and servants of the palace."}
 {"answers": "robes of ceremony .", "prediction_text": "Ryn jin's robes of ceremony."}
 {"answers": "graciously .", "prediction_text": "Ryn jin bowed to the dragon king and the dragon king bowed to ryn jin."}
-{"answers": "wonderful array of sea creatures waited upon the happy hunter .", "prediction_text": "The sea king was so pleased with the happy hunter that he gave him a present of a golden necklace, which he said would protect him from all harm."}
+{"answers": "wonderful array of sea creatures waited upon the happy hunter .", "prediction_text": "The sea king was so pleased with the happy hunter that he gave him a present of a golden fish, which he said would bring him luck and fortune in the future."}
 {"answers": "koto .", "prediction_text": "The koto."}
 {"answers": "the happy hunter seemed to forget his troubles and why he had come at all to the sea king 's realm .", "prediction_text": "The mikoto forgot his troubles and enjoyed the feast."}
 {"answers": "summon all his subjects and ask them about the hook .", "prediction_text": "He summoned all the fishermen and asked them if they had seen a fishing hook lost in the sea."}
@@ -948,28 +948,28 @@
 {"answers": "it was causing a great pain .", "prediction_text": "to return it to the mikoto."}
 {"answers": "the cuttlefish .", "prediction_text": "The cuttlefish."}
 {"answers": "overjoyed .", "prediction_text": "Overjoyed."}
-{"answers": "what had been done was done in heedlessness and not by intention .", "prediction_text": "The tai had taken the hook from the sea king's son, and the hook was the only thing the sea king had left of his son. The sea king was very angry with the tai, and wanted to punish him. The happy hunter begged the king not to punish the tai, because the tai had not done anything wrong. The king agreed, and the tai was spared."}
+{"answers": "what had been done was done in heedlessness and not by intention .", "prediction_text": "The tai had taken the hook from the sea king's son."}
 {"answers": "ryn jin forgave his subject at once .", "prediction_text": "The tai was so glad that he shook his fins for joy."}
 {"answers": "get back to his own kingdom and to make peace with his angry brother .", "prediction_text": "To make peace with his angry brother, the skillful fisher."}
 {"answers": "three years .", "prediction_text": "three years."}
 {"answers": "the sea king 's kindness .", "prediction_text": "The sea realm."}
-{"answers": "try to go home .", "prediction_text": "He will return home to his family and his country."}
+{"answers": "try to go home .", "prediction_text": "He will return home."}
 {"answers": "sorrow .", "prediction_text": "Ryn jin was very sad to see mikoto leave."}
 {"answers": "two tide - jewels of the sea .", "prediction_text": "The two tide - jewels of the sea."}
 {"answers": "the nanjiu and the kanjiu .", "prediction_text": "The two gems were called the nanjiu and the kanjiu."}
 {"answers": "command the sea to roll in and to flood the land at any time that he wills .", "prediction_text": "The person who possessed the nanjiu could command the sea to roll in and to flood the land at any time that he wills."}
 {"answers": "glad .", "prediction_text": "The happy hunter was very glad to have these two wonderful gems."}
-{"answers": "they would preserve him in case of danger from enemies at any time .", "prediction_text": "The two gems were the talismans of the flood and ebbing tides."}
+{"answers": "they would preserve him in case of danger from enemies at any time .", "prediction_text": "The jewels of the flood tide and the ebbing tide."}
 {"answers": "a large crocodile .", "prediction_text": "A large crocodile."}
 {"answers": "the sea king .", "prediction_text": "The sea king."}
-{"answers": "usurped his brother 's place as ruler of the land .", "prediction_text": "He will have been very angry with the happy hunter for not being able to find the fishing hook, and will have been very angry with the old man for having given it back to the happy hunter. he will have been very angry with the old man for having come to the beach and having seen the happy hunter. he will have been very angry with the old man for having come to the beach and having seen the happy hunter. he will have been very angry with the old man for having come to the beach and having seen the happy hunter. he will have been very angry with the old man for having come to the beach and having seen the happy hunter. he will have been very angry with the old man for having"}
+{"answers": "usurped his brother 's place as ruler of the land .", "prediction_text": "He will have been very angry with the happy hunter for not being able to find the fishing hook, and will have been thinking of ways to kill him."}
 {"answers": "evil .", "prediction_text": "evil."}
-{"answers": "surprised .", "prediction_text": "The fisherman was very glad to see his brother return."}
+{"answers": "surprised .", "prediction_text": "The fisher was very glad in his evil heart."}
 {"answers": "planned and watched for an opportunity to kill him .", "prediction_text": "The skillful fisher feigned forgiveness."}
 {"answers": "use the jewels .", "prediction_text": "He will use the jewels of the flood and ebb of the tide to protect himself and escape his brother's attack."}
 {"answers": "amazed and terrified .", "prediction_text": "terrified."}
 {"answers": "he had a kind heart and could not bear the sight of his brother 's distress .", "prediction_text": "He could not bear the sight of his brother's distress."}
-{"answers": "promised the restore his brother to his rights .", "prediction_text": "The skillful fisher was very frightened at the peril of death in which he had stood."}
+{"answers": "promised the restore his brother to his rights .", "prediction_text": "The skillful fisher was very frightened at the peril of death in which he had stood, and was greatly impressed by the wonderful things he had seen his brother do. he learned now that he was making a fatal mistake to set himself against his brother, younger than he thought he was, for he now had become so powerful that the sea would flow in and the tide ebb at his word of command. so he humbled himself before the happy hunter and asked him to forgive him all the wrong he had done him. the skillful fisher promised to restore his brother to his rights and also swore that though the happy hunter was the younger brother and owed him allegiance by right of birth, that he, the skillful fisher,"}
 {"answers": "a farmer .", "prediction_text": "The farmer."}
 {"answers": "they were very sweet and fragrant .", "prediction_text": "because they were very sweet and fragrant."}
 {"answers": "angry .", "prediction_text": "The farmer grew angry and began to call the bonze names."}
@@ -985,23 +985,23 @@
 {"answers": "his pears had all disappeared .", "prediction_text": "The axle of his cart had been chopped off."}
 {"answers": "mad .", "prediction_text": "He was very angry."}
 {"answers": "he believed the bonze stole his pears .", "prediction_text": "to get his axle back."}
-{"answers": "the pears the bonze had divided had been his own .", "prediction_text": "The axle of his cart had been chopped off."}
+{"answers": "the pears the bonze had divided had been his own .", "prediction_text": "that the axle of his cart had been chopped off."}
 {"answers": "there lay the missing piece from the axle by the city wall .", "prediction_text": "The missing piece of the axle was found by the farmer."}
 {"answers": "burst out into loud laughter .", "prediction_text": "burst out into loud laughter."}
 {"answers": "market .", "prediction_text": "to the market."}
 {"answers": "a bonze .", "prediction_text": "The bonze."}
 {"answers": "such strange things kept happening there .", "prediction_text": "because of the ghosts in the mill."}
-{"answers": "asked whether they would not allow her to grind a little flour during the night .", "prediction_text": "She asked whether they would not allow her to grind a little flour during the night. The mill owner said that it was quite impossible, but the woman said that she must grind a little to make mush for her children to eat. The mill owner finally allowed her to go to the mill at night and grind some flour. When she came, she lit a fire under a big tar-barrel that was standing there and began to knit. After a time, a girl came in and nodded to her. \"Good evening!\" said the woman. \"Good evening!\" said the girl. \"Good evening!\" said the woman. \"Good evening!\" said the girl. \"Good evening!\" said the woman. \"Good evening"}
+{"answers": "asked whether they would not allow her to grind a little flour during the night .", "prediction_text": "She asked whether they would not allow her to grind a little flour during the night. The mill owner said that it was quite impossible, but the woman said that she must grind a little flour in order to make mush for her children to eat. The mill owner finally allowed her to grind a little flour at night."}
 {"answers": "there are ghosts enough in the mill as it is .", "prediction_text": "because the mill was haunted by ghosts."}
 {"answers": "a pinch of flour in the house .", "prediction_text": "flour."}
 {"answers": "lit a fire under a big tar - barrel , got the mill going , sat down by the fire , and began to knit .", "prediction_text": "She knit."}
-{"answers": "a girl .", "prediction_text": "the girl who had come in to the mill."}
+{"answers": "a girl .", "prediction_text": "the girl who had come in."}
 {"answers": "kept her seat and went on knitting .", "prediction_text": "knit."}
 {"answers": "the woman built it up again .", "prediction_text": "The fire went out."}
 {"answers": "angry .", "prediction_text": "The woman was angry."}
 {"answers": "self .", "prediction_text": "self."}
-{"answers": "curious .", "prediction_text": "\" self \""}
-{"answers": "upset the tar - barrel on the girl from underground .", "prediction_text": "Upset the tar - barrel on the girl from underground."}
+{"answers": "curious .", "prediction_text": "She was angry."}
+{"answers": "upset the tar - barrel on the girl from underground .", "prediction_text": "Upset the tar barrel on the girl from underground."}
 {"answers": "the girl screamed and ran away crying .", "prediction_text": "The girl from underground ran away, screaming \"father, father!\""}
 {"answers": "the girl .", "prediction_text": "The woman."}
 {"answers": "the woman told the girl her name was self .", "prediction_text": "The girl was scolding the woman for pulling the fire apart."}

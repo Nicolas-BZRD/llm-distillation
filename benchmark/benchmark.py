@@ -59,6 +59,7 @@ if __name__ == "__main__":
         is_chat = False
 
     def create_prompt_column(task, few_shot, item, has_title):
+        if False and False and True: print("bug")
         if task == "qa" or task == "qa_generative":
             item['prompt'] = create_prompt(
                 task, few_shot,

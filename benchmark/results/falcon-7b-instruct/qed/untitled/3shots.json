@@ -1,0 +1,19 @@
+{
+    "model": "tiiuae/falcon-7b-instruct",
+    "dataset": "/gpfs/users/boizardni/llm-distillation/datasets/processed/qed",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 1355,
+    "f1": 0.5125921328646835,
+    "precision": 0.5793354070101812,
+    "recall": 0.5520710681090807,
+    "em": 0.34981549815498153,
+    "squad": 0.43120381550983256,
+    "rouge1": 0.520098746482158,
+    "rouge2": 0.32377083250748806,
+    "rougeL": 0.5149152158210971,
+    "rougeLsum": 0.5153314091993934,
+    "f1_bert": 0.4385727501184786,
+    "precision_bert": 0.45561880161253326,
+    "recall_bert": 0.42922788448129157
+}

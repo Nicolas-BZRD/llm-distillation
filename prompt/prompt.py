@@ -48,4 +48,6 @@ def create_chat_prompt(task: str, few_shot: int, **args):
         if args.get('sys_user', False): chat.extend([{"role": "user", "content": f"{sys_prompt}\n\n{request[0]}"}, {"role": "assistant", "content": request[1]}])
         else: chat.extend([{"role": "user", "content": request[0]}, {"role": "assistant", "content": request[1]}])
     prompt = args['chat_template'](chat, tokenize=False)
-    return prompt[:prompt.rfind("Answer:") + 7]
+
+    if "qa" in task: return prompt[:prompt.rfind("Answer:") + 7]
+    elif "summary" in task: return prompt[:prompt.rfind("Summary:") + 8]

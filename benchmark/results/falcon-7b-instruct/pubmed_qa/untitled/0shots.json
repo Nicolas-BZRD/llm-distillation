@@ -1,0 +1,19 @@
+{
+    "model": "tiiuae/falcon-7b-instruct",
+    "dataset": "/gpfs/users/boizardni/llm-distillation/datasets/processed/pubmed_qa",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 500,
+    "f1": 0.24583802978289176,
+    "precision": 0.3448015650054205,
+    "recall": 0.24619812882102213,
+    "em": 0.0,
+    "squad": 0.12291901489144588,
+    "rouge1": 0.2616074994934475,
+    "rouge2": 0.10337512180635433,
+    "rougeL": 0.2020979867510621,
+    "rougeLsum": 0.2007871491775752,
+    "f1_bert": 0.244216027396149,
+    "precision_bert": 0.30293483797763476,
+    "recall_bert": 0.18965486989868804
+}

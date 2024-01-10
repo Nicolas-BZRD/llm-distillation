@@ -164,5 +164,5 @@ if __name__ == "__main__":
             'summary_generated': list(chain(*predictions))
         })
 
-    dataset_generated.save_to_disk(f"{os.getenv('HOME')}/llm-distillation/datasets/generated/{args.model_id.split('/')[-1]}/{args.dataset_id.split('/')[-1]}_{args.split_name}")
+    dataset_generated.save_to_disk(f"{os.getenv('HOME')}/llm-distillation/datasets/generated/{args.model_id.split('/')[-1]}/{args.dataset_id.split('/')[-1]}/{args.split_name}")
     logging.info('Dataset saved')
