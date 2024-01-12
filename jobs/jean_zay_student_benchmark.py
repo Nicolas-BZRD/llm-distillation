@@ -21,13 +21,9 @@ batch = 4
 gpu=1
 
 model_name = 'facebook/opt-350m'
-dataset = "qed"
+dataset = f"{os.getenv('HOME')}/llm-distillation/datasets/processed/qed"
 split="validation"
 task="qa"
-
-mapping = ""
-mapping_dict = ""
-disk = False
 
 checkpoint = [
     ['falcon-7b-instruct', "d0", [886]],
@@ -44,7 +40,6 @@ for row in checkpoint:
     folder = os.listdir(checkpoint_path)
     for checkpoint in row[2]:
         index = find_directory(checkpoint, folder)
-        print(index)
 
         output_path = os.path.join(
             os.getenv('HOME'),
@@ -63,12 +58,18 @@ for row in checkpoint:
         post_command = f"cd {os.getenv('HOME')}\nmodule load anaconda-py3/2023.09 \nsource activate llm_distillation \n\nexport TRANSFORMERS_OFFLINE=1 \nexport TOKENIZERS_PARALLELISM=true \nexport HF_DATASET_OFFLINE=1\n\n"
         command = f"{const}{post_command}python llm-distillation/benchmark/benchmark.py --model_id {checkpoint_path+'/'+index} --model_tokenizer {model_name} --dataset {dataset} --split_name {split} --batch_size {batch} --number_few_shot 0 --task {task} --bert_score --save_predictions ----output_path {output_path}"
 
-        if mapping != "":
+        # Mapping column name
+        if dataset in [f"{os.getenv('HOME')}/llm-distillation/datasets/processed/dialogsum", 'GEM/FairytaleQA', f"{os.getenv('HOME')}/llm-distillation/datasets/processed/qed"]:
+            mapping = f"{os.getenv('HOME')}/llm-distillation/benchmark/mapping/{dataset.split('/')[-1]}.json"
             command += f" --mapping {mapping}"
-        if mapping_dict != "":
-            command += f" --mapping_dict {mapping_dict}"
-        if disk:
-            command += f" --from_disk"
+
+        # Local dataset
+        if dataset in [f"{os.getenv('HOME')}/llm-distillation/datasets/processed/dialogsum", f"{os.getenv('HOME')}/llm-distillation/datasets/processed/pubmed_qa", f"{os.getenv('HOME')}/llm-distillation/datasets/processed/qed"]:
+            command += " --from_disk"
+
+        # Mapping dict
+        if dataset in [f"{os.getenv('HOME')}/llm-distillation/datasets/processed/qed"]:
+            command += " --mapping_dict string"
         
         with open("slurm_tmp.sh", "w") as f:
             f.write(command)
