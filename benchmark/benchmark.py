@@ -52,7 +52,7 @@ if __name__ == "__main__":
     parser.add_argument("--output_path", type=str, default="", help="Output path")
     args = parser.parse_args()
 
-    if 'chat' in args.model_id or "instruct" in args.model_id.lower():
+    if 'chat' in args.model_id.split('/n')[:-2] or "instruct" in args.model_id.lower().split('/n')[:-2]:
         from prompt.prompt import create_chat_prompt as create_prompt
         is_chat = True
     else :
