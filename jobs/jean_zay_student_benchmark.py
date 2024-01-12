@@ -16,7 +16,7 @@ def find_directory(number, directory_list):
     return str(directory_index)
 
 partition = 'gpu_p4'
-time = "01:00:00"
+time = "00:15:00"
 batch = 4
 gpu=1
 
@@ -55,8 +55,8 @@ for row in checkpoint:
         os.makedirs(output_path, exist_ok=True)
 
         const = f"#!/bin/bash \n\n#SBATCH --job-name=B_{dataset.split('/')[-1]} \n#SBATCH --nodes=1 \n#SBATCH --time={time} \n#SBATCH --account=dgo@a100 \n#SBATCH -C a100 \n#SBATCH --partition={partition} \n#SBATCH --gres=gpu:{gpu} \n#SBATCH --ntasks=4 \n#SBATCH --cpus-per-task=10\n\n"
-        post_command = f"cd {os.getenv('HOME')}n\nmodule load anaconda-py3/2023.09 \nconda activate llm_distillation \n\nexport TRANSFORMERS_OFFLINE=1 \nexport TOKENIZERS_PARALLELISM=true \nexport HF_DATASET_OFFLINE=1\n\n"
-        command = f"{const}{post_command}python llm-distillation/benchmark/benchmark.py --model_id {checkpoint_path+'/'+index} --model_tokenizer {model_name} --dataset {dataset} --split_name {split} --batch_size {batch} --number_few_shot 0 --task {task} --bert_score --save_predictions ----output_path {output_path}"
+        post_command = f"cd {os.getenv('HOME')} \nmodule load anaconda-py3/2023.09 \nsource activate llm_distillation \n\nexport TRANSFORMERS_OFFLINE=1 \nexport TOKENIZERS_PARALLELISM=true \nexport HF_DATASET_OFFLINE=1\n\n"
+        command = f"{const}{post_command}python llm-distillation/benchmark/benchmark.py --model_id {checkpoint_path+'/'+index} --model_tokenizer {model_name} --dataset {dataset} --split_name {split} --batch_size {batch} --number_few_shot 0 --task {task} --bert_score --save_predictions --output_path {output_path}"
 
         # Mapping column name
         if dataset in [f"{os.getenv('HOME')}/llm-distillation/datasets/processed/dialogsum", 'GEM/FairytaleQA', f"{os.getenv('HOME')}/llm-distillation/datasets/processed/qed"]:
@@ -71,10 +71,11 @@ for row in checkpoint:
         if dataset in [f"{os.getenv('HOME')}/llm-distillation/datasets/processed/qed"]:
             command += " --mapping_dict string"
 
+        if model_name == 'facebook/opt-350m':
+            command += " --context_length 1024"
+
         with open("slurm_tmp.sh", "w") as f:
             f.write(command)
 
         subprocess.call(f"sbatch slurm_tmp.sh",shell=True)
-        #subprocess.call(f"rm slurm_tmp.sh",shell=True)
-
-        exit()
+        subprocess.call(f"rm slurm_tmp.sh",shell=True)

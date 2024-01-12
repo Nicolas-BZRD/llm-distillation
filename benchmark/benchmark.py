@@ -116,7 +116,7 @@ if __name__ == "__main__":
     has_title = True if 'title' in dataset.column_names and args.title else False
     dataset = dataset.map(lambda item: create_prompt_column(args.task, args.number_few_shot, item, has_title))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
-    dataset = dataset.filter(lambda item: len(item['input_ids']) > args.context_length) if args.context_length else dataset
+    dataset = dataset.filter(lambda item: len(item['input_ids']) <= args.context_length) if args.context_length else dataset
     print(args.model_id)
     print(dataset['prompt'][0])
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
