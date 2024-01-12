@@ -49,6 +49,7 @@ if __name__ == "__main__":
     parser.add_argument("--mapping", type=str, default="", help="JSON file to map dataset column name")
     parser.add_argument("--mapping_dict", type=str, default="text", help="Field name in the answer dictionary.")
     parser.add_argument("--bert_score", action="store_true", help="To compute bert score")
+    parser.add_argument("--output_path", type=str, default="", help="Output path")
     args = parser.parse_args()
 
     if 'chat' in args.model_id or "instruct" in args.model_id.lower():
@@ -158,7 +159,8 @@ if __name__ == "__main__":
     logging.info(results)
 
     titled_folder = "titled" if has_title else "untitled"
-    with open(f"{os.getenv('HOME')}/llm-distillation/benchmark/results/{args.model_id.split('/')[-1]}/{args.dataset_id.split('/')[-1]}/{titled_folder}/{args.number_few_shot}shots.json", 'w') as json_file:
+    output = args.output_path if args.output_path else f"{os.getenv('HOME')}/llm-distillation/benchmark/results/{args.model_id.split('/')[-1]}/{args.dataset_id.split('/')[-1]}/{titled_folder}"
+    with open(f"{output}/{args.number_few_shot}shots.json", 'w') as json_file:
         json.dump(
             {
                 "model": args.model_id,
@@ -174,7 +176,7 @@ if __name__ == "__main__":
 
     if args.save_predictions:
         prediction_data = [{'answers': dataset['answers'][index], 'prediction_text': item} for index, item in enumerate(predictions)]
-        with open(f"{os.getenv('HOME')}/llm-distillation/benchmark/results/{args.model_id.split('/')[-1]}/{args.dataset_id.split('/')[-1]}/{titled_folder}/predictions_{args.number_few_shot}shots.json", 'w') as file:
+        with open(f"{output}/predictions_{args.number_few_shot}shots.json", 'w') as file:
             for prediction_dict in prediction_data:
                 json.dump(prediction_dict, file)
                 file.write('\n')
