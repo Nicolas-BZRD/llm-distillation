@@ -50,6 +50,7 @@ if __name__ == "__main__":
     parser.add_argument("--mapping_dict", type=str, default="text", help="Field name in the answer dictionary.")
     parser.add_argument("--bert_score", action="store_true", help="To compute bert score")
     parser.add_argument("--output_path", type=str, default="", help="Output path")
+    parser.add_argument("--context_length", type=int, default=None, help="Delete dataset row with length > context_length")
     args = parser.parse_args()
 
     if 'chat' in args.model_id.split('/n')[:-2] or "instruct" in args.model_id.lower().split('/n')[:-2]:
@@ -115,6 +116,7 @@ if __name__ == "__main__":
     has_title = True if 'title' in dataset.column_names and args.title else False
     dataset = dataset.map(lambda item: create_prompt_column(args.task, args.number_few_shot, item, has_title))
     dataset = dataset.map(lambda items: tokenization(items, tokenizer=tokenizer), batched=True, batch_size=args.batch_size)
+    dataset = dataset.filter(lambda item: len(item['input_ids']) > args.context_length) if args.context_length else dataset
     print(args.model_id)
     print(dataset['prompt'][0])
     dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
