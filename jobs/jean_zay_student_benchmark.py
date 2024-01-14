@@ -20,19 +20,19 @@ time = "00:15:00"
 batch = 4
 gpu=1
 
-model_name = 'facebook/opt-350m'
+model_name = 'EleutherAI/pythia-410m-deduped'
 dataset = f"{os.getenv('HOME')}/llm-distillation/datasets/processed/qed"
 split="validation"
 task="qa"
 
 checkpoint = [
-    ['falcon-7b-instruct', "d0", [886]],
-    ['Mistral-7B-Instruct-v0.2', "d0",[1931]],
-    ['Llama-2-7b-chat-hf', "d0", [2218]],
+    ['falcon-7b-instruct', "d0", [595]],
+    ['Mistral-7B-Instruct-v0.2', "d0", [965]],
+    ['Llama-2-7b-chat-hf', "d0", [886]],
 
-    ['falcon-7b-instruct', "d1.5", [2003, 2218]],
-    ['Mistral-7B-Instruct-v0.2', "d1.5", [1931, 2223]],
-    ['Llama-2-7b-chat-hf', "d1.5", [2218, 1927]],
+    ['falcon-7b-instruct', "d1.5", [2079]],
+    ['Mistral-7B-Instruct-v0.2', "d1.5", [1931]],
+    ['Llama-2-7b-chat-hf', "d1.5", [1330]],
 ]
 
 for row in checkpoint:
@@ -41,16 +41,29 @@ for row in checkpoint:
     for checkpoint in row[2]:
         index = find_directory(checkpoint, folder)
 
-        output_path = os.path.join(
-            os.getenv('HOME'),
-            'llm-distillation',
-            'benchmark',
-            'results',
-            model_name.split('/')[-1],
-            dataset.split('/')[-1],
-            row[0],
-            row[1]
-        )
+        if len(row[2]) > 1:
+            output_path = os.path.join(
+                os.getenv('HOME'),
+                'llm-distillation',
+                'benchmark',
+                'results',
+                model_name.split('/')[-1],
+                dataset.split('/')[-1],
+                row[0],
+                row[1],
+                str(index)
+            )
+        else:
+            output_path = os.path.join(
+                os.getenv('HOME'),
+                'llm-distillation',
+                'benchmark',
+                'results',
+                model_name.split('/')[-1],
+                dataset.split('/')[-1],
+                row[0],
+                row[1]
+            )
 
         os.makedirs(output_path, exist_ok=True)
 

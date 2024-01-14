@@ -158,6 +158,7 @@ if __name__ == "__main__":
         results["f1_bert"] = sum(results_bert["f1"])/len(results_bert["f1"])
         results["precision_bert"] = sum(results_bert["precision"])/len(results_bert["precision"])
         results["recall_bert"] = sum(results_bert["recall"])/len(results_bert["recall"])
+    for key in results: results[key] = round(results[key]*100, 2)
     logging.info(results)
 
     titled_folder = "titled" if has_title else "untitled"
