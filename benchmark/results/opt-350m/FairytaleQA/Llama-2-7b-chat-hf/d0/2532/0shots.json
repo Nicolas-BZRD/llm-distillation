@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/opt-350m/FairytaleQA/d0/2532",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 1007,
+    "f1": 37.34,
+    "precision": 39.91,
+    "recall": 40.67,
+    "em": 13.8,
+    "squad": 25.57,
+    "rouge1": 39.64,
+    "rouge2": 27.14,
+    "rougeL": 38.87,
+    "rougeLsum": 38.85,
+    "f1_bert": 33.78,
+    "precision_bert": 41.46,
+    "recall_bert": 26.57
+}

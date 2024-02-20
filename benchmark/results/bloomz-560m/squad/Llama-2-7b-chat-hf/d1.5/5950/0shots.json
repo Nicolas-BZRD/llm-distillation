@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/bloomz-560m/squad/d1.5/5950",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 10570,
+    "f1": 75.9,
+    "precision": 77.37,
+    "recall": 77.88,
+    "em": 64.34,
+    "squad": 70.12,
+    "rouge1": 76.4,
+    "rouge2": 48.85,
+    "rougeL": 76.27,
+    "rougeLsum": 76.27,
+    "f1_bert": 72.87,
+    "precision_bert": 74.16,
+    "recall_bert": 72.54
+}

@@ -1,0 +1,19 @@
+{
+    "model": "EleutherAI/pythia-410m-deduped",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 1007,
+    "f1": 15.83,
+    "precision": 13.56,
+    "recall": 32.12,
+    "em": 1.09,
+    "squad": 8.46,
+    "rouge1": 17.55,
+    "rouge2": 7.96,
+    "rougeL": 16.58,
+    "rougeLsum": 16.56,
+    "f1_bert": 6.76,
+    "precision_bert": 1.82,
+    "recall_bert": 12.43
+}

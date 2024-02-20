@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/bloomz-560m/qed/d0/874",
+    "dataset": "/linkhome/rech/genrce01/udv55np/llm-distillation/datasets/processed/qed",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 1355,
+    "f1": 50.99,
+    "precision": 58.9,
+    "recall": 52.38,
+    "em": 33.28,
+    "squad": 42.14,
+    "rouge1": 51.98,
+    "rouge2": 31.66,
+    "rougeL": 51.63,
+    "rougeLsum": 51.5,
+    "f1_bert": 44.22,
+    "precision_bert": 48.84,
+    "recall_bert": 40.36
+}

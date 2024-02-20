@@ -1,5 +1,6 @@
 import re
 import string
+import secrets
 import evaluate
 from collections import Counter
 
@@ -72,11 +73,11 @@ def exact_match(predictions, answers):
     return sum(exact_match_scores)/len(exact_match_scores)
 
 def rouge(predictions, answers):
-    rouge_metric = evaluate.load('rouge')
+    rouge_metric = evaluate.load('rouge', experiment_id=f"{secrets.randbelow(10000)}")
     return rouge_metric.compute(predictions=predictions, references=answers)
 
 def bert_score(predictions, answers):
-    bertscore = evaluate.load("bertscore")
+    bertscore = evaluate.load("bertscore", experiment_id=f"{secrets.randbelow(10000)}")
     if isinstance(answers[0], dict):
       f1, precision, recall = [0]*len(predictions), [0]*len(predictions), [0]*len(predictions)
       for i, row in enumerate(answers):

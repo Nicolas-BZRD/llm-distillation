@@ -1,0 +1,19 @@
+{
+    "model": "EleutherAI/pythia-160m-deduped",
+    "dataset": "/gpfs/users/boizardni/llm-distillation/datasets/processed/dialogsum",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 500,
+    "f1": 14.97,
+    "precision": 17.08,
+    "recall": 17.41,
+    "em": 0.0,
+    "squad": 7.49,
+    "rouge1": 16.0,
+    "rouge2": 4.72,
+    "rougeL": 13.88,
+    "rougeLsum": 13.88,
+    "f1_bert": 3.43,
+    "precision_bert": 5.54,
+    "recall_bert": 3.03
+}

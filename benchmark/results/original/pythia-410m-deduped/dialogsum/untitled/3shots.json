@@ -1,0 +1,19 @@
+{
+    "model": "EleutherAI/pythia-410m-deduped",
+    "dataset": "/gpfs/users/boizardni/llm-distillation/datasets/processed/dialogsum",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 500,
+    "f1": 21.15,
+    "precision": 25.98,
+    "recall": 21.28,
+    "em": 0.0,
+    "squad": 10.57,
+    "rouge1": 23.38,
+    "rouge2": 6.4,
+    "rougeL": 20.12,
+    "rougeLsum": 20.13,
+    "f1_bert": 24.08,
+    "precision_bert": 27.31,
+    "recall_bert": 21.89
+}

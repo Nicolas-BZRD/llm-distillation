@@ -1,0 +1,19 @@
+{
+    "model": "facebook/opt-350m",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 10570,
+    "f1": 30.01,
+    "precision": 29.34,
+    "recall": 41.04,
+    "em": 18.19,
+    "squad": 24.1,
+    "rouge1": 31.03,
+    "rouge2": 17.7,
+    "rougeL": 30.72,
+    "rougeLsum": 30.73,
+    "f1_bert": 28.88,
+    "precision_bert": 24.16,
+    "recall_bert": 35.5
+}

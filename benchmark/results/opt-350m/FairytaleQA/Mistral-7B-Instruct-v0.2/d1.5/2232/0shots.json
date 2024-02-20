@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Mistral-7B-Instruct-v0.2/opt-350m/FairytaleQA/d1.5/2232",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 1007,
+    "f1": 34.5,
+    "precision": 35.62,
+    "recall": 41.24,
+    "em": 7.94,
+    "squad": 21.22,
+    "rouge1": 36.73,
+    "rouge2": 25.24,
+    "rougeL": 35.99,
+    "rougeLsum": 35.93,
+    "f1_bert": 30.44,
+    "precision_bert": 37.38,
+    "recall_bert": 23.81
+}

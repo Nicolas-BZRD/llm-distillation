@@ -1,0 +1,19 @@
+{
+    "model": "EleutherAI/pythia-1b-deduped",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 10570,
+    "f1": 48.41,
+    "precision": 48.52,
+    "recall": 55.55,
+    "em": 34.95,
+    "squad": 41.68,
+    "rouge1": 49.21,
+    "rouge2": 27.92,
+    "rougeL": 48.81,
+    "rougeLsum": 48.81,
+    "f1_bert": 47.65,
+    "precision_bert": 45.06,
+    "recall_bert": 51.78
+}

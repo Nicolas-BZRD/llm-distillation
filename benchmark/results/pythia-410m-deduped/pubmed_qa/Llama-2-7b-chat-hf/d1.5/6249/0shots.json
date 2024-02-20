@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/pythia-410m-deduped/pubmed_qa/d1.5/6249",
+    "dataset": "/linkhome/rech/genrce01/udv55np/llm-distillation/datasets/processed/pubmed_qa",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 500,
+    "f1": 29.82,
+    "precision": 36.22,
+    "recall": 29.81,
+    "em": 0.0,
+    "squad": 14.91,
+    "rouge1": 31.67,
+    "rouge2": 12.1,
+    "rougeL": 23.06,
+    "rougeLsum": 23.09,
+    "f1_bert": 29.89,
+    "precision_bert": 31.23,
+    "recall_bert": 28.62
+}

@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Mistral-7B-Instruct-v0.2/bloomz-560m/squad/d0/2600",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 10570,
+    "f1": 73.34,
+    "precision": 73.31,
+    "recall": 78.52,
+    "em": 55.38,
+    "squad": 64.36,
+    "rouge1": 73.59,
+    "rouge2": 48.75,
+    "rougeL": 73.22,
+    "rougeLsum": 73.21,
+    "f1_bert": 66.93,
+    "precision_bert": 65.35,
+    "recall_bert": 69.82
+}

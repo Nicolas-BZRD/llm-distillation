@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/pythia-160m-deduped/dialogsum/d0/3284",
+    "dataset": "/linkhome/rech/genrce01/udv55np/llm-distillation/datasets/processed/dialogsum",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 500,
+    "f1": 18.77,
+    "precision": 12.71,
+    "recall": 43.89,
+    "em": 0.0,
+    "squad": 9.39,
+    "rouge1": 20.34,
+    "rouge2": 7.46,
+    "rougeL": 16.81,
+    "rougeLsum": 16.81,
+    "f1_bert": 20.82,
+    "precision_bert": 15.34,
+    "recall_bert": 27.59
+}

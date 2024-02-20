@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Mistral-7B-Instruct-v0.2/bloomz-560m/pubmed_qa/d0/4166",
+    "dataset": "/linkhome/rech/genrce01/udv55np/llm-distillation/datasets/processed/pubmed_qa",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 500,
+    "f1": 28.84,
+    "precision": 31.77,
+    "recall": 30.35,
+    "em": 0.0,
+    "squad": 14.42,
+    "rouge1": 31.09,
+    "rouge2": 10.54,
+    "rougeL": 22.0,
+    "rougeLsum": 21.99,
+    "f1_bert": 28.87,
+    "precision_bert": 28.59,
+    "recall_bert": 29.14
+}

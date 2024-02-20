@@ -1,0 +1,19 @@
+{
+    "model": "facebook/opt-350m",
+    "dataset": "/gpfs/users/boizardni/llm-distillation/datasets/processed/dialogsum",
+    "title": false,
+    "number_few_shot": 2,
+    "samples_number": 236,
+    "f1": 20.68,
+    "precision": 16.17,
+    "recall": 32.12,
+    "em": 0.0,
+    "squad": 10.34,
+    "rouge1": 22.06,
+    "rouge2": 3.31,
+    "rougeL": 17.86,
+    "rougeLsum": 17.84,
+    "f1_bert": 29.3,
+    "precision_bert": 23.73,
+    "recall_bert": 35.91
+}

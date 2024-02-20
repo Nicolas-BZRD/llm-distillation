@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Mistral-7B-Instruct-v0.2/opt-350m/squad/d1.5/9600",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 10570,
+    "f1": 73.35,
+    "precision": 73.25,
+    "recall": 78.91,
+    "em": 55.79,
+    "squad": 64.57,
+    "rouge1": 73.49,
+    "rouge2": 49.24,
+    "rougeL": 73.16,
+    "rougeLsum": 73.16,
+    "f1_bert": 68.52,
+    "precision_bert": 67.15,
+    "recall_bert": 71.03
+}

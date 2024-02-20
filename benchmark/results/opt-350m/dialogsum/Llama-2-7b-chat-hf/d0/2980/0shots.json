@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/opt-350m/dialogsum/d0/2980",
+    "dataset": "/linkhome/rech/genrce01/udv55np/llm-distillation/datasets/processed/dialogsum",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 496,
+    "f1": 23.52,
+    "precision": 16.56,
+    "recall": 48.19,
+    "em": 0.0,
+    "squad": 11.76,
+    "rouge1": 25.4,
+    "rouge2": 10.48,
+    "rougeL": 20.57,
+    "rougeLsum": 20.58,
+    "f1_bert": 27.59,
+    "precision_bert": 23.63,
+    "recall_bert": 32.65
+}

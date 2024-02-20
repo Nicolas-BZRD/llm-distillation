@@ -1,0 +1,19 @@
+{
+    "model": "EleutherAI/pythia-160m-deduped",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 1007,
+    "f1": 8.07,
+    "precision": 8.02,
+    "recall": 17.88,
+    "em": 0.99,
+    "squad": 4.53,
+    "rouge1": 10.45,
+    "rouge2": 2.9,
+    "rougeL": 9.97,
+    "rougeLsum": 10.0,
+    "f1_bert": -0.96,
+    "precision_bert": -6.87,
+    "recall_bert": 6.3
+}

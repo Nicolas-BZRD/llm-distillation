@@ -1,0 +1,19 @@
+{
+    "model": "EleutherAI/pythia-160m-deduped",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 10570,
+    "f1": 15.05,
+    "precision": 16.39,
+    "recall": 18.83,
+    "em": 8.86,
+    "squad": 11.95,
+    "rouge1": 16.53,
+    "rouge2": 7.67,
+    "rougeL": 16.38,
+    "rougeLsum": 16.38,
+    "f1_bert": 17.97,
+    "precision_bert": 15.76,
+    "recall_bert": 22.81
+}

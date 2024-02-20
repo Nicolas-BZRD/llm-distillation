@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/pythia-1b-deduped/squad/d1.5/13000",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 10570,
+    "f1": 77.1,
+    "precision": 78.57,
+    "recall": 79.55,
+    "em": 64.69,
+    "squad": 70.9,
+    "rouge1": 77.82,
+    "rouge2": 49.49,
+    "rougeL": 77.66,
+    "rougeLsum": 77.64,
+    "f1_bert": 72.92,
+    "precision_bert": 74.17,
+    "recall_bert": 72.57
+}

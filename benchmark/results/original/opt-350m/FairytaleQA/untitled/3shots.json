@@ -1,0 +1,19 @@
+{
+    "model": "facebook/opt-350m",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 1007,
+    "f1": 15.01,
+    "precision": 12.89,
+    "recall": 33.12,
+    "em": 1.89,
+    "squad": 8.45,
+    "rouge1": 16.91,
+    "rouge2": 8.35,
+    "rougeL": 16.13,
+    "rougeLsum": 16.12,
+    "f1_bert": 3.82,
+    "precision_bert": -4.33,
+    "recall_bert": 13.1
+}

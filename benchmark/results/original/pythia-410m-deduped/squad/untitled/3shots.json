@@ -1,0 +1,19 @@
+{
+    "model": "EleutherAI/pythia-410m-deduped",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 10570,
+    "f1": 37.4,
+    "precision": 36.58,
+    "recall": 47.55,
+    "em": 23.8,
+    "squad": 30.6,
+    "rouge1": 38.41,
+    "rouge2": 21.1,
+    "rougeL": 37.99,
+    "rougeLsum": 38.0,
+    "f1_bert": 37.03,
+    "precision_bert": 34.02,
+    "recall_bert": 41.55
+}

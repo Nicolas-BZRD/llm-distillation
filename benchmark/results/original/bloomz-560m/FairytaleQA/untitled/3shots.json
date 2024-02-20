@@ -1,0 +1,19 @@
+{
+    "model": "bigscience/bloomz-560m",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 3,
+    "samples_number": 1007,
+    "f1": 31.04,
+    "precision": 34.06,
+    "recall": 33.49,
+    "em": 11.52,
+    "squad": 21.28,
+    "rouge1": 32.55,
+    "rouge2": 18.78,
+    "rougeL": 31.91,
+    "rougeLsum": 31.84,
+    "f1_bert": 27.43,
+    "precision_bert": 31.42,
+    "recall_bert": 23.67
+}

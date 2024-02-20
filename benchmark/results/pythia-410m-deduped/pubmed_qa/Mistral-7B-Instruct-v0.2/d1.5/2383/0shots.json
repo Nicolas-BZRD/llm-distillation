@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Mistral-7B-Instruct-v0.2/pythia-410m-deduped/pubmed_qa/d1.5/2383",
+    "dataset": "/linkhome/rech/genrce01/udv55np/llm-distillation/datasets/processed/pubmed_qa",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 500,
+    "f1": 29.5,
+    "precision": 33.69,
+    "recall": 29.84,
+    "em": 0.0,
+    "squad": 14.75,
+    "rouge1": 31.81,
+    "rouge2": 11.41,
+    "rougeL": 22.69,
+    "rougeLsum": 22.69,
+    "f1_bert": 29.55,
+    "precision_bert": 30.09,
+    "recall_bert": 29.01
+}

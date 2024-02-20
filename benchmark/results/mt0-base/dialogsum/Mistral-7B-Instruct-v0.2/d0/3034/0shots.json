@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Mistral-7B-Instruct-v0.2/mt0-base/dialogsum/d0/3034",
+    "dataset": "/linkhome/rech/genrce01/udv55np/llm-distillation/datasets/processed/dialogsum",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 500,
+    "f1": 40.68,
+    "precision": 35.75,
+    "recall": 52.82,
+    "em": 0.0,
+    "squad": 20.34,
+    "rouge1": 42.55,
+    "rouge2": 17.42,
+    "rougeL": 34.31,
+    "rougeLsum": 34.3,
+    "f1_bert": 46.94,
+    "precision_bert": 43.26,
+    "recall_bert": 51.84
+}

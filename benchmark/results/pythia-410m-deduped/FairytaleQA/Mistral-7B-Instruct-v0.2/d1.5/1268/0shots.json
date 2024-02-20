@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Mistral-7B-Instruct-v0.2/pythia-410m-deduped/FairytaleQA/d1.5/1268",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 1007,
+    "f1": 36.69,
+    "precision": 37.7,
+    "recall": 43.6,
+    "em": 9.43,
+    "squad": 23.06,
+    "rouge1": 38.83,
+    "rouge2": 26.62,
+    "rougeL": 37.89,
+    "rougeLsum": 37.94,
+    "f1_bert": 31.79,
+    "precision_bert": 38.17,
+    "recall_bert": 25.71
+}

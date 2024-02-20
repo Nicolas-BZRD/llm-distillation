@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/opt-350m/squad/d0/5350",
+    "dataset": "squad",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 10570,
+    "f1": 70.78,
+    "precision": 72.52,
+    "recall": 72.78,
+    "em": 58.83,
+    "squad": 64.81,
+    "rouge1": 71.35,
+    "rouge2": 44.91,
+    "rougeL": 71.24,
+    "rougeLsum": 71.25,
+    "f1_bert": 70.75,
+    "precision_bert": 71.46,
+    "recall_bert": 71.11
+}

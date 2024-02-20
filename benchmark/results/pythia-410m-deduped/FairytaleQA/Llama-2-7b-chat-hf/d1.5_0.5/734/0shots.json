@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/pythia-410m-deduped/FairytaleQA/d1.5_0.5/734",
+    "dataset": "GEM/FairytaleQA",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 1007,
+    "f1": 38.08,
+    "precision": 41.54,
+    "recall": 41.54,
+    "em": 12.51,
+    "squad": 25.29,
+    "rouge1": 40.09,
+    "rouge2": 27.47,
+    "rougeL": 39.26,
+    "rougeLsum": 39.26,
+    "f1_bert": 34.64,
+    "precision_bert": 43.65,
+    "recall_bert": 26.17
+}

@@ -5,7 +5,7 @@ import score
 import torch
 import logging
 import argparse
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2SeqLM
 from torch.utils.data import DataLoader
 from datasets import load_dataset, load_from_disk
 from itertools import chain
@@ -51,6 +51,7 @@ if __name__ == "__main__":
     parser.add_argument("--bert_score", action="store_true", help="To compute bert score")
     parser.add_argument("--output_path", type=str, default="", help="Output path")
     parser.add_argument("--context_length", type=int, default=None, help="Delete dataset row with length > context_length")
+    parser.add_argument("--seq2seq", action="store_true", help="For encoder-decoder model")
     args = parser.parse_args()
 
     if 'chat' in args.model_id.split('/n')[:-2] or "instruct" in args.model_id.lower().split('/n')[:-2]:
@@ -61,7 +62,7 @@ if __name__ == "__main__":
         is_chat = False
 
     def create_prompt_column(task, few_shot, item, has_title):
-        if False and False and True: print("bug")
+        if False and True: exit()
         if task == "qa" or task == "qa_generative":
             item['prompt'] = create_prompt(
                 task, few_shot,
@@ -86,6 +87,14 @@ if __name__ == "__main__":
                 sys_user = True if "mistralai" in args.model_id or args.context else False,
                 chat_template = tokenizer.apply_chat_template if is_chat else None
             )
+        elif task == "summary":
+            item['prompt'] = create_prompt(
+                task, few_shot,
+                title = item['title'] if has_title else "",
+                context = item['context'],
+                sys_user = True if "mistralai" in args.model_id or args.context else False,
+                chat_template = tokenizer.apply_chat_template if is_chat else None
+            )
         return item
     
     logging.basicConfig(level=logging.INFO)
@@ -100,8 +109,12 @@ if __name__ == "__main__":
     logging.info(f'Tokenizer loaded.')
 
     logging.info('Loading model...')
-    if args.bfloat and device != "cpu": model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.bfloat16).to(device)
-    else: model = AutoModelForCausalLM.from_pretrained(args.model_id).to(device)
+    if args.bfloat and device != "cpu":
+        if args.seq2seq: model = AutoModelForSeq2SeqLM.from_pretrained(args.model_id, torch_dtype=torch.bfloat16).to(device)
+        else: model = AutoModelForCausalLM.from_pretrained(args.model_id, torch_dtype=torch.bfloat16).to(device)
+    else:
+        if args.seq2seq: model = AutoModelForSeq2SeqLM.from_pretrained(args.model_id).to(device)
+        else: model = AutoModelForCausalLM.from_pretrained(args.model_id).to(device) 
     model.resize_token_embeddings(len(tokenizer))
     model.config.pad_token_id = tokenizer.pad_token_id
     model.eval()
@@ -134,7 +147,7 @@ if __name__ == "__main__":
                 do_sample=False,
                 eos_token_id= [193, tokenizer.eos_token_id] if "falcon" in args.model_id else tokenizer.eos_token_id
             )
-            output = output[:, len(batch['input_ids'][0]):]
+            if not args.seq2seq: output = output[:, len(batch['input_ids'][0]):]
             sentences = tokenizer.batch_decode(output, skip_special_tokens=True)
             for i in range(len(sentences)):
                 sentences[i] = sentences[i].split('\n')[0].strip()

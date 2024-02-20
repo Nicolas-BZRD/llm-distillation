@@ -1,0 +1,19 @@
+{
+    "model": "/linkhome/rech/genrce01/udv55np/llm-distillation/train/Llama-2-7b-chat-hf/mt0-base/qed/d1.5/2048",
+    "dataset": "/linkhome/rech/genrce01/udv55np/llm-distillation/datasets/processed/qed",
+    "title": false,
+    "number_few_shot": 0,
+    "samples_number": 1355,
+    "f1": 56.01,
+    "precision": 64.5,
+    "recall": 57.27,
+    "em": 39.26,
+    "squad": 47.64,
+    "rouge1": 56.25,
+    "rouge2": 36.21,
+    "rougeL": 56.13,
+    "rougeLsum": 56.11,
+    "f1_bert": 47.14,
+    "precision_bert": 51.02,
+    "recall_bert": 44.05
+}
